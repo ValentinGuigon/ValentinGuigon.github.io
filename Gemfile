@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 group :jekyll_plugins do
-    gem 'wdm'
+    gem 'wdm', '>= 0.1.0'
     gem 'libv8-node'
-    gem 'mini_racer'
     gem 'classifier-reborn'
     gem 'jekyll'
     gem 'jekyll-archives'
