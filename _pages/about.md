@@ -18,8 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Postdoctoral researcher
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Valentin joined the faculty at the University of Maryland in March 2024 as a Postdoctoral Researcher. He obtained his PhD under the supervision of Jean-Claude Dreher and Prof. Marie Claire Villeval at Université Claude Bernard Lyon 1 (Lyon, France). His doctoral thesis focused on the neurocognitive mechanisms involved in the transmission of uncertain information among humans. Valentin has adopted a multidisciplinary approach to explore the multifaceted aspects of human decision-making, from its behavior to its biological foundations via its computational processes. He gradually contributed to the research on impulsive actions, reward anticipation and processing, moral decision-making, beliefs about fake news, information-seeking behaviors, beliefs about others' preferences for information and beliefs in large-scale social networks. Beside his scientific interests, Valentin likes to pile arts and activities on the balance. Ask him about photography, climbing and literature.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+[LinkedIn](https://www.linkedin.com/in/valentin-guigon-61024a92/)   
+[GitHub](https://github.com/ValentinGuigon)
