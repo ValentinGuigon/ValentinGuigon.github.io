@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://sldlab.umd.edu//'>Postdoctoral researcher in Cognitive Neurosciences, Social Learning and Decisions Lab, UMD</a>
+subtitle: Postdoctoral researcher in Cognitive Neurosciences, <a href='https://sldlab.umd.edu//'>Social Learning and Decisions Lab</a>, UMD
 
 profile:
   align: right
@@ -18,12 +18,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Valentin joined the faculty at the University of Maryland in March 2024 as a Postdoctoral Researcher. He obtained his PhD under the supervision of Jean-Claude Dreher and Prof. Marie Claire Villeval at Université Claude Bernard Lyon 1 (Lyon, France).
+##### Current position
 
-His doctoral thesis focused on the neurocognitive mechanisms involved in the transmission of uncertain information among humans. Valentin has adopted a multidisciplinary approach to explore the multifaceted aspects of human decision-making, from its behavior to its biological foundations via its computational processes. He gradually contributed to the research on impulsive actions, reward anticipation and processing, moral decision-making, beliefs about fake news, information-seeking behaviors, beliefs about others' preferences for information and beliefs in large-scale social networks.
+I joined the Social Learning and Decisions Lab, led by Caroline Charpentier at the University of Maryland, as a Postdoctoral Researcher in March 2024. The project I'm working on combines behavioral tasks in a social learning battery, computational modeling and functional imagery of brain processes.
 
-Beside his scientific interests, Valentin likes to pile arts and activities on the balance. Ask him about photography, climbing, cinema or literature.
+##### About me
 
-[Contact](vguigon@umd.edu)  
-[LinkedIn](https://www.linkedin.com/in/valentin-guigon-61024a92/)  
-[GitHub](https://github.com/ValentinGuigon)
+I obtained his PhD under the supervision of Jean-Claude Dreher and Prof. Marie Claire Villeval at Université Claude Bernard Lyon 1 (Lyon, France). My doctoral thesis focused on the neurocognitive mechanisms involved in the transmission of uncertain information among humans. I adopted a multidisciplinary approach to explore the multifaceted aspects of human decision-making, from its behavior to its biological foundations via its computational processes. From that approach I gradually contributed to the research on reward processing, moral decision-making, beliefs about information and information-seeking behaviors, beliefs about others' and beliefs in large-scale social networks. My scientific interests extend to Epistemology, the integration of DevOps and MLOps to academic research and the contributions of sciences to the public policy making.
+
+Besides my scientific interests, I like to pile arts and activities on the balance. Feel free to share with me your thoughts on photography, climbing, cinema, literature or the latest meta-modernist trend.

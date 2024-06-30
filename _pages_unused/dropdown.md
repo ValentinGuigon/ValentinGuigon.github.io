@@ -1,10 +1,11 @@
 ---
 layout: page
 title: submenus
-nav: true
+nav: false
 nav_order: 8
 dropdown: true
 children:
+  # to modify once needed
   - title: publications
     permalink: /publications/
   - title: divider

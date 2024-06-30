@@ -1,97 +1,105 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+# The main file for modifying the cv is assets/json/resume.json. It is a known standard for creating cv content in json format.
+# As for data/cv.yml it was the original way of creating the content for the cv page, and it is currently used as a fallback if the file assets/json/resume.json is not found.
+# Since it was already implemented and is more human readable than a json file we decided to keep it as an option.
+resume:
+  - title: General Information
+    type: map
+    contents:
+      - name: Full Name
+        value: Valentin Guigon
+      - name: Date of Birth
+        value: 19th October 1992
+      - name: Languages
+        value: French, English
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+  - title: Education
+    type: time_table
+    contents:
+      - title: Doctorate degree – Cognitive Neurosciences
+        institution: Neurosciences and Cognition Doctorate School, Lyon 1, France
+        year: 2018-2022
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+      - title: Master degree - Cognitive Sciences
+        institution: Psychology Faculty, Lyon 2, France
+        year: 2016-2018
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+      - title: Licence degree – Physiology & Adaptative and Cognitive Neurosciences
+        institution: Biology Faculty, Marseille Saint Charles, France
+        year: 2015-2016
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
+      - title: Licence degree – Psychology
+        institution: Psychology Faculty, Aix en Provence, France
+        year: 2012 - 2015
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+  - title: Experience
+    type: time_table
+    contents:
+      - title: Postdoctoral researcher
+        institution: UMD, MD, USA
+        year: March 2024 – Ongoing
+        description:
+          - Research in neurocomputational sciences of social learning | Behavioral and imaging projects management.
+          - Tools: Matlab – VBA toolbox, SPM | R – JAGS, BRMS
+          - Supervisor: Caroline Charpentier
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+      - title: Postdoctoral researcher
+        institution: ISCMJ & GATE, France
+        year: March 2023 – October 2023
+        description:
+          - Neurocognitive mechanisms underlying transmission of uncertain information in humans & Beliefs updating in social networks | Behavioral project management.
+          - Tools: Matlab – VBA toolbox, SPM | R – JAGS, BRMS
+          - Directors: Marie Claire Villeval & Jean-Claude Dreher
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+      - title: PhD Researcher
+        institution: ISCMJ & GATE, France
+        year: October 2018 – December 2022
+        description:
+          - Neurocognitive mechanisms underlying transmission of uncertain information in humans | Behavioral and imaging projects management.
+          - Tools: Matlab – VBA toolbox, SPM | R – JAGS, BRMS
+          - Supervisors: Marie Claire Villeval & Jean-Claude Dreher
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+      - title: Research Assistant
+        institution: ISCMJ, France
+        year: February – July 2018
+        description:
+          - gPPI analysis of testosterone-induced effects on orbitofrontal-amygdala relationships during anticipation of primary and secondary rewards | fcMRI analysis & ethics protocol.
+          - Tools: Matlab – SPM, CONN
+          - Supervisor: Jean-Claude Dreher
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+  - title: Open Source Projects
+    type: time_table
+    contents:
+      - title: Cookiecutter template for research
+        year: 2023-now
+        description: Cookiecutter template for a neurosciences data analysis-focused research project in Python, R, and MATLAB
+        linkitems:
+          - link: https://github.com/ValentinGuigon/cookiecutter-neuro-research-project
+            linkname: [Cookiecutter template for research]
+
+  - title: Academic Interests
+    type: nested_list
+    contents:
+      - title: Beliefs
+        items:
+          - Information transmission in social networks
+      - title: Decision-making
+        items:
+          - Neurocognitive mechanisms
+          - Social decision making
+
+  - title: Other Interests
+    type: list
+    contents:
+      - Hobbies: Bouldering, Poetry
+
+  - title: Contact
+    type: map
+    contents:
+      - name: Phone
+        value:
+      - name: Address
+        value: 20009, Washington DC, USA
+      - name: Email
+        value: vguigon@umd.edu
+      - name: Last Position
+        value: Postdoctoral researcher at ISCMJ & GATE, March 2023 – October 2023
