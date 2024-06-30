@@ -22,7 +22,7 @@ Valentin joined the faculty at the University of Maryland in March 2024 as a Pos
 
 His doctoral thesis focused on the neurocognitive mechanisms involved in the transmission of uncertain information among humans. Valentin has adopted a multidisciplinary approach to explore the multifaceted aspects of human decision-making, from its behavior to its biological foundations via its computational processes. He gradually contributed to the research on impulsive actions, reward anticipation and processing, moral decision-making, beliefs about fake news, information-seeking behaviors, beliefs about others' preferences for information and beliefs in large-scale social networks.
 
-Beside his scientific interests, Valentin likes to pile arts and activities on the balance. Ask him about photography, climbing, cinema or literature.
+Beside his scientific interests, Valentin likes to pile arts and activities on the balance. Ask him about photography, climbing, cinema or literature. Test
 
 [Contact](vguigon@umd.edu)  
 [LinkedIn](https://www.linkedin.com/in/valentin-guigon-61024a92/)  
