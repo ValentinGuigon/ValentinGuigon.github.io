@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://valentinguigon.github.io/sitemap.xml
+Sitemap: https://ValentinGuigon.github.io/sitemap.xml
