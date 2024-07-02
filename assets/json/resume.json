@@ -1,1 +1,404 @@
-{"basics":{"name":"Valentin Guigon","label":"","image":"","email":"vguigon@umd.edu","phone":"","url":"https://valentinguigon.github.io","summary":"Postdoctoral researcher in Cognitive Neurosciences, Social Learning and Decisions Lab, UMD","location":{"address":"","postalCode":"DC 20009","city":"Washington","countryCode":"US","region":"District of Columbia"},"profiles":[{"network":"LinkedIn","username":"ValentinGuigon","url":"https://www.linkedin.com/in/valentin-guigon-61024a92/"},{"network":"GitHub","username":"ValentinGuigon","url":"https://github.com/ValentinGuigon"}]},"work":[{"name":"UMD, MD, USA","position":"Postdoctoral researcher","startDate":"2024-03-01","endDate":"Ongoing","summary":"Research in neurocomputational sciences of social learning | Behavioral and imaging projects management. Tools: Matlab – VBA toolbox, SPM | R – JAGS, BRMS. Supervisor: Caroline Charpentier"},{"name":"ISCMJ & GATE, France","position":"Postdoctoral researcher","startDate":"2023-03-01","endDate":"2023-10-01","summary":"Neurocognitive mechanisms underlying transmission of uncertain information in humans & Beliefs updating in social networks | Behavioral project management. Tools: Matlab – VBA toolbox, SPM | R – JAGS, BRMS. Directors: Marie Claire Villeval & Jean-Claude Dreher"},{"name":"ISCMJ & GATE, France","position":"PhD Researcher","startDate":"2018-10-01","endDate":"2022-12-31","summary":"Neurocognitive mechanisms underlying transmission of uncertain information in humans | Behavioral and imaging projects management. Tools: Matlab – VBA toolbox, SPM | R – JAGS, BRMS. Supervisors: Marie Claire Villeval & Jean-Claude Dreher"},{"name":"ISCMJ, France","position":"Research Assistant","startDate":"2018-02-01","endDate":"2018-07-31","summary":"gPPI analysis of testosterone-induced effects on orbitofrontal-amygdala relationships during anticipation of primary and secondary rewards | fcMRI analysis & ethics protocol. Tools: Matlab – SPM, CONN. Supervisor: Jean-Claude Dreher"},{"name":"ISCMJ, France","position":"Research Internship","startDate":"2017-06-01","endDate":"2017-08-31","summary":"Functional connectivity analysis in rewarded tasks and investigating moral norms in tDCS-disrupted decision-making behaviors | fMRI analysis & ethics protocol. Tools: Matlab – SPM, CONN | R. Supervisor: Jean-Claude Dreher"},{"name":"ISCMJ, France","position":"Research Internship","startDate":"2016-12-01","endDate":"2017-05-31","summary":"Spatial proximity effects and impulsivity to action in a VR go/no-go task | Experimentation & behavioral analysis. Tools: Matlab, R. Supervisors: Jean-Claude Dreher & David O’Connor"},{"name":"Integrative and Adaptive Neurosciences Laboratory, France","position":"Research Internship","startDate":"2016-03-01","endDate":"2016-04-30","summary":"Study on vestibular cortex and modeling patient-therapist interactions. Supervisor: Christophe Lopez"},{"name":"Integrative and Adaptive Neurosciences Laboratory, France","position":"Research Internship","startDate":"2016-03-01","endDate":"2016-04-30","summary":"Modelling patient-therapist-3rd party interactions in therapies and predicting subsequent emotional states (Lotka-Volterra models). Supervisor: Laurent Pezard"},{"name":"Cognitive Psychology Laboratory, France","position":"Research Internship","startDate":"2015-06-01","endDate":"2015-07-31","summary":"Literature review on green nudges and behavioral methods applied to ecological transition. Supervisor: Olivier Oullier"},{"name":"La Poste communications management, 13, France","position":"Professional Internship","startDate":"2015-04-01","endDate":"2015-04-30","summary":"Designing behavioral methods aiming at reducing drivers' risky behaviors and promoting employees eco-responsibility. Supervisors: Yousri Marzouki & Olivier Oullier"},{"name":"Speech and Language Laboratory, France","position":"Research Internship","startDate":"2014-05-01","endDate":"2014-06-30","summary":"Investigating and analyzing ToM in healthy and schizophrenic patients. Supervisor: Maud Champagne-Lavau"}],"volunteer":[{"organization":"Cortex-magazine","location":"","position":"Member of the editorial board","url":"https://www.cortex-mag.net/","startDate":"2023-01-01","endDate":"2024-01-01","summary":"","highlights":""}],"education":[{"institution":"Neurosciences and Cognition Doctorate School, Lyon 1, France","area":"Cognitive Neurosciences","studyType":"Doctorate degree","startDate":"2018","endDate":"2022"},{"institution":"Psychology Faculty, Lyon 2, France","area":"Cognitive Sciences","studyType":"Master degree","startDate":"2016","endDate":"2018"},{"institution":"Biology Faculty, Marseille Saint Charles, France","area":"Physiology & Adaptative and Cognitive Neurosciences","studyType":"Licence degree","startDate":"2015","endDate":"2016"},{"institution":"Psychology Faculty, Aix en Provence, France","area":"Psychology","studyType":"Licence degree","startDate":"2012","endDate":"2015"}],"teaching":[{"name":"UCBL1 Neurosciences Master students, Université Claude Bernard Lyon 1, Lyon, France","position":"Mentoring","startDate":"2024-01-01","endDate":"2024-06-30","summary":"1 semester | 3 students"},{"name":"UCBL1 Neurosciences Master students, Université Claude Bernard Lyon 1, Lyon, France","position":"Mentoring","startDate":"2023-01-01","endDate":"2023-06-30","summary":"1 semester | 3 students"},{"name":"UCBL1 Neurosciences PhD students, Université Claude Bernard Lyon 1, Lyon, France","position":"SPM fMRI preprocessing and contrasting","startDate":"2023-06-01","endDate":"2023-06-01","summary":"1 day | 20 PhD students"},{"name":"Université Lumière Lyon 2, Bron, France","position":"Teaching assistant","startDate":"2020-09-01","endDate":"2020-12-31","summary":"1 semester | 40 students | Cognitive Psychology, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Introduction to: epistemology and the problems of induction, beliefs, emotions as signaling, ontogenetics and phylogenetics of brain development, multi-level approaches, intercultural processes of decision-making. Supervisor: Gaën Plancher"},{"name":"Université Lumière Lyon 2, Bron, France","position":"Teaching assistant","startDate":"2019-09-01","endDate":"2019-12-31","summary":"1 semester | 40 students | Cognitive Psychology, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Introduction to: epistemology and the problems of induction, beliefs, behavior modelling, ontogenetics of brain development, intercultural decision-making. Supervisor: Gaën Plancher"},{"name":"Université Lumière Lyon 2, Bron, France","position":"Teaching assistant","startDate":"2018-09-01","endDate":"2018-12-31","summary":"1 semester | 80 students | Cognitive Psychology, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Supervisor: Gaën Plancher"},{"name":"Université Lumière Lyon 2, Bron, France","position":"Teaching assistant","startDate":"2017-09-01","endDate":"2017-12-31","summary":"1 semester | 80 students | Introduction to cognitive psychology, Licence 1. Courses: research methodology and cognitive paradigms. Supervisor: François Osiurak"}],"awards":[{"title":"","date":"","awarder":"","url":"","summary":""}],"fellowships":[{"title":"Institutional Design and Economic Preferences: Theory and Experiments (INDEPTH) PhD fellowship","date":"2018","awarder":"IDEX","url":"","summary":""},{"title":"LabEX CORTEX fellowship","date":"2021","awarder":"LabEX CORTEX","url":"","summary":""},{"title":"LabEX CORTEX fellowship","date":"2022","awarder":"LabEX CORTEX","url":"","summary":""}],"certificates":[{"name":"","date":"","issuer":"","url":"","icon":""}],"publications":[{"name":"Metacognition during fake news detection induces an ineffective demand for disambiguating information","authors":"Jean-Claude Dreher, Valentin Guigon, Marie Claire Villeval","publisher":"preprint","releaseDate":"2024"},{"name":"Dynamic valuation bias explains social influence on cheating behavior","authors":"Julien Benistant, Valentin Guigon, Alain Nicolas, and 2 more authors","publisher":"preprint","releaseDate":"2024"},{"name":"Perturbation of right dorsolateral prefrontal cortex makes power holders less resistant to tempting bribes","authors":"Yang Hu, Rémi Philippe, Valentin Guigon, and 5 more authors","publisher":"Psychological Science","releaseDate":"2022"},{"name":"Rewards that are near increase impulsive action","authors":"David A O’Connor, Remi Janet, Valentin Guigon, and 6 more authors","publisher":"Iscience","releaseDate":"2021"}],"dissemination":[{"name":"Notre société est-elle de plus en plus polarisée ?","publisher":"Cortex-mag.net","releaseDate":"2023-11-30","url":"https://www.cortex-mag.net/notre-societe-est-elle-de-plus-en-plus-polarisee/","summary":"Analysis on the increasing polarization of society."},{"name":"L’invité de la semaine – Valentin Guigon, fake news et théories du complot","publisher":"Pharefm.com","releaseDate":"2021-09-10","url":"https://pharefm.com/2021/09/10/linvite-de-la-semaine-valentin-guigon-fake-news-complot/","summary":"Interview with Valentin Guigon on fake news and conspiracy theories."},{"name":"À Lyon : les victimes de fake news « fonctionnent comme tout le monde »","publisher":"Rue89lyon.fr","releaseDate":"2021-08-16","url":"https://www.rue89lyon.fr/2021/08/16/lyon-victimes-fake-news/","summary":"Investigative report on the impact of fake news on individuals in Lyon."},{"name":"Comment ne pas se faire avoir par les fake news ?","publisher":"Alveole.media/cognitif","releaseDate":"2021","url":"https://smartlink.ausha.co/cognitif/episode-bonus-comment-ne-pas-se-faire-avoir-par-les-fake-news","summary":"Guide on avoiding falling for fake news."},{"name":"Pourquoi les théories du complot plaisent à notre cerveau","publisher":"Cortex-mag.net","releaseDate":"2020-09-17","url":"https://www.cortex-mag.net/pourquoi-les-theories-du-complot-plaisent-a-notre-cerveau/","summary":"Article discussing why conspiracy theories appeal to our brains."}],"skills":[{"name":"Project management","level":"","icon":"","keywords":[""]},{"name":"Data Analysis","level":"","icon":"","keywords":[""]},{"name":"Computational modeling","level":"","icon":"","keywords":[""]},{"name":"Experimental design","level":"","icon":"","keywords":[""]}],"languages":[{"language":"French","fluency":"Native speaker","icon":""},{"language":"English","fluency":"Fluent","icon":""}],"interests":[{"name":"Decision-making","icon":"","keywords":["Beliefs","Emotions","Information","Social learning","Valuation","Modeling complex behaviors","Social networks","Social sciences","Public policies","Epistemology"]},{"name":"Other interests","icon":"","keywords":["Bouldering","Photography","Poetry","Piano","Cinema","Literature"]}],"references":[{"name":"","icon":"","reference":""},{"name":"","icon":"","reference":""}],"projects":[{"name":"Cookiecutter template for research projects","startDate":"2023","endDate":"now","summary":"Cookiecutter template for a neurosciences data analysis-focused research project in Python, R, and MATLAB.","url":"https://github.com/ValentinGuigon/cookiecutter-neuro-research-project","highlights":[]}]}
+{
+  "basics": {
+    "name": "Valentin Guigon",
+    "label": "",
+    "image": "",
+    "email": "vguigon@umd.edu",
+    "phone": "",
+    "url": "https://valentinguigon.github.io",
+    "summary": "Postdoctoral researcher in Cognitive Neurosciences, Social Learning and Decisions Lab, UMD",
+    "location": {
+      "address": "",
+      "postalCode": "DC 20009",
+      "city": "Washington",
+      "countryCode": "US",
+      "region": "District of Columbia"
+    },
+
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ValentinGuigon",
+        "url": "https://www.linkedin.com/in/valentin-guigon-61024a92/"
+      },
+      {
+        "network": "GitHub",
+        "username": "ValentinGuigon",
+        "url": "https://github.com/ValentinGuigon"
+      }
+    ]
+  },
+
+  "work": [
+    {
+      "name": "UMD, MD, USA",
+      "position": "Postdoctoral researcher",
+      "startDate": "2024-03-01",
+      "endDate": "Ongoing",
+      "summary": "Research in neurocomputational sciences of social learning | Behavioral and imaging projects management. Tools: Matlab – VBA toolbox, SPM | R – JAGS, BRMS. Supervisor: Caroline Charpentier"
+    },
+    {
+      "name": "ISCMJ & GATE, France",
+      "position": "Postdoctoral researcher",
+      "startDate": "2023-03-01",
+      "endDate": "2023-10-01",
+      "summary": "Neurocognitive mechanisms underlying transmission of uncertain information in humans & Beliefs updating in social networks | Behavioral project management. Tools: Matlab – VBA toolbox, SPM | R – JAGS, BRMS. Directors: Marie Claire Villeval & Jean-Claude Dreher"
+    },
+    {
+      "name": "ISCMJ & GATE, France",
+      "position": "PhD Researcher",
+      "startDate": "2018-10-01",
+      "endDate": "2022-12-31",
+      "summary": "Neurocognitive mechanisms underlying transmission of uncertain information in humans | Behavioral and imaging projects management. Tools: Matlab – VBA toolbox, SPM | R – JAGS, BRMS. Supervisors: Marie Claire Villeval & Jean-Claude Dreher"
+    },
+    {
+      "name": "ISCMJ, France",
+      "position": "Research Assistant",
+      "startDate": "2018-02-01",
+      "endDate": "2018-07-31",
+      "summary": "gPPI analysis of testosterone-induced effects on orbitofrontal-amygdala relationships during anticipation of primary and secondary rewards | fcMRI analysis & ethics protocol. Tools: Matlab – SPM, CONN. Supervisor: Jean-Claude Dreher"
+    },
+    {
+      "name": "ISCMJ, France",
+      "position": "Research Internship",
+      "startDate": "2017-06-01",
+      "endDate": "2017-08-31",
+      "summary": "Functional connectivity analysis in rewarded tasks and investigating moral norms in tDCS-disrupted decision-making behaviors | fMRI analysis & ethics protocol. Tools: Matlab – SPM, CONN | R. Supervisor: Jean-Claude Dreher"
+    },
+    {
+      "name": "ISCMJ, France",
+      "position": "Research Internship",
+      "startDate": "2016-12-01",
+      "endDate": "2017-05-31",
+      "summary": "Spatial proximity effects and impulsivity to action in a VR go/no-go task | Experimentation & behavioral analysis. Tools: Matlab, R. Supervisors: Jean-Claude Dreher & David O’Connor"
+    },
+    {
+      "name": "Integrative and Adaptive Neurosciences Laboratory, France",
+      "position": "Research Internship",
+      "startDate": "2016-03-01",
+      "endDate": "2016-04-30",
+      "summary": "Study on vestibular cortex and modeling patient-therapist interactions. Supervisor: Christophe Lopez"
+    },
+    {
+      "name": "Integrative and Adaptive Neurosciences Laboratory, France",
+      "position": "Research Internship",
+      "startDate": "2016-03-01",
+      "endDate": "2016-04-30",
+      "summary": "Modelling patient-therapist-3rd party interactions in therapies and predicting subsequent emotional states (Lotka-Volterra models). Supervisor: Laurent Pezard"
+    },
+    {
+      "name": "Cognitive Psychology Laboratory, France",
+      "position": "Research Internship",
+      "startDate": "2015-06-01",
+      "endDate": "2015-07-31",
+      "summary": "Literature review on green nudges and behavioral methods applied to ecological transition. Supervisor: Olivier Oullier"
+    },
+    {
+      "name": "La Poste communications management, 13, France",
+      "position": "Professional Internship",
+      "startDate": "2015-04-01",
+      "endDate": "2015-04-30",
+      "summary": "Designing behavioral methods aiming at reducing drivers' risky behaviors and promoting employees eco-responsibility. Supervisors: Yousri Marzouki & Olivier Oullier"
+    },
+    {
+      "name": "Speech and Language Laboratory, France",
+      "position": "Research Internship",
+      "startDate": "2014-05-01",
+      "endDate": "2014-06-30",
+      "summary": "Investigating and analyzing ToM in healthy and schizophrenic patients. Supervisor: Maud Champagne-Lavau"
+    }
+  ],
+
+  "volunteer": [
+    {
+      "organization": "Cortex-magazine",
+      "location": "",
+      "position": "Member of the editorial board",
+      "url": "https://www.cortex-mag.net/",
+      "startDate": "2023-01-01",
+      "endDate": "2024-01-01",
+      "summary": "",
+      "highlights": ""
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Neurosciences and Cognition Doctorate School, Lyon 1, France",
+      "area": "Cognitive Neurosciences",
+      "studyType": "Doctorate degree",
+      "startDate": "2018",
+      "endDate": "2022"
+    },
+    {
+      "institution": "Psychology Faculty, Lyon 2, France",
+      "area": "Cognitive Sciences",
+      "studyType": "Master degree",
+      "startDate": "2016",
+      "endDate": "2018"
+    },
+    {
+      "institution": "Biology Faculty, Marseille Saint Charles, France",
+      "area": "Physiology & Adaptative and Cognitive Neurosciences",
+      "studyType": "Licence degree",
+      "startDate": "2015",
+      "endDate": "2016"
+    },
+    {
+      "institution": "Psychology Faculty, Aix en Provence, France",
+      "area": "Psychology",
+      "studyType": "Licence degree",
+      "startDate": "2012",
+      "endDate": "2015"
+    }
+  ],
+
+  "teaching": [
+    {
+      "name": "UCBL1 Neurosciences Master students, Université Claude Bernard Lyon 1, Lyon, France",
+      "position": "Mentoring",
+      "startDate": "2024-01-01",
+      "endDate": "2024-06-30",
+      "summary": "1 semester | 3 students"
+    },
+    {
+      "name": "UCBL1 Neurosciences Master students, Université Claude Bernard Lyon 1, Lyon, France",
+      "position": "Mentoring",
+      "startDate": "2023-01-01",
+      "endDate": "2023-06-30",
+      "summary": "1 semester | 3 students"
+    },
+    {
+      "name": "UCBL1 Neurosciences PhD students, Université Claude Bernard Lyon 1, Lyon, France",
+      "position": "SPM fMRI preprocessing and contrasting",
+      "startDate": "2023-06-01",
+      "endDate": "2023-06-01",
+      "summary": "1 day | 20 PhD students"
+    },
+    {
+      "name": "Université Lumière Lyon 2, Bron, France",
+      "position": "Teaching assistant",
+      "startDate": "2020-09-01",
+      "endDate": "2020-12-31",
+      "summary": "1 semester | 40 students | Cognitive Psychology, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Introduction to: epistemology and the problems of induction, beliefs, emotions as signaling, ontogenetics and phylogenetics of brain development, multi-level approaches, intercultural processes of decision-making. Supervisor: Gaën Plancher"
+    },
+    {
+      "name": "Université Lumière Lyon 2, Bron, France",
+      "position": "Teaching assistant",
+      "startDate": "2019-09-01",
+      "endDate": "2019-12-31",
+      "summary": "1 semester | 40 students | Cognitive Psychology, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Introduction to: epistemology and the problems of induction, beliefs, behavior modelling, ontogenetics of brain development, intercultural decision-making. Supervisor: Gaën Plancher"
+    },
+    {
+      "name": "Université Lumière Lyon 2, Bron, France",
+      "position": "Teaching assistant",
+      "startDate": "2018-09-01",
+      "endDate": "2018-12-31",
+      "summary": "1 semester | 80 students | Cognitive Psychology, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Supervisor: Gaën Plancher"
+    },
+    {
+      "name": "Université Lumière Lyon 2, Bron, France",
+      "position": "Teaching assistant",
+      "startDate": "2017-09-01",
+      "endDate": "2017-12-31",
+      "summary": "1 semester | 80 students | Introduction to cognitive psychology, Licence 1. Courses: research methodology and cognitive paradigms. Supervisor: François Osiurak"
+    }
+  ],
+
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "url": "",
+      "summary": ""
+    }
+  ],
+
+  "fellowships": [
+    {
+      "title": "Institutional Design and Economic Preferences: Theory and Experiments (INDEPTH) PhD fellowship",
+      "date": "2018",
+      "awarder": "IDEX",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "LabEX CORTEX fellowship",
+      "date": "2021",
+      "awarder": "LabEX CORTEX",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "LabEX CORTEX fellowship",
+      "date": "2022",
+      "awarder": "LabEX CORTEX",
+      "url": "",
+      "summary": ""
+    }
+  ],
+
+  "certificates": [
+    {
+      "name": "",
+      "date": "",
+      "issuer": "",
+      "url": "",
+      "icon": ""
+    }
+  ],
+
+  "publications": [
+    {
+      "name": "Metacognition during fake news detection induces an ineffective demand for disambiguating information",
+      "authors": "Jean-Claude Dreher, Valentin Guigon, Marie Claire Villeval",
+      "publisher": "preprint",
+      "releaseDate": "2024"
+    },
+    {
+      "name": "Dynamic valuation bias explains social influence on cheating behavior",
+      "authors": "Julien Benistant, Valentin Guigon, Alain Nicolas, and 2 more authors",
+      "publisher": "preprint",
+      "releaseDate": "2024"
+    },
+    {
+      "name": "Perturbation of right dorsolateral prefrontal cortex makes power holders less resistant to tempting bribes",
+      "authors": "Yang Hu, Rémi Philippe, Valentin Guigon, and 5 more authors",
+      "publisher": "Psychological Science",
+      "releaseDate": "2022"
+    },
+    {
+      "name": "Rewards that are near increase impulsive action",
+      "authors": "David A O’Connor, Remi Janet, Valentin Guigon, and 6 more authors",
+      "publisher": "Iscience",
+      "releaseDate": "2021"
+    }
+  ],
+
+  "dissemination": [
+    {
+      "name": "Notre société est-elle de plus en plus polarisée ?",
+      "publisher": "Cortex-mag.net",
+      "releaseDate": "2023-11-30",
+      "url": "https://www.cortex-mag.net/notre-societe-est-elle-de-plus-en-plus-polarisee/",
+      "summary": "Analysis on the increasing polarization of society."
+    },
+    {
+      "name": "L’invité de la semaine – Valentin Guigon, fake news et théories du complot",
+      "publisher": "Pharefm.com",
+      "releaseDate": "2021-09-10",
+      "url": "https://pharefm.com/2021/09/10/linvite-de-la-semaine-valentin-guigon-fake-news-complot/",
+      "summary": "Interview with Valentin Guigon on fake news and conspiracy theories."
+    },
+    {
+      "name": "À Lyon : les victimes de fake news « fonctionnent comme tout le monde »",
+      "publisher": "Rue89lyon.fr",
+      "releaseDate": "2021-08-16",
+      "url": "https://www.rue89lyon.fr/2021/08/16/lyon-victimes-fake-news/",
+      "summary": "Investigative report on the impact of fake news on individuals in Lyon."
+    },
+    {
+      "name": "Comment ne pas se faire avoir par les fake news ?",
+      "publisher": "Alveole.media/cognitif",
+      "releaseDate": "2021",
+      "url": "https://smartlink.ausha.co/cognitif/episode-bonus-comment-ne-pas-se-faire-avoir-par-les-fake-news",
+      "summary": "Guide on avoiding falling for fake news."
+    },
+    {
+      "name": "Pourquoi les théories du complot plaisent à notre cerveau",
+      "publisher": "Cortex-mag.net",
+      "releaseDate": "2020-09-17",
+      "url": "https://www.cortex-mag.net/pourquoi-les-theories-du-complot-plaisent-a-notre-cerveau/",
+      "summary": "Article discussing why conspiracy theories appeal to our brains."
+    }
+  ],
+
+  "skills": [
+    {
+      "name": "Project management",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    },
+    {
+      "name": "Data Analysis",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    },
+    {
+      "name": "Computational modeling",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    },
+    {
+      "name": "Experimental design",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native speaker",
+      "icon": ""
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
+    }
+  ],
+
+  "interests": [
+    {
+      "name": "Decision-making",
+      "icon": "",
+      "keywords": [
+        "Beliefs",
+        "Emotions",
+        "Information",
+        "Social learning",
+        "Valuation",
+        "Modeling complex behaviors",
+        "Social networks",
+        "Social sciences",
+        "Public policies",
+        "Epistemology"
+      ]
+    },
+    {
+      "name": "Other interests",
+      "icon": "",
+      "keywords": ["Bouldering", "Photography", "Poetry", "Piano", "Cinema", "Literature"]
+    }
+  ],
+
+  "references": [
+    {
+      "name": "",
+      "icon": "",
+      "reference": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "reference": ""
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "Cookiecutter template for research projects",
+      "startDate": "2023",
+      "endDate": "now",
+      "summary": "Cookiecutter template for a neurosciences data analysis-focused research project in Python, R, and MATLAB.",
+      "url": "https://github.com/ValentinGuigon/cookiecutter-neuro-research-project",
+      "highlights": []
+    }
+  ]
+}
