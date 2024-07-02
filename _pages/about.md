@@ -13,14 +13,15 @@ profile:
     <p>University of Maryland</p>
     <p>College Park, Maryland, USA</p>
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
 ##### Current position
 
 I joined Caroline Charpentier Social Learning and Decisions Lab, at the University of Maryland, as a Postdoctoral Researcher in March 2024. My current research project combines behavioral tasks in a social learning battery, computational modeling and functional imagery of brain processes.
+
 
 ##### About me
 
