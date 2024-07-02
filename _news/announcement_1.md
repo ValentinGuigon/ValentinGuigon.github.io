@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The website is officially built.
+The website is officially on.
