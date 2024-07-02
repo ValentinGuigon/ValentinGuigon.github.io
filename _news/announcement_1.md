@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-06-30 02:32:00-0400
+date: 2024-07-01 23:57:00
 inline: true
 related_posts: false
 ---
 
-The website is officially on.
+The website is now live.
