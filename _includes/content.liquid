@@ -1,0 +1,173 @@
+<!-- Parse internal links, external links, transclusions etc and manipulate the content to reflect it accordingly -->
+<div class="content">
+  {%- if site.preferences.wiki_style_link.enabled -%}
+    {%- assign content_array = content | split: '[[' -%}
+    {%- assign external_link_delimiter = '::' -%}
+
+    {%- assign link_joiner_delimiter = '$@' -%}
+    {%- for item in content_array -%}
+      {%- if forloop.index > 1 -%}
+        {%- assign itemparts = item | split: ']]' -%}
+        {%- assign internal_link = itemparts[0] -%}
+        {%- assign external_link = itemparts[0] | split: external_link_delimiter -%}
+        {%- assign sidenote = itemparts[0] | split: sidenote_delimiter -%}
+
+        {%- if external_link[1] == null -%}
+          {%- assign result_posts = site.posts | where: 'title', itemparts[0] -%}
+          {%- assign result_posts = site.notes | where: 'title', itemparts[0] -%}
+          {%- assign result_pages = site.pages | where: 'title', itemparts[0] -%}
+          {%- assign internal_links = internal_links | append: link_joiner_delimiter | append: internal_link -%}
+          {%- assign internal_urls = internal_urls | append: link_joiner_delimiter | append: result_posts[0].url | append: result_pages[0].url -%}
+        {%- else -%}
+          {%- assign external_links = external_links | append: link_joiner_delimiter | append: external_link[0] -%}
+          {%- assign external_urls = external_urls | append: link_joiner_delimiter | append: external_link[1] -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- assign internal_url_array = internal_urls | split: link_joiner_delimiter -%}
+    {%- assign internal_link_array = internal_links | split: link_joiner_delimiter -%}
+
+    {%- assign external_url_array = external_urls | split: link_joiner_delimiter -%}
+    {%- assign external_link_array = external_links | split: link_joiner_delimiter -%}
+
+    {%- assign replaced_content = content -%}
+    {%- for title in internal_link_array -%}
+      {%- assign url = internal_url_array[forloop.index0] -%}
+      {%- if url == null -%}
+        {%- assign link_text = '<span class="tooltip"><a class="stale-link" href="' | append: 'javascript:void(0)' | append: '">' | append: title | append: '</a> <span class="right bottom"> <span class="tooltip-title">' | append: {{site.privatelinks.title}} | append: '</span><br/><span class="tooltip-excerpt">' | append: {{site.privatelinks.msg}} | append : ' <br/></span> </span></span>' -%}
+      {%- elsif url == empty -%}
+        {%- assign link_text = '<span class="tooltip"><a class="stale-link" href="' | append: 'javascript:void(0)' | append: '">' | append: title | append: '</a> <span class="right bottom"> <span class="tooltip-title">' | append: {{site.privatelinks.title}} | append: '</span><br/><span class="tooltip-excerpt">' | append: {{site.privatelinks.msg}} | append : ' <br/></span> </span></span>' -%}
+      {%- else -%}
+        {%- assign post = site.notes | where: 'title', title -%}
+        {%- if post[0].title == null -%}
+          {%- assign post = site.posts | where: 'title', title -%}
+        {%- endif -%}
+        {%- assign excerpt = post[0].content | markdownify | strip_html | truncate: 200 | newline_to_br -%}
+        {%- if site.preferences.pagepreview.enabled -%}
+          {%- assign link_text = '<span class="tooltip"><a href="' | append: {{site.baseurl}} | append: url | append: '">' | append: title | append: '</a><span class="right bottom"><span class="tooltip-title">' | append: title | append: '</span><br/><span class="tooltip-excerpt">' | append: excerpt | remove: "[[" | remove: "]]" | append: '</span><i></i></span></span>' -%}
+        {%- else -%}
+          {%- assign link_text = '<span><a href="' | append: url | append: '">' | append: title | append: '</a></span>' -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- assign bracket_link = '[[' | append: title | append: ']]' -%}
+      {%- assign replaced_content = replaced_content | replace: bracket_link, link_text -%}
+    {%- endfor -%}
+
+    {%- assign sideNoteCounter = 0 -%}
+    {%- assign srsCounter = 0 -%}
+    {%- for title in external_link_array -%}
+      {%- assign url = external_url_array[forloop.index0] -%}
+      {%- if url == 'highlight' -%}
+        {%- if site.preferences.highlighting.enabled -%}
+          {%- assign color = '#DAEDFF' -%}
+          {%- if site.preferences.highlighting.color != null
+            and site.preferences.highlighting.color != empty
+            and site.preferences.highlighting.color != null
+          -%}
+            {%- assign color = '#' | append: site.preferences.highlighting.color -%}
+          {%- endif -%}
+          {%- assign link_text = '<span style="font-family: inherit; font-weight: inherit; font-style: inherit; font-size: inherit; background-color:'
+            | append: color
+            | append: ';">'
+            | append: title
+            | append: '</span>'
+          -%}
+        {%- endif -%}
+      {%- elsif url == 'wrap' -%}
+        {%- if site.preferences.wrapping.enabled -%}
+          {%- assign link_text = '<p class="boxit">' | append: title | append: '</p>' -%}
+        {%- endif -%}
+      {%- elsif url == 'img' -%}
+        {%- if site.preferences.wrapping.enabled -%}
+          {%- assign link_text = '<img src="' | append: title | append: '"/>' -%}
+        {%- endif -%}
+      {%- elsif url == 'lsn'
+        or url == 'rsn'
+        or url == 'lsn-transclude'
+        or url == 'rsn-transclude'
+        or url == 'lmn'
+        or url == 'rmn'
+        or url == 'lmn-transclude'
+        or url == 'rmn-transclude'
+      -%}
+        {%- assign toggleLabel = '' -%}
+        {%- assign sideNoteNum = '' -%}
+        {%- if url contains 'lsn' -%}
+          {%- assign noteType = 'sn-left' -%}
+          {%- assign sideNoteNum = 'sidenote-number' -%}
+        {%- elsif url contains 'rsn' -%}
+          {%- assign noteType = 'sn-right' -%}
+          {%- assign sideNoteNum = 'sidenote-number' -%}
+        {%- elsif url contains 'lmn' -%}
+          {%- assign noteType = 'mn-left' -%}
+          {%- assign toggleLabel = '&#8853;' -%}
+        {%- elsif url contains 'rmn' -%}
+          {%- assign noteType = 'mn-right' -%}
+          {%- assign toggleLabel = '&#8853;' -%}
+        {%- endif -%}
+
+        {%- if url contains 'transclude' -%}
+          {%- if site.preferences.sidenotes.enabled -%}
+            {%- assign post = site.posts | where: 'title', title -%}
+            {%- assign excerpt = post[0].content | strip_html | truncate: 280 -%}
+            {%- assign link_text = '<label for="'
+              | append: url
+              | append: '-'
+              | append: sideNoteCounter
+              | append: '" class="margin-toggle '
+              | append: sideNoteNum
+              | append: ' ">'
+              | append: toggleLabel
+              | append: '</label><input type="checkbox" id="'
+              | append: url
+              | append: '-'
+              | append: sideNoteCounter
+              | append: '" class="margin-toggle"/><span class="'
+              | append: noteType
+              | append: '"><a href="'
+              | append: post[0].url
+              | append: '"> <span style="background-color: #ffffc4; color: #555;">Transclusion</span><br/><b>'
+              | append: title
+              | append: '</b><br/>'
+              | append: excerpt
+              | append: '</a></span>'
+            -%}
+          {%- endif -%}
+        {%- else -%}
+          {%- if site.preferences.sidenotes.enabled -%}
+            {%- assign link_text = '<label for="'
+              | append: url
+              | append: '-'
+              | append: sideNoteCounter
+              | append: '" class="margin-toggle '
+              | append: sideNoteNum
+              | append: ' ">'
+              | append: toggleLabel
+              | append: '</label><input type="checkbox" id="'
+              | append: url
+              | append: '-'
+              | append: sideNoteCounter
+              | append: '" class="margin-toggle"/><span class="'
+              | append: noteType
+              | append: '"><a href="'
+              | append: title
+              | append: '" target="_blank"> <span style="background-color: #ffffc4; color: #555;">External link</span><br/><b>'
+              | append: title
+              | append: '</b></a></span>'
+            -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- assign replaced_content = replaced_content | replace: '[[' | append: title | append: ']]', link_text -%}
+        {%- assign sideNoteCounter = sideNoteCounter | plus: 1 -%}
+      {%- else -%}
+        {%- assign link_text = '<a target="_blank" href="' | append: url | append: '">' | append: title | append: '</a>' -%}
+        {%- assign replaced_content = replaced_content | replace: '[[' | append: title | append: ']]', link_text -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {{ replaced_content | markdownify }}
+  {%- else -%}
+    {{ content | markdownify }}
+  {%- endif -%}
+</div>

@@ -37,25 +37,20 @@ layout: default
           {% else %}
             <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
           {% endif %}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
+          {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
       {% endif %}
-
       {% if categories != '' %}
         &nbsp; &middot; &nbsp;
         {% for category in page.categories %}
           {% if url_beginning == '/blog/' %}
             <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category -}}
+              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
             </a>
           {% else %}
             <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
           {% endif %}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
+          {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
       {% endif %}
     </p>
@@ -96,4 +91,17 @@ layout: default
   {% if site.giscus and page.giscus_comments %}
     {% include giscus.liquid %}
   {% endif %}
+
+  {%- if page.backlinks -%}
+    <section class="backlinks">
+      <h2>Backlinks</h2>
+      <ul>
+        {%- for backlink in page.backlinks -%}
+          <li>
+            <a href="{{ backlink.url }}">{{ backlink.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+  {%- endif -%}
 </div>
