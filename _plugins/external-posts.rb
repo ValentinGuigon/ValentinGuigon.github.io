@@ -77,6 +77,7 @@ module ExternalPosts
       doc.data['description'] = content[:summary]
       doc.data['date'] = content[:published]
       doc.data['redirect'] = url
+      doc.data['categories'] = ['notes']
       site.collections['posts'].docs << doc
     end
 

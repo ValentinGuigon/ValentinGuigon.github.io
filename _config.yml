@@ -131,7 +131,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 blog_name: /Posts # blog_name will be displayed in your blog page
 blog_description: Documents collected from my non-academic corpus. Polished articles are published on external platforms, non-definitive notes are published locally. Creation dates, update dates and epistemic statuses are provided whenever possible for greater transparency.
-permalink: /articles/:year-:month-day-:title/
+permalink: /posts/:year-:month-day-:title/
 tag_permalink_style: pretty
 lsi: false # produce an index for related posts
 
@@ -194,6 +194,9 @@ collections:
   projects:
     output: false
     permalink: /projects/:path/
+  posts:
+    output: true
+    permalink: /posts/:year-:month-:day-:title/
   articles:
     output: true
     permalink: /articles/:year-:month-:day-:title/
@@ -277,7 +280,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: /articles/:year-:month-:day-:title/
+      permalink: /posts/:year-:month-:day-:title/
 
 sass:
   style: compressed
