@@ -194,9 +194,6 @@ collections:
   projects:
     output: false
     permalink: /projects/:path/
-  posts:
-    output: true
-    permalink: /posts/:year-:month-:day-:title/
   articles:
     output: true
     permalink: /articles/:year-:month-:day-:title/
