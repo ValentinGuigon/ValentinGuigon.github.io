@@ -509,12 +509,17 @@ footer.sticky-bottom {
     color: var(--global-theme-color);
     font-size: 5rem;
   }
+
+  h2 {
+    font-size: 1rem;
+  }
 }
 
 .tag-category-list {
   border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
   padding-top: 1rem;
+  font-size: 1.25rem;
 
   ul {
     justify-content: center;
@@ -530,10 +535,14 @@ footer.sticky-bottom {
   }
 }
 
+// Post titles on the /posts page
 .post-title {
-  mjx-container[jax="CHTML"][display="true"] {
-    display: unset;
-  }
+  font-size: 1.25rem;
+}
+
+// Post titles on individual post pages
+.post-page .post-title {
+  font-size: 2rem;
 }
 
 .post-list {

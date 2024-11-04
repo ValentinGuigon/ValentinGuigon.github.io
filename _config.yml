@@ -83,9 +83,9 @@ kaggle_id: # your kaggle id
 keybase_username: # your keybase user name
 lastfm_id: # your lastfm id
 lattes_id: # your ID on Lattes (Brazilian Lattes CV)
-linkedin_username: valentin-guigon-61024a92
+linkedin_username: valentin-guigon-phd-61024a92
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-medium_username: # your Medium username
+medium_username: valentin.guigon # your Medium username
 orcid_id: 0000-0003-0597-8094# your ORCID ID
 osf_id: 9cq3r # your OSF ID
 pinterest_id: # your pinterest id
@@ -129,9 +129,10 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Posts # blog_name will be displayed in your blog page
-blog_description: # a simple whitespace theme for academics
-permalink: /blog/:year/:title/
+blog_name: /Posts # blog_name will be displayed in your blog page
+blog_description: Documents collected from my non-academic corpus. Polished articles are published on external platforms, non-definitive notes are published locally. Creation dates, update dates and epistemic statuses are provided whenever possible for greater transparency.
+permalink: /articles/:year-:month-day-:title/
+tag_permalink_style: pretty
 lsi: false # produce an index for related posts
 
 # Pagination
@@ -139,8 +140,8 @@ pagination:
   enabled: true
 
 related_blog_posts:
-  enabled: false
-  max_related: 5
+  enabled: true
+  max_related: 10
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
@@ -164,9 +165,9 @@ disqus_shortname: # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@valentin.guigon/feed
+# external_sources:
+#   - name: medium.com
+#    rss_url: https://medium.com/@valentin.guigon/feed
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -187,9 +188,15 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
+  posts:
+    output: true
+    permalink: /posts/:title/
   projects:
     output: false
     permalink: /projects/:path/
+  articles:
+    output: true
+    permalink: /articles/:year-:month-:day-:title/
 
 announcements:
   enabled: false
@@ -266,9 +273,11 @@ plugins:
 # Sitemap settings
 defaults:
   - scope:
-      path: "assets"
+      path: ""
+      type: "posts"
     values:
-      sitemap: false
+      layout: "post"
+      permalink: /articles/:year-:month-:day-:title/
 
 sass:
   style: compressed
@@ -287,18 +296,18 @@ jekyll-minifier:
 # -----------------------------------------------------------------------------
 
 jekyll-archives:
-  enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+  enabled: [year, tags, categories]
   layouts:
     year: archive-year
     tag: archive-tag
     category: archive-category
   permalinks:
-    year: "/blog/:year/"
-    tag: "/blog/tag/:name/"
-    category: "/blog/category/:name/"
+    year: "/posts/:year/"
+    tag: "/posts/tag/:name/"
+    category: "/posts/category/:name/"
 
-display_tags: [""] # these tags will be displayed on the front page of your blog
-display_categories: [""] # these categories will be displayed on the front page of your blog
+# display_tags: [""] # these tags will be displayed on the front page of your blog
+# display_categories: [""] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

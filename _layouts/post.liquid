@@ -21,35 +21,38 @@ layout: default
       Created in {{ page.date | date: '%B %d, %Y' }}
       {% if page.author %}by {{ page.author }}{% endif %}
       {% if page.last_updated %}, last updated in {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
+      {% if page.starting_date %}, Starting date: {{ page.starting_date | date: '%B %d, %Y' }}{% endif %}
+      {% if page.update_date %}, Updated on: {{ page.update_date | date: '%B %d, %Y' }}{% endif %}
+      {% if page.status %}, Status: {{ page.status }}{% endif %}
+      {% if page.confidence %}, Confidence: {{ page.confidence }}{% endif %}
+      {% if page.effort %}, Effort: {{ page.effort }}{% endif %}
       {% if page.meta %}• {{ page.meta }}{% endif %}
     </p>
+
     <p class="post-tags">
-      {% if url_beginning == '/blog/' %}
-        <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
+      {% if url_beginning == '/posts/' %}
+        {% assign year_url = year | prepend: '/posts/' | prepend: site.baseurl %}
+        {% unless year_url contains '-2024-07-02-' %}
+          <a href="{{ year_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
+        {% endunless %}
       {% else %}
         <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
       {% endif %}
+
       {% if tags != '' %}
         &nbsp; &middot; &nbsp;
         {% for tag in page.tags %}
-          {% if url_beginning == '/blog/' %}
-            <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
-          {% else %}
-            <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
-          {% endif %}
+          {% assign tag_url = tag | slugify | prepend: '/posts/tag/' | prepend: site.baseurl %}
+          <a href="{{ tag_url }}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
           {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
       {% endif %}
+
       {% if categories != '' %}
         &nbsp; &middot; &nbsp;
         {% for category in page.categories %}
-          {% if url_beginning == '/blog/' %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
-            </a>
-          {% else %}
-            <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
-          {% endif %}
+          {% assign category_url = category | slugify | prepend: '/posts/category/' | prepend: site.baseurl %}
+          <a href="{{ category_url }}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category }} </a>
           {% unless forloop.last %}&nbsp;{% endunless %}
         {% endfor %}
       {% endif %}
@@ -63,9 +66,20 @@ layout: default
       </div>
       <hr>
     {% endif %}
-    <div id="markdown-content">
-      {{ content }}
-    </div>
+
+    {% if page.external_source == 'medium' %}
+      <div class="medium-post-notice" style="padding: 15px; margin-bottom: 20px; background-color: #f9f9f9; border-left: 4px solid #007bff;">
+        <p style="font-size: 1.2em; font-weight: bold; margin: 0;">This post was originally published on Medium.</p>
+        <a href="{{ page.external_url }}" target="_blank" style="color: #007bff; text-decoration: underline;">Read the full article on Medium</a>
+      </div>
+      <div id="medium-excerpt">
+        {{ content | truncatewords: 100 }}
+      </div>
+    {% else %}
+      <div id="markdown-content">
+        {{ content | markdownify }}
+      </div>
+    {% endif %}
   </article>
 
   {% if page.citation %}
@@ -91,17 +105,4 @@ layout: default
   {% if site.giscus and page.giscus_comments %}
     {% include giscus.liquid %}
   {% endif %}
-
-  {%- if page.backlinks -%}
-    <section class="backlinks">
-      <h2>Backlinks</h2>
-      <ul>
-        {%- for backlink in page.backlinks -%}
-          <li>
-            <a href="{{ backlink.url }}">{{ backlink.title }}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </section>
-  {%- endif -%}
 </div>

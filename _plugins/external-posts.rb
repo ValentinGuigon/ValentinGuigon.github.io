@@ -3,6 +3,8 @@ require 'httparty'
 require 'jekyll'
 require 'nokogiri'
 require 'time'
+require 'digest'
+require 'set'
 
 module ExternalPosts
   class ExternalPostsGenerator < Jekyll::Generator
@@ -10,7 +12,9 @@ module ExternalPosts
     priority :high
 
     def generate(site)
-      if site.config['external_sources'] != nil
+      @existing_slugs = Set.new
+
+      if site.config['external_sources']
         site.config['external_sources'].each do |src|
           puts "Fetching external posts from #{src['name']}:"
           if src['rss_url']
@@ -20,6 +24,11 @@ module ExternalPosts
           end
         end
       end
+
+      if site.config['medium_username']
+        puts "Fetching Medium posts for #{site.config['medium_username']}:"
+        fetch_medium_posts(site)
+      end
     end
 
     def fetch_from_rss(site, src)
@@ -27,6 +36,14 @@ module ExternalPosts
       return if xml.nil?
       feed = Feedjira.parse(xml)
       process_entries(site, src, feed.entries)
+    end
+
+    def fetch_medium_posts(site)
+      feed_url = "https://medium.com/feed/@#{site.config['medium_username']}"
+      xml = HTTParty.get(feed_url).body
+      return if xml.nil?
+      feed = Feedjira.parse(xml)
+      process_medium_entries(site, feed.entries)
     end
 
     def process_entries(site, src, entries)
@@ -41,9 +58,16 @@ module ExternalPosts
       end
     end
 
+    def process_medium_entries(site, entries)
+      entries.each do |entry|
+        puts "...fetching Medium post: #{entry.url}"
+        create_medium_document(site, entry)
+      end
+    end
+
     def create_document(site, source_name, url, content)
       slug = content[:title].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-      path = site.in_source_dir("_posts/#{slug}.md")
+      path = site.in_source_dir("_posts/#{content[:published].strftime('%Y-%m-%d')}-#{slug}.md")
       doc = Jekyll::Document.new(
         path, { :site => site, :collection => site.collections['posts'] }
       )
@@ -53,6 +77,42 @@ module ExternalPosts
       doc.data['description'] = content[:summary]
       doc.data['date'] = content[:published]
       doc.data['redirect'] = url
+      site.collections['posts'].docs << doc
+    end
+
+    def create_medium_document(site, entry)
+      date_slug = entry.published.strftime('%Y-%m-%d')
+      title_slug = entry.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+      unique_slug = "#{date_slug}-#{title_slug}"
+    
+      # Prevent double date in the slug
+      unique_slug = unique_slug.sub(/#{date_slug}-#{date_slug}-/, "#{date_slug}-")
+    
+      # Check if a post with this slug already exists
+      existing_post = site.posts.docs.find { |post| post.data['slug'] == unique_slug }
+      if existing_post
+        puts "Skipping duplicate post: #{entry.title}"
+        return
+      end
+    
+      path = site.in_source_dir("_posts/#{unique_slug}.md")
+      doc = Jekyll::Document.new(path, { :site => site, :collection => site.collections['posts'] })
+      
+      doc.data['layout'] = 'post'
+      doc.data['title'] = entry.title
+      doc.data['date'] = entry.published
+      doc.data['external_source'] = 'medium'
+      doc.data['external_url'] = entry.url
+      doc.data['description'] = entry.summary
+      doc.data['categories'] = ['articles']
+      doc.data['tags'] = entry.categories
+      doc.data['slug'] = unique_slug
+      doc.data['permalink'] = "/articles/#{unique_slug}/"
+    
+      content = Nokogiri::HTML.fragment(entry.content)
+      content.css('h3').remove
+      doc.content = content.to_html
+    
       site.collections['posts'].docs << doc
     end
 
@@ -88,9 +148,7 @@ module ExternalPosts
         title: title,
         content: body_content,
         summary: description
-        # Note: The published date is now added in the fetch_from_urls method.
       }
     end
-
   end
 end

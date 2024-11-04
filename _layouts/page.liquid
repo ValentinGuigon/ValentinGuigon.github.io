@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+{% if page._styles %}
+  <!-- Page/Post style -->
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -8,7 +15,7 @@ layout: default
   </header>
 
   <article>
-    {{ content }}
+    {{ content | markdownify }}
   </article>
 
   {% if page.related_publications %}
