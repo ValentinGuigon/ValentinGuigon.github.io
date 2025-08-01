@@ -27,7 +27,7 @@ He designs and fits interpretable models of behavior and brain function using Ba
 His current projects are increasingly connected to NeuroAI, where he explores how cognitive models and AI systems can inform one another. He also experiments with modular multi-agent systems to support behavioral science workflows, including simulation environments, metadata parsing, and automated documentation.
 Dr. Valentin Guigon is a postdoctoral researcher in psychology and neuroscience at the University of Maryland, working in Caroline Charpentier’s Social Learning and Decisions Lab (SLD Lab). He is also an affiliated member of the Artificial Intelligence Interdisciplinary Institute at Maryland (AIM). His research combines behavioral experimentation, computational modeling, and neuroimaging to investigate how people learn, update beliefs, and make decisions under uncertainty, particularly in social contexts.
 
-He designs and fits interpretable models of behavior and brain function using Bayesian frameworks, reinforcement learning, heuristics, and mixtures of models. His work spans end-to-end pipelines - from experimental design and data acquisition to model implementation and interpretation - with a strong emphasis on reproducibility and methodological transparency. 
+He designs and fits interpretable models of behavior and brain function using Bayesian frameworks, reinforcement learning, heuristics, and mixtures of models. His work spans end-to-end pipelines - from experimental design and data acquisition to model implementation and interpretation - with a strong emphasis on reproducibility and methodological transparency.
 
 His current projects are increasingly connected to NeuroAI, where he explores how cognitive models and AI systems can inform one another. He also experiments with modular multi-agent systems to support behavioral science workflows, including simulation environments, metadata parsing, and automated documentation.
 
@@ -41,7 +41,7 @@ In my current work, I supervise research projects on social learning, with a foc
 
 ##### Applied Directions and Broader Interests
 
-• I contribute to discussions on information, polarization, critical thinking and belief calibration through public-facing pieces grounded in research.
+• I contribute to discussions on information, polarization, critical thinking and belief calibration through public-facing pieces grounded in research.Run npx prettier . --check
 • I have designed behavioral interventions and incentive-based nudges in applied contexts
 • I participate in public education efforts, including invited instruction at the 2025 CORTECS summer school on critical reasoning and scientific thinking
 • I develop AI systems that support scientific work and reproducibility.
