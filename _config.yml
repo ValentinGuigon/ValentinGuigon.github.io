@@ -86,6 +86,7 @@ lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 linkedin_username: valentin-guigon-phd-61024a92
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 medium_username: valentin.guigon # your Medium username
+substack_url: https://valentinguigon.substack.com/
 orcid_id: 0000-0003-0597-8094# your ORCID ID
 osf_id: 9cq3r # your OSF ID
 pinterest_id: # your pinterest id
@@ -130,7 +131,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: /Posts # blog_name will be displayed in your blog page
-blog_description: Documents collected from my non-academic corpus. Polished articles are published on external platforms, non-definitive notes are published locally. Creation dates, update dates and epistemic statuses are provided whenever possible for greater transparency.
+blog_description: Documents collected from my non-academic corpus. Polished articles are published on external platforms. Non-definitive notes may be published locally.Epistemic statuses provided whenever possible.
 permalink: /posts/:year-:month-day-:title/
 tag_permalink_style: pretty
 lsi: false # produce an index for related posts

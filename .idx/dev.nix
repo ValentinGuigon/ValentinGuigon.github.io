@@ -6,6 +6,12 @@
 
   # Use https://search.nixos.org/packages to find packages
   packages = [
+    pkgs.bundler
+    pkgs.imagemagick
+    (pkgs.python3.withPackages (ps: [
+      ps.pip
+      ps.jupyter
+    ]))
     # pkgs.go
     # pkgs.python311
     # pkgs.python311Packages.pip
@@ -13,8 +19,6 @@
     # pkgs.nodePackages.nodemon
   ];
 
-  # Sets environment variables in the workspace
-  env = {};
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [

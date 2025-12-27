@@ -1,9 +1,7 @@
-require 'feedjira'
+
 require 'httparty'
-require 'jekyll'
+require 'feedjira'
 require 'nokogiri'
-require 'time'
-require 'digest'
 require 'set'
 
 module ExternalPosts
@@ -29,6 +27,11 @@ module ExternalPosts
         puts "Fetching Medium posts for #{site.config['medium_username']}:"
         fetch_medium_posts(site)
       end
+
+      if site.config['substack_url']
+        puts "Fetching Substack posts from #{site.config['substack_url']}:"
+        fetch_substack_posts(site)
+      end
     end
 
     def fetch_from_rss(site, src)
@@ -44,6 +47,14 @@ module ExternalPosts
       return if xml.nil?
       feed = Feedjira.parse(xml)
       process_medium_entries(site, feed.entries)
+    end
+
+    def fetch_substack_posts(site)
+      feed_url = "#{site.config['substack_url']}/feed"
+      xml = HTTParty.get(feed_url).body
+      return if xml.nil?
+      feed = Feedjira.parse(xml)
+      process_substack_entries(site, feed.entries)
     end
 
     def process_entries(site, src, entries)
@@ -62,6 +73,13 @@ module ExternalPosts
       entries.each do |entry|
         puts "...fetching Medium post: #{entry.url}"
         create_medium_document(site, entry)
+      end
+    end
+
+    def process_substack_entries(site, entries)
+      entries.each do |entry|
+        puts "...fetching Substack post: #{entry.url}"
+        create_substack_document(site, entry)
       end
     end
 
@@ -113,6 +131,36 @@ module ExternalPosts
       content = Nokogiri::HTML.fragment(entry.content)
       content.css('h3').remove
       doc.content = content.to_html
+    
+      site.collections['posts'].docs << doc
+    end
+
+    def create_substack_document(site, entry)
+      date_slug = entry.published.strftime('%Y-%m-%d')
+      title_slug = entry.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+      unique_slug = "#{date_slug}-#{title_slug}"
+    
+      # Prevent double date in the slug
+      unique_slug = unique_slug.sub(/#{date_slug}-#{date_slug}-/, "#{date_slug}-")
+    
+      # Check if a post with this slug already exists
+      existing_post = site.posts.docs.find { |post| post.data['slug'] == unique_slug }
+      if existing_post
+        puts "Skipping duplicate post: #{entry.title}"
+        return
+      end
+    
+      path = site.in_source_dir("_posts/#{unique_slug}.md")
+      doc = Jekyll::Document.new(path, { :site => site, :collection => site.collections['posts'] })
+      
+      doc.data['title'] = entry.title
+      doc.data['date'] = entry.published
+      doc.data['external_source'] = 'substack'
+      doc.data['redirect'] = entry.url
+      doc.data['description'] = entry.summary
+      doc.data['categories'] = ['articles']
+      doc.data['tags'] = entry.categories
+      doc.data['slug'] = unique_slug
     
       site.collections['posts'].docs << doc
     end
