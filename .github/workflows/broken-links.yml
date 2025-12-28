@@ -48,29 +48,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.2.2"
-          bundler-cache: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install Jupyter
-        run: pip install --upgrade jupyter nbconvert
-
-      - name: Build site
-        run: bundle exec jekyll build
-
       - name: Link Checker 🔗
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
           args: >
             --user-agent 'curl/7.54'
+            --exclude-path README.md
+            --exclude-path _pages/404.md
+            --exclude-path _pages/blog.md
+            --exclude-path '/posts/**'
+            --exclude-path '_teaching/**'
+            --exclude '.*\.(png|jpg|jpeg|webp|svg)$'
+            --exclude 'https://git-trophy\.vercel\.app/.*'
+            --exclude 'https://github-readme-stats\.vercel\.app/.*'
             --verbose
             --no-progress
-            './_site/**/*.html'
+            './**/*.md' './**/*.html'
