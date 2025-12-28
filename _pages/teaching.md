@@ -6,7 +6,7 @@ description: Materials for courses taught.
 nav: true
 nav_order: 6
 display_years: [2025, 2023]
-display_categories: ["UCBL1", "Summer school Cortecs", "UMD"]
+display_categories: ["UMD", "Summer school Cortecs", "UCBL1"]
 horizontal: false
 ---
 
