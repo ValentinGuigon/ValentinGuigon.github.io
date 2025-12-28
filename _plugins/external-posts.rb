@@ -157,7 +157,7 @@ module ExternalPosts
       doc.data['title'] = entry.title
       doc.data['date'] = entry.published
       doc.data['external_source'] = 'substack'
-      doc.data['redirect'] = entry.url
+      doc.data['external_url'] = entry.url
       doc.data['description'] = entry.summary
       doc.data['categories'] = ['articles']
       doc.data['tags'] = entry.categories
