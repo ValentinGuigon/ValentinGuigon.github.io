@@ -58,10 +58,8 @@ jobs:
             --exclude-path _pages/404.md
             --exclude-path _pages/blog.md
             --exclude-path '/posts/**'
-            --exclude-path '_teaching/**'
-            --exclude '.*\.(png|jpg|jpeg|webp|svg)$'
             --exclude 'https://git-trophy\.vercel\.app/.*'
             --exclude 'https://github-readme-stats\.vercel\.app/.*'
             --verbose
             --no-progress
-            './**/*.md' './**/*.html'
+            './**/*.html'
