@@ -84,9 +84,20 @@ module ExternalPosts
         puts "...HTTP response code=#{res&.code} body_len=#{res&.body&.length || 0}"
       end
 
-      # If still not 200, give up (safe, explicit)
+      # If still not 200, try cache fallback
       unless res && res.code == 200
-        puts "...unexpected response (#{res&.code}), aborting Substack fetch"
+        cached_path = site.in_source_dir('_data/substack_feed.xml')
+        if File.exist?(cached_path)
+          puts "...using cached _data/substack_feed.xml"
+          begin
+            feed = Feedjira.parse(File.read(cached_path))
+            puts "...parsed cached feed entries=#{feed&.entries&.length || 0}"
+            return process_substack_entries(site, feed.entries || [])
+          rescue => e
+            puts "...failed to parse cached Substack feed: #{e}"
+          end
+        end
+        puts "...no valid Substack feed available, aborting"
         return
       end
 
