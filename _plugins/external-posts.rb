@@ -50,28 +50,23 @@ module ExternalPosts
     end
 
     def fetch_substack_posts(site)
-      feed_url = "#{site.config['substack_url']}/feed"
-      feed_url = feed_url.chomp('/') + '/feed'
-      xml = HTTParty.get(feed_url).body
-      if xml.nil? || xml.strip.empty?
-        puts "...no feed content received for #{feed_url}"
+      feed_url = "#{site.config['substack_url']}/feed".chomp('/')
+      puts "Fetching Substack feed: #{feed_url}"
+      begin
+        res = HTTParty.get(feed_url, headers: { 'User-Agent' => "al-folio-bot/1.0 (+#{site.config['url']})" })
+      rescue => e
+        puts "...HTTP error fetching Substack feed: #{e}"
         return
       end
-
+      puts "...HTTP response code=#{res&.code} body_len=#{res&.body&.length || 0}"
       begin
-        # Let Feedjira auto-detect the parser (RSS or Atom)
-        feed = Feedjira.parse(xml)
+        feed = Feedjira.parse(res.body)
       rescue => e
         puts "...failed to parse Substack feed: #{e}"
         return
       end
-
-      if feed.nil? || feed.entries.nil? || feed.entries.empty?
-        puts "...no entries found in Substack feed at #{feed_url}"
-        return
-      end
-
-      process_substack_entries(site, feed.entries)
+      puts "...parsed feed entries=#{feed&.entries&.length || 0}"
+      process_substack_entries(site, feed.entries || [])
     end
 
     def process_entries(site, src, entries)
@@ -89,6 +84,7 @@ module ExternalPosts
     def process_medium_entries(site, entries)
       entries.each do |entry|
         puts "...fetching Medium post: #{entry.url}"
+        debug_entry(entry, 'medium')
         create_external_document(site, entry, 'medium', "/articles/#{generate_unique_slug(entry)}/")
       end
     end
@@ -96,6 +92,7 @@ module ExternalPosts
     def process_substack_entries(site, entries)
       entries.each do |entry|
         puts "...fetching Substack post: #{entry.url}"
+        debug_entry(entry, 'substack')
         create_external_document(site, entry, 'substack')
       end
     end
@@ -204,6 +201,19 @@ module ExternalPosts
         content: body_content,
         summary: description
       }
+    end
+
+    # Debug helper: print concise info about a feed entry
+    def debug_entry(entry, source)
+      puts "DEBUG ENTRY (#{source.upcase}): class=#{entry.class}"
+      puts "  title: #{entry.title.inspect}"
+      puts "  url: #{entry.url.inspect}"
+      puts "  published: #{entry.respond_to?(:published) ? entry.published.inspect : 'N/A'}"
+      puts "  has_content?: #{entry.respond_to?(:content) && !entry.content.to_s.strip.empty?}"
+      puts "  content_len: #{entry.respond_to?(:content) ? entry.content.to_s.length : 'N/A'}"
+      puts "  summary: #{entry.respond_to?(:summary) ? entry.summary.inspect : 'N/A'}"
+      puts "  categories: #{entry.respond_to?(:categories) ? entry.categories.inspect : 'N/A'}"
+      puts "  raw_trunc: #{entry.to_s[0,500].gsub(/\n/, ' ')}"
     end
   end
 end
