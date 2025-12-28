@@ -118,7 +118,7 @@ module ExternalPosts
       path = site.in_source_dir("_posts/#{unique_slug}.md")
       doc = Jekyll::Document.new(path, { :site => site, :collection => site.collections['posts'] })
       
-      doc.data['layout'] = 'post'
+      #doc.data['layout'] = 'post'
       doc.data['title'] = entry.title
       doc.data['date'] = entry.published
       doc.data['external_source'] = 'medium'
