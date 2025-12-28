@@ -1,6 +1,7 @@
 
 require 'httparty'
 require 'feedjira'
+require 'feedjira/parser/rss'
 require 'nokogiri'
 require 'set'
 
@@ -53,7 +54,7 @@ module ExternalPosts
       feed_url = "#{site.config['substack_url']}/feed"
       xml = HTTParty.get(feed_url).body
       return if xml.nil?
-      feed = Feedjira.parse(xml)
+      feed = Feedjira.parse(xml, parser: Feedjira::Parser::RSS)
       process_substack_entries(site, feed.entries)
     end
 
