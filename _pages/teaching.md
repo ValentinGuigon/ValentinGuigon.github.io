@@ -15,16 +15,16 @@ horizontal: false
 {% assign all_teaching = site.teaching %}
 
 {% for y in page.display_years %}
-  <a id="{{ y }}" href=".#{{ y }}">
-    <h2 class="category">{{ y }}</h2>
-  </a>
+<a id="{{ y }}" href=".#{{ y }}">
+<h2 class="category">{{ y }}</h2>
+</a>
 
-  {% assign teaching_in_year = all_teaching | where: "year", y %}
+{% assign teaching_in_year = all_teaching | where: "year", y %}
 
-  {% if site.enable_project_categories and page.display_categories %}
-    {% for c in page.display_categories %}
-      {% assign teaching_in_cat = teaching_in_year | where: "category", c %}
-      {% assign sorted_teaching = teaching_in_cat | sort: "importance" %}
+{% if site.enable_project_categories and page.display_categories %}
+{% for c in page.display_categories %}
+{% assign teaching_in_cat = teaching_in_year | where: "category", c %}
+{% assign sorted_teaching = teaching_in_cat | sort: "importance" %}
 
       {% if sorted_teaching and sorted_teaching.size > 0 %}
         <a id="{{ y }}-{{ c | slugify }}" href=".#{{ y }}-{{ c | slugify }}">
@@ -48,14 +48,15 @@ horizontal: false
         {% endif %}
       {% endif %}
     {% endfor %}
-  {% else %}
-    {% assign sorted_teaching = teaching_in_year | sort: "importance" %}
-    <div class="row row-cols-1 row-cols-md-3">
-      {% for item in sorted_teaching %}
-        {% include teaching.liquid item=item %}
-      {% endfor %}
-    </div>
-  {% endif %}
+
+{% else %}
+{% assign sorted_teaching = teaching_in_year | sort: "importance" %}
+<div class="row row-cols-1 row-cols-md-3">
+{% for item in sorted_teaching %}
+{% include teaching.liquid item=item %}
+{% endfor %}
+</div>
+{% endif %}
 
 {% endfor %}
 

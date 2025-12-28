@@ -27,13 +27,13 @@ See https://github.com/adobe-type-tools/cmap-resources
     <meta name="google" content="notranslate" />
     <title>PDF.js viewer</title>
 
-<!-- This snippet is used in production (included from viewer.html) -->
-<link rel="resource" type="application/l10n" href="locale/locale.json" />
-<script src="../build/pdf.mjs" type="module"></script>
+    <!-- This snippet is used in production (included from viewer.html) -->
+    <link rel="resource" type="application/l10n" href="locale/locale.json" />
+    <script src="../build/pdf.mjs" type="module"></script>
 
     <link rel="stylesheet" href="viewer.css" />
 
-  <script src="viewer.mjs" type="module"></script>
+    <script src="viewer.mjs" type="module"></script>
   </head>
 
   <body tabindex="0">
@@ -273,14 +273,34 @@ See https://github.com/adobe-type-tools/cmap-resources
                       <span data-l10n-id="pdfjs-editor-comment-button-label"></span>
                     </button>
                     <div class="editorParamsToolbar hidden menu" id="editorCommentParamsToolbar">
-                      <div id="editorCommentsSidebar" class="menuContainer comment sidebar" role="landmark" aria-labelledby="editorCommentsSidebarHeader">
-                        <div id="editorCommentsSidebarResizer" class="sidebarResizer" role="separator" aria-controls="editorCommentsSidebar" tabindex="0"></div>
+                      <div
+                        id="editorCommentsSidebar"
+                        class="menuContainer comment sidebar"
+                        role="landmark"
+                        aria-labelledby="editorCommentsSidebarHeader"
+                      >
+                        <div
+                          id="editorCommentsSidebarResizer"
+                          class="sidebarResizer"
+                          role="separator"
+                          aria-controls="editorCommentsSidebar"
+                          tabindex="0"
+                        ></div>
                         <div id="editorCommentsSidebarHeader" role="heading" aria-level="2">
                           <span class="commentCount">
-                            <span id="editorCommentsSidebarTitle" data-l10n-id="pdfjs-editor-comments-sidebar-title" data-l10n-args='{ "count": 0 }'></span>
+                            <span
+                              id="editorCommentsSidebarTitle"
+                              data-l10n-id="pdfjs-editor-comments-sidebar-title"
+                              data-l10n-args='{ "count": 0 }'
+                            ></span>
                             <span id="editorCommentsSidebarCount"></span>
                           </span>
-                          <button id="editorCommentsSidebarCloseButton" type="button" tabindex="0" data-l10n-id="pdfjs-editor-comments-sidebar-close-button">
+                          <button
+                            id="editorCommentsSidebarCloseButton"
+                            type="button"
+                            tabindex="0"
+                            data-l10n-id="pdfjs-editor-comments-sidebar-close-button"
+                          >
                             <span data-l10n-id="pdfjs-editor-comments-sidebar-close-button-label"></span>
                           </button>
                         </div>
@@ -335,7 +355,11 @@ See https://github.com/adobe-type-tools/cmap-resources
                     <div class="editorParamsToolbar hidden doorHangerRight" id="editorHighlightParamsToolbar">
                       <div id="highlightParamsToolbarContainer" class="editorParamsToolbarContainer">
                         <div id="editorHighlightColorPicker" class="colorPicker">
-                          <span id="highlightColorPickerLabel" class="editorParamsLabel" data-l10n-id="pdfjs-editor-highlight-colorpicker-label"></span>
+                          <span
+                            id="highlightColorPickerLabel"
+                            class="editorParamsLabel"
+                            data-l10n-id="pdfjs-editor-highlight-colorpicker-label"
+                          ></span>
                         </div>
                         <div id="editorHighlightThickness">
                           <label
@@ -360,7 +384,11 @@ See https://github.com/adobe-type-tools/cmap-resources
                         <div id="editorHighlightVisibility">
                           <div class="divider"></div>
                           <div class="toggler">
-                            <label for="editorHighlightShowAll" class="editorParamsLabel" data-l10n-id="pdfjs-editor-highlight-show-all-button-label"></label>
+                            <label
+                              for="editorHighlightShowAll"
+                              class="editorParamsLabel"
+                              data-l10n-id="pdfjs-editor-highlight-show-all-button-label"
+                            ></label>
                             <button
                               id="editorHighlightShowAll"
                               class="toggle-button"
@@ -396,7 +424,16 @@ See https://github.com/adobe-type-tools/cmap-resources
                         </div>
                         <div class="editorParamsSetter">
                           <label for="editorFreeTextFontSize" class="editorParamsLabel" data-l10n-id="pdfjs-editor-free-text-size-input"></label>
-                          <input type="range" id="editorFreeTextFontSize" class="editorParamsSlider" value="10" min="5" max="100" step="1" tabindex="0" />
+                          <input
+                            type="range"
+                            id="editorFreeTextFontSize"
+                            class="editorParamsSlider"
+                            value="10"
+                            min="5"
+                            max="100"
+                            step="1"
+                            tabindex="0"
+                          />
                         </div>
                       </div>
                     </div>
@@ -427,7 +464,16 @@ See https://github.com/adobe-type-tools/cmap-resources
                         </div>
                         <div class="editorParamsSetter">
                           <label for="editorInkOpacity" class="editorParamsLabel" data-l10n-id="pdfjs-editor-ink-opacity-input"></label>
-                          <input type="range" id="editorInkOpacity" class="editorParamsSlider" value="1" min="0.05" max="1" step="0.05" tabindex="0" />
+                          <input
+                            type="range"
+                            id="editorInkOpacity"
+                            class="editorParamsSlider"
+                            value="1"
+                            min="0.05"
+                            max="1"
+                            step="0.05"
+                            tabindex="0"
+                          />
                         </div>
                       </div>
                     </div>
@@ -503,12 +549,17 @@ See https://github.com/adobe-type-tools/cmap-resources
                         <button id="secondaryDownload" class="toolbarButton labeled" type="button" tabindex="0" data-l10n-id="pdfjs-save-button">
                           <span data-l10n-id="pdfjs-save-button-label"></span>
                         </button>
-
                       </div>
 
                       <div class="horizontalToolbarSeparator"></div>
 
-                      <button id="presentationMode" class="toolbarButton labeled" type="button" tabindex="0" data-l10n-id="pdfjs-presentation-mode-button">
+                      <button
+                        id="presentationMode"
+                        class="toolbarButton labeled"
+                        type="button"
+                        tabindex="0"
+                        data-l10n-id="pdfjs-presentation-mode-button"
+                      >
                         <span data-l10n-id="pdfjs-presentation-mode-button-label"></span>
                       </button>
 
@@ -766,7 +817,9 @@ See https://github.com/adobe-type-tools/cmap-resources
             <p id="linearizedField" aria-labelledby="linearizedLabel">-</p>
           </div>
           <div class="buttonRow">
-            <button id="documentPropertiesClose" class="dialogButton" type="button"><span data-l10n-id="pdfjs-document-properties-close-button"></span></button>
+            <button id="documentPropertiesClose" class="dialogButton" type="button">
+              <span data-l10n-id="pdfjs-document-properties-close-button"></span>
+            </button>
           </div>
         </dialog>
         <dialog class="dialog altText" id="altTextDialog" aria-labelledby="dialogLabel" aria-describedby="dialogDescription">
@@ -786,7 +839,12 @@ See https://github.com/adobe-type-tools/cmap-resources
                 </div>
               </div>
               <div class="descriptionArea">
-                <textarea id="descriptionTextarea" aria-labelledby="descriptionAreaLabel" data-l10n-id="pdfjs-editor-alt-text-textarea" tabindex="0"></textarea>
+                <textarea
+                  id="descriptionTextarea"
+                  aria-labelledby="descriptionAreaLabel"
+                  data-l10n-id="pdfjs-editor-alt-text-textarea"
+                  tabindex="0"
+                ></textarea>
               </div>
             </div>
             <div id="markAsDecorative">
@@ -804,11 +862,19 @@ See https://github.com/adobe-type-tools/cmap-resources
               <button id="altTextCancel" class="secondaryButton" type="button" tabindex="0">
                 <span data-l10n-id="pdfjs-editor-alt-text-cancel-button"></span>
               </button>
-              <button id="altTextSave" class="primaryButton" type="button" tabindex="0"><span data-l10n-id="pdfjs-editor-alt-text-save-button"></span></button>
+              <button id="altTextSave" class="primaryButton" type="button" tabindex="0">
+                <span data-l10n-id="pdfjs-editor-alt-text-save-button"></span>
+              </button>
             </div>
           </div>
         </dialog>
-        <dialog class="dialog newAltText" id="newAltTextDialog" aria-labelledby="newAltTextTitle" aria-describedby="newAltTextDescription" tabindex="0">
+        <dialog
+          class="dialog newAltText"
+          id="newAltTextDialog"
+          aria-labelledby="newAltTextTitle"
+          aria-describedby="newAltTextDescription"
+          tabindex="0"
+        >
           <div id="newAltTextContainer" class="mainContainer">
             <div class="title">
               <span id="newAltTextTitle" data-l10n-id="pdfjs-editor-new-alt-text-dialog-edit-label" role="sectionhead" tabindex="0"></span>
@@ -887,7 +953,13 @@ See https://github.com/adobe-type-tools/cmap-resources
         <dialog class="dialog" id="altTextSettingsDialog" aria-labelledby="altTextSettingsTitle">
           <div id="altTextSettingsContainer" class="mainContainer">
             <div class="title">
-              <span id="altTextSettingsTitle" data-l10n-id="pdfjs-editor-alt-text-settings-dialog-label" role="sectionhead" tabindex="0" class="title"></span>
+              <span
+                id="altTextSettingsTitle"
+                data-l10n-id="pdfjs-editor-alt-text-settings-dialog-label"
+                role="sectionhead"
+                tabindex="0"
+                class="title"
+              ></span>
             </div>
             <div id="automaticAltText">
               <span data-l10n-id="pdfjs-editor-alt-text-settings-automatic-title"></span>
@@ -895,7 +967,11 @@ See https://github.com/adobe-type-tools/cmap-resources
                 <div id="createModelSetting">
                   <div class="toggler">
                     <button id="createModelButton" type="button" class="toggle-button" aria-pressed="true" tabindex="0"></button>
-                    <label for="createModelButton" class="togglerLabel" data-l10n-id="pdfjs-editor-alt-text-settings-create-model-button-label"></label>
+                    <label
+                      for="createModelButton"
+                      class="togglerLabel"
+                      data-l10n-id="pdfjs-editor-alt-text-settings-create-model-button-label"
+                    ></label>
                   </div>
                   <div id="createModelDescription" class="description">
                     <span data-l10n-id="pdfjs-editor-alt-text-settings-create-model-description"></span>
@@ -931,7 +1007,11 @@ See https://github.com/adobe-type-tools/cmap-resources
               <div id="showAltTextEditor">
                 <div class="toggler">
                   <button id="showAltTextDialogButton" type="button" class="toggle-button" aria-pressed="true" tabindex="0"></button>
-                  <label for="showAltTextDialogButton" class="togglerLabel" data-l10n-id="pdfjs-editor-alt-text-settings-show-dialog-button-label"></label>
+                  <label
+                    for="showAltTextDialogButton"
+                    class="togglerLabel"
+                    data-l10n-id="pdfjs-editor-alt-text-settings-show-dialog-button-label"
+                  ></label>
                 </div>
                 <div id="showAltTextDialogDescription" class="description">
                   <span data-l10n-id="pdfjs-editor-alt-text-settings-show-dialog-description"></span>
@@ -1039,7 +1119,11 @@ See https://github.com/adobe-type-tools/cmap-resources
                 <div>
                   <div>
                     <span id="addSignatureErrorTitle" class="title" data-l10n-id="pdfjs-editor-add-signature-image-upload-error-title"></span>
-                    <span id="addSignatureErrorDescription" class="description" data-l10n-id="pdfjs-editor-add-signature-image-upload-error-description"></span>
+                    <span
+                      id="addSignatureErrorDescription"
+                      class="description"
+                      data-l10n-id="pdfjs-editor-add-signature-image-upload-error-description"
+                    ></span>
                   </div>
                   <button id="addSignatureErrorCloseButton" class="closeButton" type="button" tabindex="0">
                     <span data-l10n-id="pdfjs-editor-add-signature-error-close-button"></span>

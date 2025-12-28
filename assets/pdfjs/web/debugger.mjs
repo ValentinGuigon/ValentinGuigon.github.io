@@ -37,18 +37,13 @@ const FontInspector = (function FontInspectorClosure() {
     }
   }
   function selectFont(fontName, show) {
-    const divs = document.querySelectorAll(
-      `span[${fontAttribute}=${fontName}]`
-    );
+    const divs = document.querySelectorAll(`span[${fontAttribute}=${fontName}]`);
     for (const div of divs) {
       div.className = show ? "debuggerShowText" : "debuggerHideText";
     }
   }
   function textLayerClick(e) {
-    if (
-      !e.target.dataset.fontName ||
-      e.target.tagName.toUpperCase() !== "SPAN"
-    ) {
+    if (!e.target.dataset.fontName || e.target.tagName.toUpperCase() !== "SPAN") {
       return;
     }
     const fontName = e.target.dataset.fontName;
@@ -112,9 +107,7 @@ const FontInspector = (function FontInspectorClosure() {
         return moreInfo;
       }
 
-      const moreInfo = fontObj.css
-        ? properties(fontObj, ["baseFontName"])
-        : properties(fontObj, ["name", "type"]);
+      const moreInfo = fontObj.css ? properties(fontObj, ["baseFontName"]) : properties(fontObj, ["name", "type"]);
 
       const fontName = fontObj.loadedName;
       const font = document.createElement("div");
@@ -127,9 +120,7 @@ const FontInspector = (function FontInspectorClosure() {
           url = /url\(['"]?([^)"']+)/.exec(url);
           download.href = url[1];
         } else if (fontObj.data) {
-          download.href = URL.createObjectURL(
-            new Blob([fontObj.data], { type: fontObj.mimetype })
-          );
+          download.href = URL.createObjectURL(new Blob([fontObj.data], { type: fontObj.mimetype }));
         }
         download.textContent = "Download";
       }
@@ -200,9 +191,7 @@ const StepperManager = (function StepperManagerClosure() {
     active: false,
     // Stepper specific functions.
     create(pageIndex) {
-      const pageContainer = document.querySelector(
-        `#viewer div[data-page-number="${pageIndex + 1}"]`
-      );
+      const pageContainer = document.querySelector(`#viewer div[data-page-number="${pageIndex + 1}"]`);
 
       const debug = document.createElement("div");
       debug.id = "stepper" + pageIndex;
@@ -214,12 +203,7 @@ const StepperManager = (function StepperManagerClosure() {
       b.value = pageIndex;
       stepperChooser.append(b);
       const initBreakPoints = breakPoints[pageIndex] || [];
-      const stepper = new Stepper(
-        debug,
-        pageIndex,
-        initBreakPoints,
-        pageContainer
-      );
+      const stepper = new Stepper(debug, pageIndex, initBreakPoints, pageContainer);
       steppers.push(stepper);
       if (steppers.length === 1) {
         this.selectStepper(pageIndex, false);
@@ -259,9 +243,7 @@ class Stepper {
   #simplifyArgs(args) {
     if (typeof args === "string") {
       const MAX_STRING_LENGTH = 75;
-      return args.length <= MAX_STRING_LENGTH
-        ? args
-        : args.substring(0, MAX_STRING_LENGTH) + "...";
+      return args.length <= MAX_STRING_LENGTH ? args : args.substring(0, MAX_STRING_LENGTH) + "...";
     }
     if (typeof args !== "object" || args === null) {
       return args;
@@ -314,12 +296,7 @@ class Stepper {
     table.cellSpacing = 0;
     const headerRow = this.#c("tr");
     table.append(headerRow);
-    headerRow.append(
-      this.#c("th", "Break"),
-      this.#c("th", "Idx"),
-      this.#c("th", "fn"),
-      this.#c("th", "args")
-    );
+    headerRow.append(this.#c("th", "Break"), this.#c("th", "Idx"), this.#c("th", "fn"), this.#c("th", "args"));
     panel.append(content);
     this.table = table;
     this.updateOperatorList(operatorList);
@@ -328,7 +305,7 @@ class Stepper {
     this.hoverStyle = hoverStyle;
     content.prepend(hoverStyle);
     table.addEventListener("mouseover", this.#handleStepHover.bind(this));
-    table.addEventListener("mouseleave", e => {
+    table.addEventListener("mouseleave", (e) => {
       hoverStyle.innerText = "";
     });
 
@@ -360,10 +337,7 @@ class Stepper {
     }
 
     const chunk = document.createDocumentFragment();
-    const operatorsToDisplay = Math.min(
-      MAX_OPERATORS_COUNT,
-      operatorList.fnArray.length
-    );
+    const operatorsToDisplay = Math.min(MAX_OPERATORS_COUNT, operatorList.fnArray.length);
     for (let i = this.operatorListIdx; i < operatorsToDisplay; i++) {
       const line = this.#c("tr");
       line.className = "line";
@@ -446,14 +420,8 @@ class Stepper {
       boxesContainer.classList.add("pdfBugGroupsLayer");
       this.pageContainer.append(boxesContainer);
 
-      boxesContainer.addEventListener(
-        "click",
-        this.#handleDebugBoxClick.bind(this)
-      );
-      boxesContainer.addEventListener(
-        "mouseover",
-        this.#handleDebugBoxHover.bind(this)
-      );
+      boxesContainer.addEventListener("click", this.#handleDebugBoxClick.bind(this));
+      boxesContainer.addEventListener("mouseover", this.#handleDebugBoxHover.bind(this));
     }
     boxesContainer.innerHTML = "";
 
@@ -501,12 +469,7 @@ class Stepper {
         return -1;
       }
 
-      const diffs = [
-        a.minY - b.minY,
-        a.minX - b.minX,
-        b.maxY - a.maxY,
-        b.maxX - a.maxX,
-      ];
+      const diffs = [a.minY - b.minY, a.minX - b.minX, b.maxY - a.maxY, b.maxX - a.maxX];
       for (const diff of diffs) {
         if (Math.abs(diff) > 0.01) {
           return Math.sign(diff);
@@ -573,9 +536,9 @@ class Stepper {
     const dependencyColor = `rgba(0, 255, 255, 0.1)`;
     const dependentColor = `rgba(255, 0, 0, 0.1)`;
 
-    const solid = color => `background-color: ${color}`;
+    const solid = (color) => `background-color: ${color}`;
     // Used for operations that have an empty bounding box
-    const striped = color => `
+    const striped = (color) => `
       background-image: repeating-linear-gradient(
         -45deg,
         white,
@@ -585,23 +548,19 @@ class Stepper {
       )
     `;
 
-    const select = idx => `#${this.panel.id} tr[data-idx="${idx}"]`;
-    const selectN = idxs =>
-      idxs.length === 0 ? "q:not(q)" : idxs.map(select).join(", ");
+    const select = (idx) => `#${this.panel.id} tr[data-idx="${idx}"]`;
+    const selectN = (idxs) => (idxs.length === 0 ? "q:not(q)" : idxs.map(select).join(", "));
 
-    const isEmpty = idx =>
-      !this.operatorsGroups[idx] || this.operatorsGroups[idx].minX === null;
+    const isEmpty = (idx) => !this.operatorsGroups[idx] || this.operatorsGroups[idx].minX === null;
 
-    const selfColor = group.isRenderingOperation
-      ? renderingColor
-      : dependentColor;
+    const selfColor = group.isRenderingOperation ? renderingColor : dependentColor;
 
     this.hoverStyle.innerText = `${select(index)} {
       ${group.minX === null ? striped(selfColor) : solid(selfColor)}
     }`;
     if (group.dependencies.length > 0) {
       this.hoverStyle.innerText += `
-        ${selectN(group.dependencies.filter(idx => !isEmpty(idx)))} {
+        ${selectN(group.dependencies.filter((idx) => !isEmpty(idx)))} {
           ${solid(dependencyColor)}
         }
         ${selectN(group.dependencies.filter(isEmpty))} {
@@ -610,7 +569,7 @@ class Stepper {
     }
     if (group.dependents.length > 0) {
       this.hoverStyle.innerText += `
-        ${selectN(group.dependents.filter(idx => !isEmpty(idx)))} {
+        ${selectN(group.dependents.filter((idx) => !isEmpty(idx)))} {
           ${solid(dependentColor)}
         }
         ${selectN(group.dependents.filter(isEmpty))} {
@@ -640,7 +599,7 @@ class Stepper {
     StepperManager.selectStepper(this.pageIndex, true);
     this.currentIdx = idx;
 
-    const listener = evt => {
+    const listener = (evt) => {
       switch (evt.keyCode) {
         case 83: // step
           document.removeEventListener("keydown", listener);
@@ -786,7 +745,7 @@ class PDFBug {
       const panel = document.createElement("div");
       const panelButton = document.createElement("button");
       panelButton.textContent = tool.name;
-      panelButton.addEventListener("click", event => {
+      panelButton.addEventListener("click", (event) => {
         event.preventDefault();
         this.selectPanel(tool);
       });
@@ -798,8 +757,7 @@ class PDFBug {
         tool.init();
       } else {
         panel.textContent =
-          `${tool.name} is disabled. To enable add "${tool.id}" to ` +
-          "the pdfBug parameter and refresh (separate multiple by commas).";
+          `${tool.name} is disabled. To enable add "${tool.id}" to ` + "the pdfBug parameter and refresh (separate multiple by commas).";
       }
       this.#buttons.push(panelButton);
     }
