@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Cortecs 2025 école d'été Cours 4"
+title: "Ecole douteuse: Cours 4"
 description: "Evaluer des informations complexes"
 img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_4.png
 importance: 2

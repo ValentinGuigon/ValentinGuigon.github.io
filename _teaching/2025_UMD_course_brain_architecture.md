@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "UMD 2025 NACS 645: Brain architecture"
+title: "NACS 645: Brain architecture"
 description: "Connectivity, network organization, and constraints on computation."
 img: /assets/img/UMD_2025/brain_architecture.png
 importance: 2

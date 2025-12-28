@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Cortecs 2025 école d'été Cours 5"
+title: "Ecole douteuse: Cours 5"
 description: "Bruit"
 img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_5.png
 importance: 2

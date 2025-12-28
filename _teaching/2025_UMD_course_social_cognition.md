@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "UMD 2025 NACS 645: Social cognition"
+title: "NACS 645: Social cognition"
 description: "Cooperation, origins of social cognition, morality as cooperation and rules, and neural accounts of mentalizing."
 img: /assets/img/UMD_2025/social_cognition.png
 importance: 7

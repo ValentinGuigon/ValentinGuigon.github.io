@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Cortecs 2025 école d'été Cours 3"
+title: "Ecole douteuse: Cours 3"
 description: "Le raisonnement et ses limites"
 img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_3.png
 importance: 2

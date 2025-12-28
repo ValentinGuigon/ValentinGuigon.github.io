@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Cortecs 2025 école d'été Cours 6"
+title: "Ecole douteuse: Cours 6"
 description: "Prédictions"
 img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_6.png
 importance: 2

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "UMD 2025 NACS 645: Syllabus"
+title: "NACS 645: Syllabus"
 description: "Course overview, policies, schedule, and reading list."
 img: /assets/img/UMD_2025/syllabus.png
 importance: 0
