@@ -16,6 +16,7 @@ horizontal: false
 
 {% for y in page.display_years %}
 <a id="{{ y }}" href=".#{{ y }}">
+
 <h2 class="category">{{ y }}</h2>
 </a>
 
@@ -51,6 +52,7 @@ horizontal: false
 
 {% else %}
 {% assign sorted_teaching = teaching_in_year | sort: "importance" %}
+
 <div class="row row-cols-1 row-cols-md-3">
 {% for item in sorted_teaching %}
 {% include teaching.liquid item=item %}
