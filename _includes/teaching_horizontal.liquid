@@ -1,0 +1,36 @@
+{% assign item = include.item %}
+
+<div class="col mb-4">
+  <a href="{% if item.redirect %}{{ item.redirect }}{% else %}{{ item.url | relative_url }}{% endif %}">
+    <div class="card h-100 hoverable">
+      <div class="row no-gutters">
+        {% if item.img %}
+          <div class="col-md-6">
+            {% include figure.liquid loading="eager" path=item.img sizes="(min-width: 768px) 156px, 50vw" alt="teaching thumbnail" class="card-img" %}
+          </div>
+        {% endif %}
+        <div class="{% if item.img %}col-md-6{% else %}col-md-12{% endif %}">
+          <div class="card-body">
+            <h3 class="card-title">{{ item.title }}</h3>
+            <p class="card-text">{{ item.description }}</p>
+            <div class="row ml-1 mr-1 p-0">
+              {% if item.github %}
+                <div class="github-icon">
+                  <div class="icon" data-toggle="tooltip" title="Code Repository">
+                    <a href="{{ item.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
+                  </div>
+                  {% if item.github_stars %}
+                    <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+                      <i class="fa-solid fa-star"></i>
+                      <span id="{{ item.github_stars }}-stars"></span>
+                    </span>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
