@@ -52,21 +52,51 @@ module ExternalPosts
     def fetch_substack_posts(site)
       feed_url = "#{site.config['substack_url']}/feed".chomp('/')
       puts "Fetching Substack feed: #{feed_url}"
+
       begin
+        # Initial request (simple UA)
         res = HTTParty.get(feed_url, headers: {
-          'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
+          'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+          'Accept' => 'application/rss+xml,application/xml;q=0.9,*/*;q=0.8'
         })
       rescue => e
         puts "...HTTP error fetching Substack feed: #{e}"
         return
       end
-      puts "...HTTP response code=#{res&.code} body_len=#{res&.body&.length || 0}"
+
+      # Minimal retry with fuller browser-like headers on 403
+      if res && res.code == 403
+        puts "...received 403, retrying with fuller browser headers"
+        browser_headers = {
+          'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+          'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Language' => 'en-US,en;q=0.9',
+          'Referer' => site.config['url'].to_s
+        }
+        begin
+          res = HTTParty.get(feed_url, headers: browser_headers)
+        rescue => e
+          puts "...HTTP error on retry: #{e}"
+          return
+        end
+        puts "...retry response code=#{res&.code} body_len=#{res&.body&.length || 0}"
+      else
+        puts "...HTTP response code=#{res&.code} body_len=#{res&.body&.length || 0}"
+      end
+
+      # If still not 200, give up (safe, explicit)
+      unless res && res.code == 200
+        puts "...unexpected response (#{res&.code}), aborting Substack fetch"
+        return
+      end
+
       begin
         feed = Feedjira.parse(res.body)
       rescue => e
         puts "...failed to parse Substack feed: #{e}"
         return
       end
+
       puts "...parsed feed entries=#{feed&.entries&.length || 0}"
       process_substack_entries(site, feed.entries || [])
     end
