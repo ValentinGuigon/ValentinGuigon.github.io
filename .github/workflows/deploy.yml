@@ -66,6 +66,11 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+      - name: Format with Prettier
+        uses: creyD/prettier_action@v4.3
+        with:
+          commit_message: "style: auto-format with prettier"
+          commit_description: "Automated code formatting"
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
