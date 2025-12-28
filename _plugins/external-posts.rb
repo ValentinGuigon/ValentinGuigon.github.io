@@ -51,9 +51,26 @@ module ExternalPosts
 
     def fetch_substack_posts(site)
       feed_url = "#{site.config['substack_url']}/feed"
+      feed_url = feed_url.chomp('/') + '/feed'
       xml = HTTParty.get(feed_url).body
-      return if xml.nil?
-      feed = Feedjira.parse(xml, parser: Feedjira::Parser::RSS)
+      if xml.nil? || xml.strip.empty?
+        puts "...no feed content received for #{feed_url}"
+        return
+      end
+
+      begin
+        # Let Feedjira auto-detect the parser (RSS or Atom)
+        feed = Feedjira.parse(xml)
+      rescue => e
+        puts "...failed to parse Substack feed: #{e}"
+        return
+      end
+
+      if feed.nil? || feed.entries.nil? || feed.entries.empty?
+        puts "...no entries found in Substack feed at #{feed_url}"
+        return
+      end
+
       process_substack_entries(site, feed.entries)
     end
 
@@ -146,8 +163,10 @@ module ExternalPosts
     end
 
     def generate_slug_from_title_and_date(title, published_date)
-      date_slug = published_date.strftime('%Y-%m-%d')
-      title_slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+      # Allow missing published_date (fallback to today UTC)
+      pd = published_date || Time.now.utc
+      date_slug = pd.strftime('%Y-%m-%d')
+      title_slug = (title || '').to_s.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
       "#{date_slug}-#{title_slug}"
     end
 
