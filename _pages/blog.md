@@ -74,7 +74,7 @@ pagination:
 <div class="row row-cols-{% if featured_posts.size <= 2 or is_even == 0 %}2{% else %}3{% endif %}">
 {% for post in featured_posts %}
 <div class="col mb-4">
-<a href="{% if (post.external_source == 'medium' or post.external_source == 'substack') and post.external_url %}{{ post.external_url }}{% else %}{{ post.url | relative_url }}{% endif %}" {% if (post.external_source == 'medium' or post.external_source == 'substack') and post.external_url %}target="_blank"{% endif %}>
+<a href="{% if post.external_url and post.external_source == 'medium' or post.external_url and post.external_source == 'substack' %}{{ post.external_url }}{% else %}{{ post.url | relative_url }}{% endif %}" {% if post.external_url and post.external_source == 'medium' or post.external_url and post.external_source == 'substack' %}target="_blank"{% endif %}>
 <div class="card hoverable">
 <div class="row g-0">
 <div class="col-md-12">
@@ -142,7 +142,7 @@ Created in {{ post.date | date: '%B %d, %Y' }}
             <div class="col-sm-9">
         {% endif %}
         <h3>
-          {% if (post.external_source == 'medium' or post.external_source == 'substack') and post.external_url %}
+          {% if post.external_url and post.external_source == 'medium' or post.external_url and post.external_source == 'substack' %}
 
 <a class="post-title" href="{{ post.external_url }}" target="_blank">{{ post.title }}</a>
 <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
