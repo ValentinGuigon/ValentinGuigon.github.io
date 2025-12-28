@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 
 ### Current position
 
-Dr. Valentin Guigon is a postdoctoral researcher in Psychology and Neuroscience at the University of Maryland, working in Caroline Charpentier’s Social Learning and Decisions Lab ([SLD Lab](https://sldlab.umd.edu/)). He is also an affiliated member of the Artificial Intelligence Interdisciplinary Institute at Maryland ([AIM](https://aim.umd.edu/)) and an affiliate researcher of the Neuroscience and Cognitive Science ([NACS](https://nacs.umd.edu/)) program. 
+Dr. Valentin Guigon is a postdoctoral researcher in Psychology and Neuroscience at the University of Maryland, working in Caroline Charpentier’s Social Learning and Decisions Lab ([SLD Lab](https://sldlab.umd.edu/)). He is also an affiliated member of the Artificial Intelligence Interdisciplinary Institute at Maryland ([AIM](https://aim.umd.edu/)) and an affiliate researcher of the Neuroscience and Cognitive Science ([NACS](https://nacs.umd.edu/)) program.
 
 His research combines behavioral experimentation, computational modeling, and neuroimaging to investigate how people learn, update beliefs, and make decisions under uncertainty, with a particular focus on social contexts. He designs experimental paradigms and develops interpretable models of behavior and brain function using Bayesian frameworks, reinforcement learning, heuristic models, and model mixtures. His work spans experimental design, data acquisition, model implementation, and interpretation, with a strong emphasis on reproducibility, methodological transparency, and robust inference.
 
