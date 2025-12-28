@@ -3,7 +3,7 @@ layout: page
 title: "UMD 2025 NACS 645: Social networks"
 description: "Network structure, information flow, and collective dynamics in social systems."
 img: /assets/img/UMD_2025/social_networks.png
-importance: 9
+importance: 8
 category: "UMD"
 year: 2025
 pdf: /assets/pdf/UMD_2025/social_networks.pdf
