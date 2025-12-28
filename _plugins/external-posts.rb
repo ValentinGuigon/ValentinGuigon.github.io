@@ -1,4 +1,3 @@
-
 require 'httparty'
 require 'feedjira'
 require 'feedjira/parser/rss'
@@ -73,99 +72,85 @@ module ExternalPosts
     def process_medium_entries(site, entries)
       entries.each do |entry|
         puts "...fetching Medium post: #{entry.url}"
-        create_medium_document(site, entry)
+        create_external_document(site, entry, 'medium', "/articles/#{generate_unique_slug(entry)}/")
       end
     end
 
     def process_substack_entries(site, entries)
       entries.each do |entry|
         puts "...fetching Substack post: #{entry.url}"
-        create_substack_document(site, entry)
+        create_external_document(site, entry, 'substack')
       end
     end
 
     def create_document(site, source_name, url, content)
-      slug = content[:title].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-      path = site.in_source_dir("_posts/#{content[:published].strftime('%Y-%m-%d')}-#{slug}.md")
-      doc = Jekyll::Document.new(
-        path, { :site => site, :collection => site.collections['posts'] }
-      )
-      doc.data['external_source'] = source_name
-      doc.data['title'] = content[:title]
+      slug = generate_slug_from_title_and_date(content[:title], content[:published])
+      doc = build_and_populate_doc(site, slug, {
+        title: content[:title],
+        date: content[:published],
+        external_source: source_name,
+        description: content[:summary],
+        categories: ['notes']
+      })
       doc.data['feed_content'] = content[:content]
-      doc.data['description'] = content[:summary]
-      doc.data['date'] = content[:published]
       doc.data['redirect'] = url
-      doc.data['categories'] = ['notes']
       site.collections['posts'].docs << doc
     end
 
-    def create_medium_document(site, entry)
-      date_slug = entry.published.strftime('%Y-%m-%d')
-      title_slug = entry.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-      unique_slug = "#{date_slug}-#{title_slug}"
-    
-      # Prevent double date in the slug
-      unique_slug = unique_slug.sub(/#{date_slug}-#{date_slug}-/, "#{date_slug}-")
-    
-      # Check if a post with this slug already exists
-      existing_post = site.posts.docs.find { |post| post.data['slug'] == unique_slug }
-      if existing_post
-        puts "Skipping duplicate post: #{entry.title}"
-        return
-      end
-    
-      path = site.in_source_dir("_posts/#{unique_slug}.md")
-      doc = Jekyll::Document.new(path, { :site => site, :collection => site.collections['posts'] })
-      
+    def create_external_document(site, entry, source, permalink = nil)
+      unique_slug = generate_unique_slug(entry)
+      doc = build_and_populate_doc(site, unique_slug, {
+        title: entry.title,
+        date: entry.published,
+        external_source: source,
+        description: entry.summary,
+        categories: ['articles'],
+        tags: entry.categories
+      })
       doc.data['layout'] = 'post'
-      doc.data['title'] = entry.title
-      doc.data['date'] = entry.published
-      doc.data['external_source'] = 'medium'
       doc.data['external_url'] = entry.url
-      doc.data['description'] = entry.summary
-      doc.data['categories'] = ['articles']
-      doc.data['tags'] = entry.categories
       doc.data['slug'] = unique_slug
-      doc.data['permalink'] = "/articles/#{unique_slug}/"
-    
-      content = Nokogiri::HTML.fragment(entry.content)
-      content.css('h3').remove
-      doc.content = content.to_html
-    
+      doc.data['permalink'] = permalink if permalink
+
+      if source == 'medium'
+        content = Nokogiri::HTML.fragment(entry.content)
+        content.css('h3').remove
+        doc.content = content.to_html
+      end
+
       site.collections['posts'].docs << doc
     end
 
-    def create_substack_document(site, entry)
-      date_slug = entry.published.strftime('%Y-%m-%d')
-      title_slug = entry.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-      unique_slug = "#{date_slug}-#{title_slug}"
-    
-      # Prevent double date in the slug
-      unique_slug = unique_slug.sub(/#{date_slug}-#{date_slug}-/, "#{date_slug}-")
-    
-      # Check if a post with this slug already exists
-      existing_post = site.posts.docs.find { |post| post.data['slug'] == unique_slug }
-      if existing_post
-        puts "Skipping duplicate post: #{entry.title}"
-        return
-      end
-    
-      path = site.in_source_dir("_posts/#{unique_slug}.md")
-      doc = Jekyll::Document.new(path, { :site => site, :collection => site.collections['posts'] })
-      
-      doc.data['layout'] = 'post'
-      doc.data['title'] = entry.title
-      doc.data['date'] = entry.published
-      doc.data['external_source'] = 'substack'
-      doc.data['external_url'] = entry.url
-      doc.data['description'] = entry.summary
-      doc.data['categories'] = ['articles']
-      doc.data['tags'] = entry.categories
-      doc.data['slug'] = unique_slug
-    
-      site.collections['posts'].docs << doc
+    # Helper: build a Jekyll document and populate shared fields
+    def build_and_populate_doc(site, slug, attrs = {})
+      doc = create_jekyll_document(site, build_post_path(site, slug))
+      doc.data['title'] = attrs[:title] if attrs[:title]
+      doc.data['date'] = attrs[:date] if attrs[:date]
+      doc.data['external_source'] = attrs[:external_source] if attrs[:external_source]
+      doc.data['description'] = attrs[:description] if attrs[:description]
+      doc.data['categories'] = attrs[:categories] if attrs[:categories]
+      doc.data['tags'] = attrs[:tags] if attrs[:tags]
+      doc
     end
+
+    def build_post_path(site, slug)
+      site.in_source_dir("_posts/#{slug}.md")
+    end
+
+    def create_jekyll_document(site, path)
+      Jekyll::Document.new(path, site: site, collection: site.collections['posts'])
+    end
+
+    def generate_unique_slug(entry)
+      generate_slug_from_title_and_date(entry.title, entry.published)
+    end
+
+    def generate_slug_from_title_and_date(title, published_date)
+      date_slug = published_date.strftime('%Y-%m-%d')
+      title_slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+      "#{date_slug}-#{title_slug}"
+    end
+
 
     def fetch_from_urls(site, src)
       src['posts'].each do |post|
