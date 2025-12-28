@@ -6,7 +6,8 @@
     "email": "vguigon@umd.edu",
     "phone": "",
     "url": "https://valentinguigon.github.io",
-    "summary": "Postdoctoral researcher in Cognitive Neurosciences, Social Learning and Decisions Lab, UMD",
+    "summary": "Postdoctoral researcher in Cognitive Neuroscience, Social Learning and Decisions Lab, UMD",
+    "affiliations": "Affiliate researcher at Artificial Intelligence Interdisciplinary Institute at Maryland (UMD); Affiliate researcher of Neuroscience and Cognitive Science (NACS) program (UMD)",
     "location": {
       "address": "",
       "postalCode": "DC 20009",
@@ -73,14 +74,14 @@
       "summary": "Spatial proximity effects and impulsivity to action in a VR go/no-go task | Experimentation & behavioral analysis. Tools: Matlab, R. Supervisors: Jean-Claude Dreher & David O’Connor"
     },
     {
-      "name": "Integrative and Adaptive Neurosciences Laboratory, France",
+      "name": "Integrative and Adaptive Neuroscience Laboratory, France",
       "position": "Research Internship",
       "startDate": "2016-03-01",
       "endDate": "2016-04-30",
       "summary": "Study on vestibular cortex and modeling patient-therapist interactions. Supervisor: Christophe Lopez"
     },
     {
-      "name": "Integrative and Adaptive Neurosciences Laboratory, France",
+      "name": "Integrative and Adaptive Neuroscience Laboratory, France",
       "position": "Research Internship",
       "startDate": "2016-03-01",
       "endDate": "2016-04-30",
@@ -124,8 +125,8 @@
 
   "education": [
     {
-      "institution": "Neurosciences and Cognition Doctorate School, Lyon 1, France",
-      "area": "Cognitive Neurosciences",
+      "institution": "Neuroscience and Cognition Doctorate School, Lyon 1, France",
+      "area": "Cognitive Neuroscience",
       "studyType": "Doctorate degree",
       "startDate": "2018",
       "endDate": "2022"
@@ -139,7 +140,7 @@
     },
     {
       "institution": "Biology Faculty, Marseille Saint Charles, France",
-      "area": "Physiology & Adaptative and Cognitive Neurosciences",
+      "area": "Physiology & Adaptative and Cognitive Neuroscience",
       "studyType": "Licence degree",
       "startDate": "2015",
       "endDate": "2016"
@@ -155,53 +156,46 @@
 
   "teaching": [
     {
-      "name": "UCBL1 Neurosciences Master students, Université Claude Bernard Lyon 1, Lyon, France",
-      "position": "Mentoring",
-      "startDate": "2024-01-01",
-      "endDate": "2024-06-30",
-      "summary": "1 semester | 3 students"
+      "name": "UMD NACS645 Cognitive Science, University of Maryland, MD, USA",
+      "position": "Teaching",
+      "startDate": "2025-09-01",
+      "endDate": "2025-12-20",
+      "summary": "Taught foundational debates in Cognitive Science to 11 PhD students from UMD NACS PhD program. Courses: Modularity; Brain architecture; Cognitive architecture; Innateness; Methods; Social cognition; Social networks; Cognitive systems; Thinking; NeuroAI."
     },
     {
-      "name": "UCBL1 Neurosciences Master students, Université Claude Bernard Lyon 1, Lyon, France",
-      "position": "Mentoring",
-      "startDate": "2023-01-01",
-      "endDate": "2023-06-30",
-      "summary": "1 semester | 3 students"
-    },
-    {
-      "name": "UCBL1 Neurosciences PhD students, Université Claude Bernard Lyon 1, Lyon, France",
-      "position": "SPM fMRI preprocessing and contrasting",
+      "name": "SPM fMRI preprocessing and contrasting, NSCO Doctorate school, UCBL1, Lyon, France",
+      "position": "Teaching",
       "startDate": "2023-06-01",
       "endDate": "2023-06-01",
-      "summary": "1 day | 20 PhD students"
+      "summary": "Taught fMRI preprocessing and contrasting with SPM12 to 20 PhD students from NSCO Doctorate school."
     },
     {
-      "name": "Université Lumière Lyon 2, Bron, France",
+      "name": "Introduction to Cognitive Psychology, ULL2, Lyon, France",
       "position": "Teaching assistant",
       "startDate": "2020-09-01",
       "endDate": "2020-12-31",
-      "summary": "1 semester | 40 students | Cognitive Psychology, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Introduction to: epistemology and the problems of induction, beliefs, emotions as signaling, ontogenetics and phylogenetics of brain development, multi-level approaches, intercultural processes of decision-making. Supervisor: Gaën Plancher"
+      "summary": "Taught Introduction to Cognitive Psychology to 40 Undergraduate students, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Teacher: Gaën Plancher"
     },
     {
-      "name": "Université Lumière Lyon 2, Bron, France",
+      "name": "Introduction to Cognitive Psychology, ULL2, Lyon, France",
       "position": "Teaching assistant",
       "startDate": "2019-09-01",
       "endDate": "2019-12-31",
-      "summary": "1 semester | 40 students | Cognitive Psychology, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Introduction to: epistemology and the problems of induction, beliefs, behavior modelling, ontogenetics of brain development, intercultural decision-making. Supervisor: Gaën Plancher"
+      "summary": "Taught Introduction to Cognitive Psychology to 40 Undergraduate students, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Teacher: Gaën Plancher"
     },
     {
-      "name": "Université Lumière Lyon 2, Bron, France",
+      "name": "Introduction to Cognitive Psychology, ULL2, Lyon, France",
       "position": "Teaching assistant",
       "startDate": "2018-09-01",
       "endDate": "2018-12-31",
-      "summary": "1 semester | 80 students | Cognitive Psychology, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Supervisor: Gaën Plancher"
+      "summary": "Taught Introduction to Cognitive Psychology to 80 Undergraduate students, Licence 2. Courses: cognitive psychology (Methodology, Emotions, Working Memory, Executive Functions, Language). Teacher: Gaën Plancher"
     },
     {
-      "name": "Université Lumière Lyon 2, Bron, France",
+      "name": "Introduction to Cognitive Psychology, ULL2, Lyon, France",
       "position": "Teaching assistant",
       "startDate": "2017-09-01",
       "endDate": "2017-12-31",
-      "summary": "1 semester | 80 students | Introduction to cognitive psychology, Licence 1. Courses: research methodology and cognitive paradigms. Supervisor: François Osiurak"
+      "summary": "Taught Introduction to Cognitive Psychology to 80 Undergraduate students, Licence 1. Courses: research methodology and cognitive paradigms. Teacher: François Osiurak"
     }
   ],
 
@@ -276,7 +270,53 @@
     }
   ],
 
+  "skills": [
+    {
+      "name": "Computational Modeling & Simulation",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    },
+    {
+      "name": "Bayesian Statistical Analysis & Inference",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    },
+    {
+      "name": "Reinforcement Learning & Decision-Making Models",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    },
+    {
+      "name": "Experimental Design & Behavioral Task Optimization",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    },
+    {
+      "name": "Project Leadership & Cross-Disciplinary Collaboration",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    },
+    {
+      "name": "Teaching, Mentoring & Scientific Communication",
+      "level": "",
+      "icon": "",
+      "keywords": [""]
+    }
+  ],
+
   "dissemination": [
+    {
+      "name": "La sphère publique et la chambre d'écho",
+      "publisher": "Cortecs.org",
+      "releaseDate": "2025-03-09",
+      "url": "https://cortecs.org/informations-medias/la-sphere-publique-et-la-chambre-decho/",
+      "summary": "Analysis on the dissociation between the perceived echo chambers and the actual public sphere."
+    },
     {
       "name": "Notre société est-elle de plus en plus polarisée ?",
       "publisher": "Cortex-mag.net",
@@ -311,46 +351,6 @@
       "releaseDate": "2020-09-17",
       "url": "https://www.cortex-mag.net/pourquoi-les-theories-du-complot-plaisent-a-notre-cerveau/",
       "summary": "Article discussing why conspiracy theories appeal to our brains."
-    }
-  ],
-
-  "skills": [
-    {
-      "name": "Project management",
-      "level": "",
-      "icon": "",
-      "keywords": [""]
-    },
-    {
-      "name": "Data Analysis",
-      "level": "",
-      "icon": "",
-      "keywords": [""]
-    },
-    {
-      "name": "Computational modeling",
-      "level": "",
-      "icon": "",
-      "keywords": [""]
-    },
-    {
-      "name": "Experimental design",
-      "level": "",
-      "icon": "",
-      "keywords": [""]
-    }
-  ],
-
-  "languages": [
-    {
-      "language": "French",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
     }
   ],
 
@@ -389,16 +389,6 @@
       "icon": "",
       "reference": ""
     }
-  ],
-
-  "projects": [
-    {
-      "name": "Cookiecutter template for research projects",
-      "startDate": "2023",
-      "endDate": "now",
-      "summary": "Cookiecutter template for a neurosciences data analysis-focused research project in Python, R, and MATLAB.",
-      "url": "https://github.com/ValentinGuigon/cookiecutter-neuro-research-project",
-      "highlights": []
-    }
   ]
+
 }
