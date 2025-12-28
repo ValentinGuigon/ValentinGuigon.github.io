@@ -53,7 +53,9 @@ module ExternalPosts
       feed_url = "#{site.config['substack_url']}/feed".chomp('/')
       puts "Fetching Substack feed: #{feed_url}"
       begin
-        res = HTTParty.get(feed_url, headers: { 'User-Agent' => "al-folio-bot/1.0 (+#{site.config['url']})" })
+        res = HTTParty.get(feed_url, headers: {
+          'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
+        })
       rescue => e
         puts "...HTTP error fetching Substack feed: #{e}"
         return
