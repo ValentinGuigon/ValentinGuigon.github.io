@@ -1,7 +1,7 @@
 ---
 layout: page
-title: UMD 2025 NACS 645: Modularity
-description: Perceptual modularity, cognitive penetrability, and specialization.
+title: "UMD 2025 NACS 645: Modularity"
+description: "Perceptual modularity, cognitive penetrability, and specialization."
 img: /assets/img/UMD_2025/modularity.png
 importance: 1
 category: "UMD"

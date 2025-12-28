@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Cortecs 2025 école d'été Cours 2
-description: Croyances
+title: "Cortecs 2025 école d'été Cours 2"
+description: "Croyances"
 img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_2.png
 importance: 2
 category: "Summer school Cortecs"

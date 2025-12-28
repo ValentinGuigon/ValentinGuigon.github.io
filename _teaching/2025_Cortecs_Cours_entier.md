@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Cortecs 2025 école d'été Cours entier
-description: Informations, Croyances, Prédictions
+title: "Cortecs 2025 école d'été Cours entier"
+description: "Informations, Croyances, Prédictions"
 img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_entier.png
 importance: 1
 category: "Summer school Cortecs"

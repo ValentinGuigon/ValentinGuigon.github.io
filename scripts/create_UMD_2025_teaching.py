@@ -29,7 +29,7 @@ import re
 
 YEAR = 2025
 # must match teaching.md display_categories if you filter by category
-CATEGORY = "UMD 2025"
+CATEGORY = "UMD"
 OUTPUT_DIR = Path("_teaching")
 
 PDF_BASE = "/assets/pdf/UMD_2025"  # site-relative
@@ -62,6 +62,11 @@ class Bundle:
     readings: List[str]
 
 
+def yq(s: str) -> str:
+    """YAML-quote a string safely."""
+    return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
 def slugify(s: str) -> str:
     s = s.lower().strip()
     s = re.sub(r"[’']", "", s)
@@ -86,13 +91,13 @@ def md_for_bundle(bundle: Bundle) -> str:
 
     return f"""---
 layout: page
-title: {bundle.title}
-description: {bundle.description}
-img: {img}
+title: {yq(bundle.title)}
+description: {yq(bundle.description)}
+img: {yq(img)}
 importance: {bundle.importance}
-category: "{CATEGORY}"
+category: "{yq(CATEGORY)}"
 year: {YEAR}
-pdf: {pdf}
+pdf: {yq(pdf)}
 ---
 
 Course material for **NACS 645: Introduction to Cognitive Science (Fall {YEAR})** at the University of Maryland.
@@ -119,13 +124,13 @@ The material is provided below as a single PDF.
 def md_for_syllabus() -> str:
     return f"""---
 layout: page
-title: {SYLLABUS_TITLE}
-description: {SYLLABUS_DESCRIPTION}
-img: {SYLLABUS_IMG}
+title: {yq(SYLLABUS_TITLE)}
+description: {yq(SYLLABUS_DESCRIPTION)}
+img: {yq(SYLLABUS_IMG)}
 importance: 0
-category: "{CATEGORY}"
+category: "{yq(CATEGORY)}"
 year: {YEAR}
-pdf: {SYLLABUS_PDF}
+pdf: {yq(SYLLABUS_PDF)}
 ---
 
 Syllabus for **NACS 645: Introduction to Cognitive Science (Fall {YEAR})** at the University of Maryland.

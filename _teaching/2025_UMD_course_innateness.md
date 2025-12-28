@@ -1,7 +1,7 @@
 ---
 layout: page
-title: UMD 2025 NACS 645: Innateness
-description: Origins of knowledge in object cognition and language acquisition debates.
+title: "UMD 2025 NACS 645: Innateness"
+description: "Origins of knowledge in object cognition and language acquisition debates."
 img: /assets/img/UMD_2025/innateness.png
 importance: 5
 category: "UMD"

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: UMD 2025 NACS 645: Thinking
-description: Accounts of reasoning on the individual and collective levels.
+title: "UMD 2025 NACS 645: Thinking"
+description: "Accounts of reasoning on the individual and collective levels."
 img: /assets/img/UMD_2025/thinking.png
 importance: 3
 category: "UMD"

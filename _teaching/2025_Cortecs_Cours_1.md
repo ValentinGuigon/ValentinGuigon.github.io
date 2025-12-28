@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Cortecs 2025 école d'été Cours 1
-description: Traitement d'informations
+title: "Cortecs 2025 école d'été Cours 1"
+description: "Traitement d'informations"
 img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_1.png
 importance: 2
 category: "Summer school Cortecs"

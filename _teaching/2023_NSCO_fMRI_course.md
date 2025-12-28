@@ -1,7 +1,7 @@
 ---
 layout: page
-title: UCBL1 2023 doctorate school fMRI course
-description: Preprocessing and statistical analysis of fMRI data with SPM12
+title: "UCBL1 2023 doctorate school fMRI course"
+description: "Preprocessing and statistical analysis of fMRI data with SPM12"
 img: /assets/img/UCBL1_2023/2023_NSCO_fMRI_course.png
 importance: 1
 category: "UCBL1"

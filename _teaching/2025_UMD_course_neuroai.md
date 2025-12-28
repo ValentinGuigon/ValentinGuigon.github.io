@@ -1,7 +1,7 @@
 ---
 layout: page
-title: UMD 2025 NACS 645: NeuroAI
-description: Links between artificial neural systems and biological cognition: models, limits, and interpretations.
+title: "UMD 2025 NACS 645: NeuroAI"
+description: "Links between artificial neural systems and biological cognition: models, limits, and interpretations."
 img: /assets/img/UMD_2025/neuroai.png
 importance: 11
 category: "UMD"
