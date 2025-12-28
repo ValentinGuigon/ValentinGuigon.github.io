@@ -4,7 +4,7 @@ title: UMD 2025 NACS 645: Methods and paradigms
 description: Theory testing, inference from neuroimaging, and the role of paradigms in explanation.
 img: /assets/img/UMD_2025/methods.png
 importance: 6
-category: "UMD 2025"
+category: "UMD"
 year: 2025
 pdf: /assets/pdf/UMD_2025/methods.pdf
 ---

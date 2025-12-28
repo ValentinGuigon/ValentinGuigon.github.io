@@ -4,7 +4,7 @@ title: UMD 2025 NACS 645: Modularity
 description: Perceptual modularity, cognitive penetrability, and specialization.
 img: /assets/img/UMD_2025/modularity.png
 importance: 1
-category: "UMD 2025"
+category: "UMD"
 year: 2025
 pdf: /assets/pdf/UMD_2025/modularity.pdf
 ---

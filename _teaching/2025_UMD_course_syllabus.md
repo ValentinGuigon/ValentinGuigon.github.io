@@ -4,7 +4,7 @@ title: UMD 2025 NACS 645: Syllabus
 description: Course overview, policies, schedule, and reading list.
 img: /assets/img/UMD_2025/syllabus.png
 importance: 0
-category: "UMD 2025"
+category: "UMD"
 year: 2025
 pdf: /assets/pdf/UMD_2025/NACS_645_syllabus.pdf
 ---
