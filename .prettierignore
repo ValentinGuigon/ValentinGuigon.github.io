@@ -1,1 +1,6 @@
-**/*.bib
+_site
+package-lock.json
+assets
+*.bib
+lighthouse_results
+_layouts/bib.liquid
