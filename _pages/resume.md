@@ -7,6 +7,4 @@ nav_order: 5
 cv_pdf: resume.pdf
 display_pdf: true
 description: PDF last version is January 2026. Do not hesitate to ask for a recent version if PDF is outdated.
-toc:
-  sidebar: left
 ---
