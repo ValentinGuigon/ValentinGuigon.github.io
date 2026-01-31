@@ -640,17 +640,17 @@ jekyll_get_json:
     json: assets/json/resume.json # it can also be an url
 jsonresume:
   - basics
-  - work
-  - education
-  - publications
   - dissemination
-  - projects
-  - volunteer
+  - fellowships
+  - interests
+  # publications
+  # work
+  # education
+  # projects
+  # volunteer
   # - awards
   # - certificates
-  - skills
-  - languages
-  - interests
+  # skills
+  # languages
   # - references
-  - fellowships
-  - teaching
+  # teaching
