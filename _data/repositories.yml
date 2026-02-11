@@ -1,14 +1,15 @@
 github_users:
   - ValentinGuigon
+  - SLDlab
 
 repo_description_lines_max: 2
 
 github_repos:
   - ValentinGuigon/ValentinGuigon.github.io
+  - SLDlab/neurodesign-plus
   - ValentinGuigon/cookiecutter-neuro-research-project
-  - ValentinGuigon/MATLAB_Tools
-  - ValentinGuigon/Mixed_Linear_Modelling
   - ValentinGuigon/SPM_fMRI_pipeline_template
-  - ValentinGuigon/sentiment_analysis_methods
+  - ValentinGuigon/Py_fMRI_pipeline_template
+  - ValentinGuigon/Mixed_LM_templates
+  - ValentinGuigon/sentiment_analysis_templates
   - ValentinGuigon/NLP_templates
-  - ValentinGuigon/UMD-2025-NACS_645-Cognitive_Science
