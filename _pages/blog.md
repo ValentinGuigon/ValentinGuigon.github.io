@@ -29,42 +29,6 @@ pagination:
 </div>
 {% endif %}
 
-  <div class="tag-category-container" style="text-align: center; margin: 1rem 0;">
-    {% if site.tags.size > 0 %}
-      <div class="tag-list" style="margin-bottom: 1rem;">
-        {% assign sorted_tags = site.tags | sort %}
-        {% for tag in sorted_tags %}
-          <a href="{{ tag[0] | slugify | prepend: '/posts/tag/' | relative_url }}">
-            <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag[0] }}
-          </a>
-          {% unless forloop.last %}
-            &nbsp;&middot;&nbsp;
-          {% endunless %}
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    <!-- Line Separator -->
-    {% if site.tags.size > 0 and site.categories.size > 0 %}
-      <hr style="margin: 1rem auto; width: 80%;">
-    {% endif %}
-
-    {% if site.categories.size > 0 %}
-      <div class="category-list" style="margin-top: 1rem;">
-        {% assign sorted_categories = site.categories | sort %}
-        {% for category in sorted_categories %}
-          <a href="{{ category[0] | slugify | prepend: '/posts/category/' | relative_url }}">
-            <i class="fa-solid fa-tag fa-sm"></i> {{ category[0] }}
-          </a>
-          {% unless forloop.last %}
-            &nbsp;&middot;&nbsp;
-          {% endunless %}
-        {% endfor %}
-      </div>
-    {% endif %}
-
-  </div>
-
 {% assign featured_posts = site.posts | where: "featured", "true" %}
 {% if featured_posts.size > 0 %}
 <br>
@@ -119,105 +83,97 @@ Created in {{ post.date | date: '%B %d, %Y' }}
 <hr>
 {% endif %}
 
-  <ul class="post-list">
-    {% if page.pagination.enabled %}
-      {% assign postlist = paginator.posts %}
-    {% else %}
-      {% assign postlist = site.posts %}
-    {% endif %}
+  {% assign postlist = site.posts %}
+  {% assign posts_by_year = postlist | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
 
-    {% for post in postlist %}
-      {% if post.external_source == blank %}
-        {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
-      {% else %}
-        {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
-      {% endif %}
-      {% assign year = post.date | date: "%Y" %}
-      {% assign tags = post.tags | join: "" %}
-      {% assign categories = post.categories | join: "" %}
+  <div class="row">
+    <!-- Main post list -->
+    <div class="col-sm-9">
+      {% for year_group in posts_by_year %}
+        <h2 id="{{ year_group.name }}" class="year-heading" style="margin-top: 1.5rem;">{{ year_group.name }}</h2>
+        <ul class="post-list">
+          {% for post in year_group.items %}
+            {% if post.external_source == blank %}
+              {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
+            {% else %}
+              {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+            {% endif %}
+            {% assign year = post.date | date: "%Y" %}
 
-      <li>
-        {% if post.thumbnail %}
-          <div class="row">
-            <div class="col-sm-9">
-        {% endif %}
-        <h3>
-          {% if post.external_url and post.external_source == 'medium' or post.external_url and post.external_source == 'substack' %}
+            <li>
+              {% if post.thumbnail %}
+                <div class="row">
+                  <div class="col-sm-9">
+              {% endif %}
+              <h3>
+                {% if post.external_url and post.external_source == 'medium' or post.external_url and post.external_source == 'substack' %}
+                  <a class="post-title" href="{{ post.external_url }}" target="_blank">{{ post.title }}</a>
+                  <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                {% elsif post.redirect == blank %}
+                  <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                {% elsif post.redirect contains '://' %}
+                  <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
+                  <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                {% else %}
+                  <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
+                {% endif %}
+              </h3>
 
-<a class="post-title" href="{{ post.external_url }}" target="_blank">{{ post.title }}</a>
-<svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-<path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
-{% elsif post.redirect == blank %}
-<a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-{% elsif post.redirect contains '://' %}
-<a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
-<svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-<path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
-{% else %}
-<a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
-{% endif %}
+              {% assign preview = "" %}
+              {% if post.feed_content and post.feed_content != "" %}
+                {% assign preview = post.feed_content | strip_html | truncatewords: 50 %}
+              {% elsif post.description and post.description != "" %}
+                {% assign preview = post.description %}
+              {% elsif post.content and post.content != "" %}
+                {% assign preview = post.content | strip_html | truncatewords: 50 %}
+              {% endif %}
+              {% if preview != "" %}
+                <p>{{ preview }}</p>
+              {% endif %}
 
-</h3>
-<p>{{ post.description }}</p>
-<p class="post-meta">
-Created in {{ post.date | date: '%B %d, %Y' }}
-{% if post.last_updated %}, last updated in {{ post.last_updated | date: '%B %d, %Y' }}{% endif %}
-{% if post.starting_date %}, Starting date: {{ post.starting_date | date: '%B %d, %Y' }}{% endif %}
-{% if post.update_date %}, Updated on: {{ post.update_date | date: '%B %d, %Y' }}{% endif %}
-{% if post.status %}, Status: {{ post.status }}{% endif %}
-{% if post.confidence %}, Confidence: {{ post.confidence }}{% endif %}
-{% if post.effort %}, Effort: {{ post.effort }}{% endif %}
-<br>
-{{ read_time }} min read &nbsp; &middot; &nbsp;
-{{ post.date | date: '%B %d, %Y' }}
-{% if post.external_source and post.external_url %}
-  &nbsp; &middot; &nbsp; {{ post.external_source | capitalize }}
-{% endif %}
-</p>
-<p class="post-tags">
-<a href="{{ year | prepend: '/posts/' | prepend: site.baseurl}}">
-<i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
-</a>
+              <p class="post-meta">
+                {{ post.date | date: '%B %d, %Y' }}
+                {% if post.last_updated %}, last updated in {{ post.last_updated | date: '%B %d, %Y' }}{% endif %}
+                {% if post.status %}, Status: {{ post.status }}{% endif %}
+                {% if post.confidence %}, Confidence: {{ post.confidence }}{% endif %}
+                {% if post.effort %}, Effort: {{ post.effort }}{% endif %}
+                &nbsp; &middot; &nbsp; {{ read_time }} min read
+                {% if post.external_source and post.external_url %}
+                  &nbsp; &middot; &nbsp; {{ post.external_source | capitalize }}
+                {% endif %}
+              </p>
 
-          {% if tags != "" %}
-            &nbsp; &middot; &nbsp;
-            {% for tag in post.tags %}
-              <a href="{{ tag | slugify | prepend: '/posts/tag/' | prepend: site.baseurl}}">
-                <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
-            {% endfor %}
-          {% endif %}
+              {% if post.thumbnail %}
+                  </div>
+                  <div class="col-sm-3">
+                    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
+                  </div>
+                </div>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
 
-          {% if categories != "" %}
-            &nbsp; &middot; &nbsp;
-            {% for category in post.categories %}
-              <a href="{{ category | slugify | prepend: '/posts/category/' | prepend: site.baseurl}}">
-                <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
-            {% endfor %}
-          {% endif %}
-        </p>
-
-        {% if post.thumbnail %}
-            </div>
-            <div class.col-sm-3">
-              <img class="card-img" src="{{post.thumbnail | relative_url}}" style="object-fit: cover; height: 90%" alt="image">
-            </div>
-          </div>
-        {% endif %}
-      </li>
-    {% endfor %}
-
-  </ul>
-
-{% if page.pagination.enabled %}
-{% include pagination.liquid %}
-{% endif %}
+    <!-- Year navigation sidebar -->
+    <div class="col-sm-3">
+      <nav class="year-nav sticky-top" style="top: 5rem; padding-top: 1rem;">
+        <h4>Years</h4>
+        <ul style="list-style: none; padding-left: 0;">
+          {% for year_group in posts_by_year %}
+            <li style="margin-bottom: 0.5rem;">
+              <a href="#{{ year_group.name }}">{{ year_group.name }}</a>
+              <span class="text-muted">({{ year_group.items | size }})</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
 
 </div>

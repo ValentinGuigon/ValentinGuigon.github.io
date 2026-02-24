@@ -121,6 +121,7 @@ module ExternalPosts
       doc.data['external_url'] = entry.url
       doc.data['slug'] = unique_slug
       doc.data['permalink'] = permalink if permalink
+      doc.data['feed_content'] = entry.content if entry.respond_to?(:content) && entry.content
 
       if source == 'medium'
         content = Nokogiri::HTML.fragment(entry.content)

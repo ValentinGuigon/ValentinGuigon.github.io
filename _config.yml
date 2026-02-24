@@ -131,7 +131,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: /Posts # blog_name will be displayed in your blog page
-blog_description: Documents collected from my non-academic corpus. Polished articles are published on external platforms. Non-definitive notes may be published locally. Epistemic statuses provided whenever possible. Note that Substack doesn't embed hastags; tags function deactivated.
+blog_description: A place for non-academic writing.
 permalink: /posts/:year-:month-day-:title/
 tag_permalink_style: pretty
 lsi: false # produce an index for related posts
