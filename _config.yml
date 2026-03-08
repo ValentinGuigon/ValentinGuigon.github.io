@@ -2,16 +2,17 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Valentin Guigon | Computational Neuroscience, Computational Psychiatry, NeuroAI # the website title (if blank, full name will be used instead)
 first_name: Valentin
 middle_name:
 last_name: Guigon
 email: vguigon@umd.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal website of Valentin Guigon.
+  description: >
+  Personal website of Valentin Guigon, postdoctoral researcher in computational neuroscience, computational psychiatry, and NeuroAI, studying social learning, trust, belief updating, and decision-making under uncertainty.
 footer_text:
   > # Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: computational neuroscience, computational psychiatry, NeuroAI, social learning, trust, belief updating, decision-making under uncertainty, fMRI, computational modeling, reproducible research # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: icon.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -60,8 +61,8 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
@@ -70,7 +71,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 acm_id: # your dl.acm.org/profile/id
 blogger_url: # your blogger URL
-bluesky_url: # your bluesky URL
+bluesky_url: #guigonv.bsky.social # your bluesky URL
 dblp_url: # your DBLP profile url
 discord_id: # your discord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
@@ -87,12 +88,12 @@ linkedin_username: valentin-guigon-phd-61024a92
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 medium_username: valentin.guigon # your Medium username
 substack_url: https://valentinguigon.substack.com
-orcid_id: 0000-0003-0597-8094# your ORCID ID
+orcid_id: 0000-0003-0597-8094 # your ORCID ID
 osf_id: 9cq3r # your OSF ID
 pinterest_id: # your pinterest id
 publons_id: # your ID on Publons
 quora_username: # your Quora username
-research_gate_profile: # your profile on ResearchGate
+research_gate_profile: #Valentin-Guigon-2 # your profile on ResearchGate
 scholar_userid: M4O2z3EAAAAJ # your Google Scholar ID
 scopus_id: # your profile on Scopus
 semanticscholar_id: # your Semantic Scholar ID
@@ -104,8 +105,8 @@ wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 wikidata_id: # your wikidata id
 wikipedia_id: # your wikipedia id (Case sensitive)
-work_url: # work page URL
-x_username: # your X handle
+work_url: #https://nacs.umd.edu/facultyprofile/guigon/valentin # work page URL
+x_username: #GuigonV # your X handle
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 

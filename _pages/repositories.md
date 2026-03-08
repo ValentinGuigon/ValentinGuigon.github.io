@@ -2,26 +2,14 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Code I use daily and side projects.
+description: Research code, methods templates, and scientific software.
 nav: true
 nav_order: 4
 ---
 
-## GitHub users
+This page gathers a selected set of repositories tied to my work in computational neuroscience, computational psychiatry, NeuroAI, reproducible research workflows, fMRI methods, and scientific programming. It is not intended as an exhaustive mirror of my GitHub activity, but as a curated view of the projects most relevant to my research profile.
 
-{% if site.data.repositories.github_users %}
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.liquid username=user %}
-  {% endfor %}
-</div>
-
----
-
-{% endif %}
-
-## GitHub Repositories
+## Selected repositories
 
 {% if site.data.repositories.github_repos %}
 
@@ -30,4 +18,5 @@ nav_order: 4
     {% include repository/repo.liquid repository=repo %}
   {% endfor %}
 </div>
+
 {% endif %}
