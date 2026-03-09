@@ -127,6 +127,12 @@ module ExternalPosts
         content = Nokogiri::HTML.fragment(entry.content)
         content.css('h3').remove
         doc.content = content.to_html
+        first_img = content.at_css('img')
+        doc.data['thumbnail'] = first_img['src'] if first_img
+      elsif source == 'substack'
+        content = Nokogiri::HTML.fragment(entry.content)
+        first_img = content.at_css('img')
+        doc.data['thumbnail'] = first_img['src'] if first_img
       end
 
       site.collections['posts'].docs << doc

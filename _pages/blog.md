@@ -97,7 +97,7 @@ Created in {{ post.date | date: '%B %d, %Y' }}
 <li>
 {% if post.thumbnail %}
 <div class="row">
-<div class="col-sm-9">
+<div class="col-sm-8">
 {% endif %}
 <h3 data-toc-skip>
 {% if post.external_url and post.external_source == 'medium' or post.external_url and post.external_source == 'substack' %}
@@ -145,7 +145,7 @@ Created in {{ post.date | date: '%B %d, %Y' }}
 {% if post.thumbnail %}
 
 </div>
-<div class="col-sm-3">
+<div class="col-sm-4">
 <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
 </div>
 </div>

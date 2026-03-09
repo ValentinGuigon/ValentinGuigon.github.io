@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Valentin Guigon | Computational Neuroscience, Computational Psychiatry, NeuroAI # the website title (if blank, full name will be used instead)
+title: Valentin Guigon # the website title (if blank, full name will be used instead)
 first_name: Valentin
 middle_name:
 last_name: Guigon
