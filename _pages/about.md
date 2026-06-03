@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral researcher in Computational Neuroscience, Computational Psychiatry, and NeuroAI, <a href='https://sldlab.umd.edu/'>Social Learning and Decisions Lab</a>, UMD
+subtitle: Postdoctoral researcher in Computational Neuroscience, Computational Psychiatry, and NeuroAI
 
 profile:
   align: right
@@ -18,7 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a postdoctoral researcher in Neuroscience and Psychology at the University of Maryland, working in Caroline Charpentier’s Social Learning and Decisions Lab ([SLD Lab](https://sldlab.umd.edu/)). I am also an affiliated member of the Artificial Intelligence Interdisciplinary Institute at Maryland ([AIM](https://aim.umd.edu/)), an affiliate researcher of the Neuroscience and Cognitive Science ([NACS](https://nacs.umd.edu/)) program, an elected Full Member of [Sigma Xi](https://www.sigmaxi.org/), The Scientific Research Honor Society, and I was nominated as a 2026 ambassador for [Thinking about Thinking](https://www.thinkingaboutthinking.org/).
+I am a postdoctoral researcher in Neuroscience and Psychology at the University of Maryland, working in Caroline Charpentier’s Social Learning and Decisions Lab ([SLD Lab](https://sldlab.umd.edu/)). I am also an affiliated member of the Artificial Intelligence Interdisciplinary Institute at Maryland ([AIM](https://aim.umd.edu/)), an affiliate researcher of the Neuroscience and Cognitive Science ([NACS](https://nacs.umd.edu/)) program, an elected Full Member of [Sigma Xi](https://www.sigmaxi.org/), The Scientific Research Honor Society, and a 2026 fellow of [Thinking about Thinking](https://www.thinkingaboutthinking.org/).
 
 My research sits at the intersection of computational neuroscience, behavioral economics, and NeuroAI. I combine behavioral experimentation, computational modeling, and neuroimaging to study how people learn, update beliefs, calibrate confidence, and make decisions under uncertainty, especially in social environments. My current work focuses on trust and social learning in dynamic settings, with an emphasis on model-based approaches, fMRI, and the formal characterization of individual differences.
 
