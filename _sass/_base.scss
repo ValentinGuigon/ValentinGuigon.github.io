@@ -874,7 +874,7 @@ footer.sticky-bottom {
   }
 
   h2.category {
-    color: var(--global-divider-color);
+    color: var(--color-text);
     border-bottom: 1px solid var(--global-divider-color);
     padding-top: 0.5rem;
     margin-top: 2rem;
@@ -929,7 +929,7 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
+    color: var(--color-text);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
@@ -1269,6 +1269,21 @@ progress::-moz-progress-bar {
 }
 
 /* Table of Contents */
+.toc-shell__title {
+  margin: 0 0 0.85rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.toc-sidebar-shell {
+  top: 5rem;
+}
+
 nav[data-toggle="toc"] {
   top: 5rem;
 
@@ -1298,13 +1313,66 @@ nav[data-toggle="toc"] {
   }
 }
 
-/* small screens */
+.toc-sidebar-nav--custom {
+  .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  .nav > li > a {
+    display: block;
+    padding: 4px 20px;
+    color: var(--global-text-color);
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    &:hover {
+      padding-left: 19px;
+      color: var(--global-hover-color);
+      border-left-color: var(--global-hover-color);
+      border-left-width: 1px;
+      border-left-style: solid;
+    }
+  }
+
+  .nav-link.active,
+  .nav-link.active:focus,
+  .nav-link.active:hover {
+    padding-left: 18px;
+    font-weight: 700;
+    color: var(--global-theme-color);
+    border-left-color: var(--global-theme-color);
+    border-left-width: 2px;
+    border-left-style: solid;
+
+    color: var(--global-theme-color);
+  }
+
+  .nav .nav > li > a:hover,
+  .nav .nav > li > a:focus {
+    padding-left: 29px;
+  }
+
+  .nav .nav > li > .active,
+  .nav .nav > li > .active:focus,
+  .nav .nav > li > .active:hover {
+    padding-left: 28px;
+    font-weight: 500;
+  }
+}
+
 @media (max-width: 576px) {
-  /* override stickyness so that the navigation does not follow scrolling */
-  nav[data-toggle="toc"] {
-    visibility: hidden;
-    height: 0;
-    top: 0;
+  .toc-sidebar-shell {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) {
+  .toc-sidebar-shell .toc-shell__title {
+    display: none;
   }
 }
 

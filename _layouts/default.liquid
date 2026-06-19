@@ -33,23 +33,53 @@
       role="main"
     >
       {% if page.toc and page.toc.sidebar %}
+        {% assign use_custom_toc = false %}
+        {% if page.custom_toc and page.custom_toc.size > 0 %}
+          {% assign use_custom_toc = true %}
+        {% endif %}
         {% if page.toc.sidebar == 'right' %}
-          <div class="row">
+          <div class="row toc-layout toc-layout--right">
             <!-- main content area -->
-            <div class="col-sm-10">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-2">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+            <div class="col-12 col-sm-10 order-2 order-sm-1">{{ content }}</div>
+            <!-- sidebar, which moves above content on a small screen -->
+            <div class="col-12 col-sm-2 order-1 order-sm-2">
+              <aside class="toc-sidebar-shell sticky-top">
+                <p class="toc-shell__title">jump to section</p>
+                {% if use_custom_toc %}
+                  <nav id="toc-sidebar" class="toc-sidebar-nav toc-sidebar-nav--custom" aria-label="Section navigation">
+                    <ul class="nav navbar-nav">
+                      {% for item in page.custom_toc %}
+                        <li><a class="nav-link" href="#{{ item.id }}">{{ item.label }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </nav>
+                {% else %}
+                  <nav id="toc-sidebar" class="toc-sidebar-nav" data-toggle="toc"></nav>
+                {% endif %}
+              </aside>
             </div>
           </div>
         {% else %}
-          <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-2">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+          <div class="row toc-layout toc-layout--left">
+            <!-- sidebar, which moves above content on a small screen -->
+            <div class="col-12 col-sm-2 order-1">
+              <aside class="toc-sidebar-shell sticky-top">
+                <p class="toc-shell__title">jump to section</p>
+                {% if use_custom_toc %}
+                  <nav id="toc-sidebar" class="toc-sidebar-nav toc-sidebar-nav--custom" aria-label="Section navigation">
+                    <ul class="nav navbar-nav">
+                      {% for item in page.custom_toc %}
+                        <li><a class="nav-link" href="#{{ item.id }}">{{ item.label }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </nav>
+                {% else %}
+                  <nav id="toc-sidebar" class="toc-sidebar-nav" data-toggle="toc"></nav>
+                {% endif %}
+              </aside>
             </div>
             <!-- main content area -->
-            <div class="col-sm-10">{{ content }}</div>
+            <div class="col-12 col-sm-10 order-2">{{ content }}</div>
           </div>
         {% endif %}
       {% else %}

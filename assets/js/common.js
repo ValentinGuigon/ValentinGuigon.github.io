@@ -24,8 +24,6 @@ $(document).ready(function () {
       $(this).attr("data-toc-skip", "");
     });
     var navSelector = "#toc-sidebar";
-    var $myNav = $(navSelector);
-    Toc.init($myNav);
     $("body").scrollspy({
       target: navSelector,
     });
