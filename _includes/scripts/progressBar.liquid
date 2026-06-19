@@ -29,6 +29,9 @@
     function progressBarSetup() {
       if ('max' in document.createElement('progress')) {
         initializeProgressElement();
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(initializeProgressElement);
+        }
         $(document).on('scroll', function () {
           progressBar.attr({ value: getCurrentScrollPosition() });
         });
