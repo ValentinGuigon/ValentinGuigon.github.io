@@ -141,6 +141,8 @@ module ExternalPosts
     # Helper: build a Jekyll document and populate shared fields
     def build_and_populate_doc(site, slug, attrs = {})
       doc = create_jekyll_document(site, build_post_path(site, slug))
+      doc.data['layout'] ||= 'post'
+      doc.data['neuro_background'] ||= 'sparse'
       doc.data['title'] = attrs[:title] if attrs[:title]
       doc.data['date'] = attrs[:date] if attrs[:date]
       doc.data['external_source'] = attrs[:external_source] if attrs[:external_source]

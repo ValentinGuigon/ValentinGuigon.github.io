@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post post--about">
+<div class="post post--about{% if page.neuro_background and page.disable_neuro_bg != true and page.disable_neuro_bg != 'true' %} hero-neuro-bg{% endif %}">
   <header class="post-header about-hero">
     <h1 class="post-title">
       {% if site.title == 'blank' %}

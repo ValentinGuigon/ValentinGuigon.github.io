@@ -95,6 +95,14 @@
               <span class="project-card__link-icon" aria-hidden="true">
                 {% if link_label contains 'github' or link_url contains 'github.com' %}
                   <i class="fa-brands fa-github"></i>
+                {% elsif link_label contains 'poster' or link_url contains '/assets/pdf/posters/' %}
+                  <i class="fa-solid fa-image"></i>
+                {% elsif link_label contains 'osf' or link_url contains 'osf.io' %}
+                  <i class="ai ai-osf"></i>
+                {% elsif link_label contains 'paper' or link_url contains '/articles/' or link_url contains 'doi.org' or link_url contains 'nature.com/articles' %}
+                  <i class="fa-solid fa-file-lines"></i>
+                {% elsif link_label contains 'live page' or link_label contains 'live site' or link_url contains 'github.io' %}
+                  <i class="fa-solid fa-globe"></i>
                 {% elsif link_label contains 'substack' or link_url contains 'substack.com' %}
                   <i class="fa-solid fa-newspaper"></i>
                 {% elsif link_label contains 'pypi' or link_url contains 'pypi.org' %}

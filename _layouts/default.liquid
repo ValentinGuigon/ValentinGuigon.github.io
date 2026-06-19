@@ -17,25 +17,21 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    {% assign neuro_background_variant = nil %}
-    {% if page.neuro_background == false %}
-    {% elsif page.neuro_background %}
-      {% assign neuro_background_variant = page.neuro_background %}
-    {% elsif page.neuro_background_variant %}
-      {% assign neuro_background_variant = page.neuro_background_variant %}
-    {% endif %}
+    {% assign enable_random_neuro_bg = false %}
+    {% unless page.disable_neuro_bg == true or page.disable_neuro_bg == 'true' %}
+      {% if page.neuro_background or page.layout == 'post' %}
+        {% assign enable_random_neuro_bg = true %}
+      {% endif %}
+    {% endunless %}
 
     <!-- Header -->
     {% include header.liquid %}
 
     <!-- Content -->
     <div
-      class="container mt-5 {% if page.layout == 'about' %}container--about-shell{% endif %}{% if page.toc and page.toc.sidebar and page.wide_toc_content %} container--wide-toc{% endif %}{% if neuro_background_variant %} container--with-neuro-background container--with-neuro-background--{{ neuro_background_variant }}{% endif %}"
+      class="container mt-5 {% if page.layout == 'about' %}container--about-shell{% endif %}{% if page.toc and page.toc.sidebar and page.wide_toc_content %} container--wide-toc{% endif %}"
       role="main"
     >
-      {% if neuro_background_variant %}
-        {% include neuro_background.liquid variant=neuro_background_variant %}
-      {% endif %}
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
@@ -88,5 +84,21 @@
     {% include scripts/back_to_top.liquid %}
     {% include scripts/search.liquid %}
     <script src="{{ '/assets/js/shortcut-key.js' | relative_url }}"></script>
+    {% if enable_random_neuro_bg %}
+      <script>
+        (function () {
+          const backgrounds = [
+            {% for bg in site.data.neuro_backgrounds %}
+              "{{ bg | relative_url }}"{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ];
+
+          if (!backgrounds.length) return;
+          const selected = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+          document.documentElement.style.setProperty("--random-neuro-bg", `url("${selected}")`);
+        })();
+      </script>
+    {% endif %}
   </body>
 </html>

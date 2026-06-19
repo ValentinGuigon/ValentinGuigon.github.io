@@ -8,7 +8,7 @@ layout: default
   </style>
 {% endif %}
 
-<div class="post">
+<div class="post{% if page.neuro_background and page.disable_neuro_bg != true and page.disable_neuro_bg != 'true' %} hero-neuro-bg{% endif %}">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>

@@ -12,6 +12,15 @@ let toggleThemeSetting = () => {
   }
 };
 
+let toggleNeuroBackgroundSetting = () => {
+  let neuroBackgroundSetting = determineNeuroBackgroundSetting();
+  if (neuroBackgroundSetting == "on") {
+    setNeuroBackgroundSetting("off");
+  } else {
+    setNeuroBackgroundSetting("on");
+  }
+};
+
 // Change the theme setting and apply the theme.
 let setThemeSetting = (themeSetting) => {
   localStorage.setItem("theme", themeSetting);
@@ -19,6 +28,11 @@ let setThemeSetting = (themeSetting) => {
   document.documentElement.setAttribute("data-theme-setting", themeSetting);
 
   applyTheme();
+};
+
+let setNeuroBackgroundSetting = (neuroBackgroundSetting) => {
+  localStorage.setItem("neuroBackground", neuroBackgroundSetting);
+  applyNeuroBackgroundSetting(neuroBackgroundSetting);
 };
 
 // Apply the computed dark or light theme to the website.
@@ -81,6 +95,18 @@ let applyTheme = () => {
       background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
     });
   }
+};
+
+let applyNeuroBackgroundSetting = (neuroBackgroundSetting) => {
+  document.documentElement.setAttribute("data-neuro-bg", neuroBackgroundSetting);
+
+  const backgroundToggle = document.getElementById("background-toggle");
+  if (!backgroundToggle) return;
+
+  const isEnabled = neuroBackgroundSetting !== "off";
+  backgroundToggle.setAttribute("aria-pressed", isEnabled ? "true" : "false");
+  backgroundToggle.setAttribute("title", isEnabled ? "Hide page background" : "Show page background");
+  backgroundToggle.setAttribute("aria-label", isEnabled ? "Hide page background" : "Show page background");
 };
 
 let setHighlight = (theme) => {
@@ -231,18 +257,36 @@ let determineComputedTheme = () => {
   }
 };
 
+let determineNeuroBackgroundSetting = () => {
+  let neuroBackgroundSetting = localStorage.getItem("neuroBackground");
+  if (neuroBackgroundSetting != "on" && neuroBackgroundSetting != "off") {
+    neuroBackgroundSetting = "on";
+  }
+  return neuroBackgroundSetting;
+};
+
 let initTheme = () => {
   let themeSetting = determineThemeSetting();
+  let neuroBackgroundSetting = determineNeuroBackgroundSetting();
 
   setThemeSetting(themeSetting);
+  applyNeuroBackgroundSetting(neuroBackgroundSetting);
 
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
+    const background_toggle = document.getElementById("background-toggle");
 
     mode_toggle.addEventListener("click", function () {
       toggleThemeSetting();
     });
+
+    if (background_toggle) {
+      background_toggle.addEventListener("click", function () {
+        toggleNeuroBackgroundSetting();
+      });
+      applyNeuroBackgroundSetting(determineNeuroBackgroundSetting());
+    }
   });
 
   // Add event listener to the system theme preference change.

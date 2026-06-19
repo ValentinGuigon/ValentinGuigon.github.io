@@ -21,7 +21,7 @@ toc:
 wide_toc_content: true
 ---
 
-<div class="post">
+<div class="post hero-neuro-bg">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>

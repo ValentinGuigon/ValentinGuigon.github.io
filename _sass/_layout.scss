@@ -47,6 +47,33 @@ body.sticky-bottom-footer {
   max-width: calc(#{$max-content-width} / 0.8333333333);
 }
 
+.hero-neuro-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-neuro-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--random-neuro-bg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+html[data-neuro-bg="off"] .hero-neuro-bg::before {
+  display: none;
+}
+
+.hero-neuro-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
 .container--with-neuro-background {
   position: relative;
   z-index: 1;
