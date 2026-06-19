@@ -2,64 +2,32 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
-nav: false
-nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+description: Selected research and personal projects.
+nav: true
+nav_order: 1
+neuro_background: dense
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+{% assign projects_by_year = site.projects | group_by_exp: "project", "project.date_range | split: '-' | first | strip" | sort: "name" | reverse %}
 
+<div class="projects projects-page">
+
+{% if site.projects.size > 0 %}
+
+{% for year_group in projects_by_year %}
+
+<h2 id="{{ year_group.name }}" class="year-heading">{{ year_group.name }}</h2>
+
+{% assign sorted_projects = year_group.items | sort: "importance" | reverse %}
+
+<div class="project-list">
+{% for project in sorted_projects %}
+{% include project_card_long.liquid project=project %}
+{% endfor %}
+</div>
+{% endfor %}
 {% else %}
-
-<!-- Display projects without categories -->
-
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
+<p>No projects published yet.</p>
 {% endif %}
+
 </div>

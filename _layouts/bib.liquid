@@ -56,12 +56,18 @@
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
         {% assign author_array_limit = site.max_author_limit %}
       {% endif %}
+      {%- assign site_first_name_normalized = site.first_name | downcase | strip -%}
+      {%- assign site_last_name_normalized = site.last_name | downcase | strip -%}
 
       {%- for author in entry.author_array limit: author_array_limit -%}
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
-        {% if site.scholar.last_name contains author_last_name %}
+        {%- assign author_first_name_normalized = author.first | downcase | strip -%}
+        {%- assign author_last_name_normalized = author_last_name | downcase | strip -%}
+        {% if author_last_name_normalized == site_last_name_normalized and author_first_name_normalized contains site_first_name_normalized %}
+          {% assign author_is_self = true %}
+        {% elsif site.scholar.last_name contains author_last_name %}
           {% if site.scholar.first_name contains author.first %}
             {% assign author_is_self = true %}
           {% endif %}
@@ -82,10 +88,10 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <em>
+          <strong class="author-self">
             {{- author.first }}
             {{ author_last_html -}}
-          </em>
+          </strong>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{coauthor_url}}">

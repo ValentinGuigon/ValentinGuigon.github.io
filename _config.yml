@@ -283,6 +283,13 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:year-:month-:day-:title/
+      neuro_background: sparse
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "post"
+      neuro_background: sparse
 
 sass:
   style: compressed
@@ -322,8 +329,8 @@ jekyll-archives:
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Valentin]
-  first_name: [Guigon]
+  last_name: [Guigon]
+  first_name: [Valentin]
 
   style: apa
   locale: en
@@ -494,7 +501,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
   highlightjs:
     integrity:
       css:

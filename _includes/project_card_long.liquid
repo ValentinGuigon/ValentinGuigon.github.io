@@ -1,0 +1,115 @@
+{% assign project_slug = project.title | slugify %}
+<article class="card project-card project-card--{{ project_slug }} mt-4 mb-4 hoverable">
+  <div class="project-card__art" aria-hidden="true">
+    {% case project_slug %}
+      {% when 'suplex-agentic-workflow' %}
+        <svg viewBox="0 0 520 320" role="presentation" focusable="false">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M162 70C225 30 321 37 381 83C429 119 442 183 419 230C397 274 339 297 284 287C215 274 169 209 177 150C182 113 208 82 245 65" stroke="var(--project-art-line)" stroke-width="1.4" />
+            <path d="M138 105C187 68 267 57 334 82C394 104 434 154 434 205C434 244 407 274 361 286" stroke="var(--project-art-line-strong)" stroke-width="1.2" />
+            <path d="M217 44C282 27 358 41 413 90" stroke="var(--project-art-line)" stroke-width="0.95" />
+            <path d="M306 54V128M334 54V128M362 54V128M390 54V128M306 54H390M306 79H390M306 104H390M306 128H390" stroke="var(--project-art-grid)" stroke-width="0.9" />
+          </g>
+          <g fill="var(--project-art-dot)">
+            <circle cx="257" cy="133" r="4.2" />
+            <circle cx="288" cy="117" r="3.6" />
+            <circle cx="319" cy="142" r="3.9" />
+            <circle cx="296" cy="163" r="3.1" />
+            <circle cx="269" cy="176" r="2.8" />
+            <circle cx="335" cy="171" r="2.6" />
+            <circle cx="238" cy="156" r="2.5" />
+          </g>
+        </svg>
+      {% when 'cookiecutter-neuro-research-project' %}
+        <svg viewBox="0 0 520 320" role="presentation" focusable="false">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M176 250C219 218 244 205 277 181C311 156 333 127 365 96C380 81 397 70 420 63" stroke="var(--project-art-line-strong)" stroke-width="1.7" />
+            <path d="M152 232C205 195 254 173 300 139C334 114 367 90 406 74" stroke="var(--project-art-line)" stroke-width="1.05" />
+            <path d="M270 94V184M300 94V184M330 94V184M360 94V184M390 94V184M270 94H390M270 124H390M270 154H390M270 184H390" stroke="var(--project-art-grid)" stroke-width="0.9" />
+          </g>
+          <g fill="var(--project-art-dot)">
+            <circle cx="213" cy="221" r="4.3" />
+            <circle cx="258" cy="193" r="3.8" />
+            <circle cx="304" cy="157" r="4.1" />
+            <circle cx="352" cy="109" r="3.6" />
+            <circle cx="404" cy="70" r="4.2" />
+            <circle cx="342" cy="199" r="2.8" />
+            <circle cx="377" cy="173" r="2.5" />
+            <circle cx="286" cy="219" r="2.7" />
+          </g>
+        </svg>
+      {% else %}
+        <svg viewBox="0 0 520 320" role="presentation" focusable="false">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M174 224C211 187 248 158 292 131C325 110 360 92 411 77" stroke="var(--project-art-line)" stroke-width="1.2" />
+            <path d="M187 108C234 75 302 63 360 80C404 93 437 121 454 162" stroke="var(--project-art-line-strong)" stroke-width="1.1" />
+            <path d="M293 70V136M321 70V136M349 70V136M377 70V136M293 70H377M293 92H377M293 114H377M293 136H377" stroke="var(--project-art-grid)" stroke-width="0.85" />
+          </g>
+          <g fill="var(--project-art-dot)">
+            <circle cx="254" cy="198" r="3.4" />
+            <circle cx="281" cy="172" r="3.1" />
+            <circle cx="315" cy="156" r="3.6" />
+            <circle cx="343" cy="133" r="2.8" />
+            <circle cx="371" cy="114" r="2.6" />
+          </g>
+        </svg>
+    {% endcase %}
+  </div>
+
+  <div class="card-body project-card__body">
+    <div class="project-card__content">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-start">
+        <div class="project-card__heading">
+          <h2 class="project-card__title mb-0">{{ project.title }}</h2>
+          {% assign meta_parts = '' | split: '' %}
+          {% if project.date_range %}
+            {% assign meta_parts = meta_parts | push: project.date_range %}
+          {% endif %}
+          {% if project.context %}
+            {% assign meta_parts = meta_parts | push: project.context %}
+          {% endif %}
+          {% if meta_parts.size > 0 %}
+            <p class="project-card__meta mb-0">{{ meta_parts | join: ' | ' }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if project.tags and project.tags.size > 0 %}
+        <ul class="project-card__tags" aria-label="Project tags">
+          {% for tag in project.tags %}
+            <li>{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if project.description %}
+        <p class="project-card__description mb-0">{{ project.description }}</p>
+      {% endif %}
+
+      {% if project.links and project.links.size > 0 %}
+        <div class="project-card__links" aria-label="Project links">
+          {% for link in project.links %}
+            {% assign link_label = link.label | downcase %}
+            {% assign link_url = link.url | downcase %}
+            <a class="project-card__link" href="{{ link.url }}">
+              <span class="project-card__link-icon" aria-hidden="true">
+                {% if link_label contains 'github' or link_url contains 'github.com' %}
+                  <i class="fa-brands fa-github"></i>
+                {% elsif link_label contains 'substack' or link_url contains 'substack.com' %}
+                  <i class="fa-solid fa-newspaper"></i>
+                {% elsif link_label contains 'pypi' or link_url contains 'pypi.org' %}
+                  <i class="fa-brands fa-python"></i>
+                {% elsif link_label contains 'read the docs' or link_label contains 'docs' or link_url contains 'readthedocs' %}
+                  <i class="fa-solid fa-book-open"></i>
+                {% else %}
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                {% endif %}
+              </span>
+              <span class="project-card__link-label">{{ link.label }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article>

@@ -4,9 +4,11 @@ permalink: /publications/
 title: publications
 description: Publications in reversed chronological order.
 nav: true
-nav_order: 1
+nav_order: 2
+neuro_background: sparse
 toc:
   sidebar: right
+wide_toc_content: true
 ---
 
 <!-- _pages/publications.md -->

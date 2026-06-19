@@ -2,7 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral researcher in Computational Neuroscience, Computational Psychiatry, and NeuroAI
+subtitle: # Postdoctoral researcher in Computational Neuroscience, Computational Psychiatry, and NeuroAI
+neuro_background: balanced
 
 profile:
   align: right
@@ -18,14 +19,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a postdoctoral researcher in Neuroscience and Psychology at the University of Maryland, working in Caroline Charpentier’s Social Learning and Decisions Lab ([SLD Lab](https://sldlab.umd.edu/)). I am also an affiliated member of the Artificial Intelligence Interdisciplinary Institute at Maryland ([AIM](https://aim.umd.edu/)), an affiliate researcher of the Neuroscience and Cognitive Science ([NACS](https://nacs.umd.edu/)) program, an elected Full Member of [Sigma Xi](https://www.sigmaxi.org/), The Scientific Research Honor Society, and a 2026 fellow of [Thinking about Thinking](https://www.thinkingaboutthinking.org/).
+I'm Valentin, a computational neuroscientist and psychologist developing models of social learning, belief updating, and decision-making under uncertainty.
 
-My research sits at the intersection of computational neuroscience, behavioral economics, and NeuroAI. I combine behavioral experimentation, computational modeling, and neuroimaging to study how people learn, update beliefs, calibrate confidence, and make decisions under uncertainty, especially in social environments. My current work focuses on trust and social learning in dynamic settings, with an emphasis on model-based approaches, fMRI, and the formal characterization of individual differences.
+I work with Caroline Charpentier in the Social Learning and Decisions Lab ([SLD Lab](https://sldlab.umd.edu/)) at the University of Maryland. I am also an affiliated member of the Artificial Intelligence Interdisciplinary Institute at Maryland ([AIM](https://aim.umd.edu/)), an affiliate researcher of the Neuroscience and Cognitive Science ([NACS](https://nacs.umd.edu/)) program, an elected Full Member of [Sigma Xi](https://www.sigmaxi.org/), the Scientific Research Honor Society, and a 2026 fellow of [Thinking about Thinking](https://www.thinkingaboutthinking.org/).
 
-More broadly, I am interested in how people assess uncertainty, seek information, and form or revise beliefs, and in how these capacities connect to the norms and institutions that structure social life. I am also increasingly drawn to foundational questions about cognition and to the relationship between neuroscience, cognitive theory, and AI.
+My research asks how people seek information, learn from social experience, and revise beliefs in dynamic environments. I combine behavioral experiments, computational modeling, and neuroimaging to study these processes at both behavioral and neural levels. My current work focuses on heterogeneity in trust learning and social decision-making, with applications to computational psychiatry and model-based fMRI.
 
-I currently supervise a computational psychiatry project on trust and a model-based fMRI study on social learning, both focused on dynamic and uncertain social environments.
-
-I was trained in psychology and neuroscience at Aix-Marseille Université and completed a Master’s degree in Cognitive Science at Université Lumière Lyon 2. I earned my Ph.D. in Cognitive Neuroscience at Université Claude Bernard Lyon 1, under the supervision of Jean-Claude Dreher and Marie Claire Villeval. My doctoral research focused on the neurocognitive mechanisms underlying the transmission of uncertain information in social contexts.
-
-I write about cognition, AI, and epistemology on Substack. Outside of research, I boulder, and I spend a great deal of time thinking about the works of Walt Whitman, Gregory Crewdson, Saul Leiter, and Bi Gan, and about _The Birth of Tragedy_.
+More broadly, I am interested in the computational principles that link cognition, social behavior, and artificial intelligence, and in how uncertainty, belief, and epistemic norms shape human decision-making. I also write about cognition, AI, and epistemology on [Substack](https://valentinguigon.substack.com/). Outside of research, I boulder, I do photography, and I spend a great deal of time thinking about the works of Walt Whitman, Saul Leiter, and _The Birth of Tragedy_.

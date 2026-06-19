@@ -4,7 +4,8 @@ permalink: /posts/
 title: posts
 description: A place for non-academic writing.
 nav: true
-nav_order: 2
+nav_order: 3
+neuro_background: sparse
 pagination:
   enabled: true
   collection: posts
@@ -17,6 +18,7 @@ pagination:
     after: 3
 toc:
   sidebar: right
+wide_toc_content: true
 ---
 
 <div class="post">

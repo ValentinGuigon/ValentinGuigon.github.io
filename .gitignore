@@ -12,3 +12,7 @@ node_modules/
 vendor
 .idea
 _posts/*-medium-*.md
+.suplex
+AGENTS.md
+CLAUDE.md
+SUPLEX.md

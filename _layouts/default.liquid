@@ -17,11 +17,25 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    {% assign neuro_background_variant = nil %}
+    {% if page.neuro_background == false %}
+    {% elsif page.neuro_background %}
+      {% assign neuro_background_variant = page.neuro_background %}
+    {% elsif page.neuro_background_variant %}
+      {% assign neuro_background_variant = page.neuro_background_variant %}
+    {% endif %}
+
     <!-- Header -->
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div
+      class="container mt-5 {% if page.layout == 'about' %}container--about-shell{% endif %}{% if page.toc and page.toc.sidebar and page.wide_toc_content %} container--wide-toc{% endif %}{% if neuro_background_variant %} container--with-neuro-background container--with-neuro-background--{{ neuro_background_variant }}{% endif %}"
+      role="main"
+    >
+      {% if neuro_background_variant %}
+        {% include neuro_background.liquid variant=neuro_background_variant %}
+      {% endif %}
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">

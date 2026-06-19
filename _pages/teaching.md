@@ -4,12 +4,14 @@ title: teaching
 permalink: /teaching/
 description: Materials for courses taught.
 nav: true
-nav_order: 6
+nav_order: 5
+neuro_background: sparse
 display_years: [2025, 2023]
 display_categories: ["UMD", "Summer school Cortecs", "UCBL1"]
 horizontal: false
 toc:
   sidebar: right
+wide_toc_content: true
 _styles: >
   nav[data-toggle=toc] .nav-link + ul { display: block !important; }
 ---
@@ -29,23 +31,25 @@ _styles: >
         {% assign sorted_teaching = teaching_in_cat | sort: "importance" %}
 
         {% if sorted_teaching and sorted_teaching.size > 0 %}
-          <h3 id="{{ y }}-{{ c | slugify }}" class="category">{{ c }}</h3>
+          <section class="teaching-group">
+            <h3 id="{{ y }}-{{ c | slugify }}" class="category">{{ c }}</h3>
 
-          {% if page.horizontal %}
-            <div class="container">
-              <div class="row row-cols-1 row-cols-md-2">
+            {% if page.horizontal %}
+              <div class="container">
+                <div class="row row-cols-1 row-cols-md-2">
+                  {% for item in sorted_teaching %}
+                    {% include teaching_horizontal.liquid item=item %}
+                  {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              <div class="row row-cols-1 row-cols-md-3">
                 {% for item in sorted_teaching %}
-                  {% include teaching_horizontal.liquid item=item %}
+                  {% include teaching.liquid item=item %}
                 {% endfor %}
               </div>
-            </div>
-          {% else %}
-            <div class="row row-cols-1 row-cols-md-3">
-              {% for item in sorted_teaching %}
-                {% include teaching.liquid item=item %}
-              {% endfor %}
-            </div>
-          {% endif %}
+            {% endif %}
+          </section>
         {% endif %}
       {% endfor %}
 

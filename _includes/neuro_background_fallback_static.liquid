@@ -1,0 +1,472 @@
+{% assign neuro_background_variant = include.variant | default: page.neuro_background | default: page.neuro_background_variant | default: 'balanced' %}
+{% unless neuro_background_variant == 'sparse' or neuro_background_variant == 'balanced' or neuro_background_variant == 'dense' %}
+  {% assign neuro_background_variant = 'balanced' %}
+{% endunless %}
+
+<div
+  class="neuro-background neuro-background--{{ neuro_background_variant }}"
+  data-neuro-variant="{{ neuro_background_variant }}"
+  aria-hidden="true"
+>
+  <svg
+    class="neuro-background__svg"
+    viewBox="0 0 1200 900"
+    preserveAspectRatio="xMidYMid slice"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <clipPath id="neuro-background-clip-{{ neuro_background_variant }}">
+        <path d="M 676 0 L 1200 0 L 1200 708 L 1122 708 L 1048 698 L 960 700 L 868 690 L 788 660 L 726 608 L 694 532 L 682 424 L 678 286 L 676 136 Z" />
+      </clipPath>
+    </defs>
+
+    {% case neuro_background_variant %}
+      {% when 'sparse' %}
+        <g clip-path="url(#neuro-background-clip-{{ neuro_background_variant }})">
+          <g class="neuro-background__field neuro-background__contours" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 640 62 C 742 34, 864 40, 980 78 C 1072 110, 1140 160, 1196 230" stroke="var(--neuro-bg-line-soft)" stroke-width="0.92" />
+            <path d="M 668 122 C 756 92, 864 102, 962 146 C 1044 182, 1112 238, 1182 312" stroke="var(--neuro-bg-line-soft)" stroke-width="1" />
+            <path d="M 702 194 C 794 168, 892 178, 976 218 C 1050 252, 1114 306, 1178 378" stroke="var(--neuro-bg-line)" stroke-width="1.05" />
+            <path d="M 684 286 C 788 252, 890 258, 978 292 C 1060 324, 1122 378, 1184 452" stroke="var(--neuro-bg-line-soft)" stroke-width="0.98" />
+            <path d="M 720 398 C 820 360, 916 362, 1002 392 C 1074 418, 1132 464, 1188 528" stroke="var(--neuro-bg-line-soft)" stroke-width="0.94" />
+            <path d="M 760 512 C 854 482, 944 486, 1024 512 C 1090 534, 1140 570, 1188 624" stroke="var(--neuro-bg-line)" stroke-width="1" />
+            <path d="M 828 114 C 882 148, 920 196, 938 258 C 958 324, 956 388, 946 450" stroke="var(--neuro-bg-line-soft)" stroke-width="0.9" />
+            <path d="M 932 96 C 994 132, 1036 184, 1058 246 C 1082 316, 1086 388, 1074 452" stroke="var(--neuro-bg-line-soft)" stroke-width="0.9" />
+          </g>
+
+          <g class="neuro-background__fragments neuro-background__grids">
+            <g fill="var(--neuro-bg-grid)">
+              <rect x="972" y="118" width="6" height="6" rx="1.2" />
+              <rect x="992" y="110" width="5" height="5" rx="1.1" />
+              <rect x="1010" y="126" width="6" height="6" rx="1.2" />
+              <rect x="1032" y="114" width="5" height="5" rx="1.1" />
+              <rect x="1050" y="132" width="6" height="6" rx="1.2" />
+              <rect x="1072" y="120" width="5" height="5" rx="1.1" />
+              <rect x="988" y="150" width="5" height="5" rx="1.1" />
+              <rect x="1008" y="168" width="6" height="6" rx="1.2" />
+              <rect x="1030" y="154" width="5" height="5" rx="1.1" />
+              <rect x="1050" y="174" width="6" height="6" rx="1.2" />
+            </g>
+          </g>
+
+          <g class="neuro-background__trajectory">
+            <path
+              d="M 716 566 C 780 524, 846 494, 904 444 C 962 394, 1006 328, 1048 256"
+              fill="none"
+              stroke="var(--neuro-bg-trajectory)"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+
+          <g class="neuro-background__cloud neuro-background__dots">
+            <circle cx="786" cy="146" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="824" cy="128" r="1.4" fill="var(--neuro-bg-dot)" />
+            <circle cx="858" cy="154" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="894" cy="136" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="932" cy="166" r="1.2" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="970" cy="148" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1006" cy="176" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1044" cy="160" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="1080" cy="188" r="1.2" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1116" cy="172" r="1.5" fill="var(--neuro-bg-dot)" />
+
+            <circle cx="760" cy="224" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="798" cy="246" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="834" cy="228" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="870" cy="254" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="906" cy="238" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="944" cy="266" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="980" cy="248" r="1.2" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1016" cy="278" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1052" cy="260" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1088" cy="292" r="1.6" fill="var(--neuro-bg-dot)" />
+
+            <circle cx="786" cy="336" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="822" cy="360" r="1.5" fill="var(--neuro-bg-dot)" />
+            <circle cx="860" cy="344" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="894" cy="372" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="932" cy="352" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="970" cy="382" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="1006" cy="364" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1040" cy="394" r="1.5" fill="var(--neuro-bg-dot)" />
+            <circle cx="1078" cy="378" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1112" cy="406" r="1.5" fill="var(--neuro-bg-dot)" />
+
+            <circle cx="814" cy="470" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="852" cy="494" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="888" cy="474" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="926" cy="506" r="1.5" fill="var(--neuro-bg-dot)" />
+            <circle cx="962" cy="486" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1000" cy="518" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="1036" cy="500" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1072" cy="530" r="1.5" fill="var(--neuro-bg-dot)" />
+            <circle cx="1108" cy="512" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1140" cy="542" r="1.4" fill="var(--neuro-bg-dot)" />
+          </g>
+        </g>
+
+      {% when 'dense' %}
+        <g clip-path="url(#neuro-background-clip-{{ neuro_background_variant }})">
+          <g class="neuro-background__field neuro-background__contours" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 612 42 C 726 12, 858 20, 982 62 C 1084 96, 1152 146, 1200 220" stroke="var(--neuro-bg-line-soft)" stroke-width="0.92" />
+            <path d="M 632 82 C 744 52, 872 66, 984 112 C 1076 150, 1140 204, 1200 280" stroke="var(--neuro-bg-line-soft)" stroke-width="0.96" />
+            <path d="M 658 124 C 772 94, 900 108, 1010 152 C 1094 186, 1152 236, 1200 306" stroke="var(--neuro-bg-line-soft)" stroke-width="1.02" />
+            <path d="M 684 172 C 790 142, 906 150, 1008 190 C 1092 222, 1154 274, 1200 344" stroke="var(--neuro-bg-line)" stroke-width="1.08" />
+            <path d="M 706 218 C 808 188, 918 196, 1016 232 C 1098 262, 1158 314, 1200 382" stroke="var(--neuro-bg-line-soft)" stroke-width="1" />
+            <path d="M 694 274 C 802 240, 918 244, 1020 278 C 1102 304, 1162 352, 1200 420" stroke="var(--neuro-bg-line-soft)" stroke-width="0.98" />
+            <path d="M 716 330 C 822 294, 930 296, 1032 326 C 1110 350, 1168 398, 1200 462" stroke="var(--neuro-bg-line)" stroke-width="1.05" />
+            <path d="M 734 388 C 838 354, 944 356, 1040 384 C 1118 406, 1174 448, 1200 510" stroke="var(--neuro-bg-line-soft)" stroke-width="0.98" />
+            <path d="M 752 446 C 854 414, 956 416, 1048 440 C 1122 460, 1176 500, 1200 556" stroke="var(--neuro-bg-line-soft)" stroke-width="0.96" />
+            <path d="M 770 508 C 868 478, 966 480, 1054 504 C 1124 522, 1178 556, 1200 608" stroke="var(--neuro-bg-line)" stroke-width="1.04" />
+            <path d="M 792 566 C 886 542, 980 544, 1062 566 C 1128 584, 1180 614, 1200 662" stroke="var(--neuro-bg-line-soft)" stroke-width="0.96" />
+            <path d="M 816 98 C 872 138, 910 188, 930 250 C 952 318, 950 386, 938 456" stroke="var(--neuro-bg-line-soft)" stroke-width="0.92" />
+            <path d="M 874 84 C 934 126, 974 180, 994 246 C 1016 314, 1014 392, 1000 468" stroke="var(--neuro-bg-line-soft)" stroke-width="0.9" />
+            <path d="M 932 74 C 998 118, 1042 176, 1062 244 C 1082 310, 1082 388, 1064 470" stroke="var(--neuro-bg-line)" stroke-width="0.96" />
+            <path d="M 990 90 C 1052 138, 1090 198, 1108 266 C 1126 332, 1126 408, 1110 490" stroke="var(--neuro-bg-line-soft)" stroke-width="0.9" />
+            <path d="M 1044 118 C 1100 170, 1136 234, 1148 300 C 1162 370, 1158 442, 1138 514" stroke="var(--neuro-bg-line-soft)" stroke-width="0.88" />
+            <path d="M 720 624 C 780 590, 838 574, 904 572 C 976 568, 1040 582, 1110 618" stroke="var(--neuro-bg-line-soft)" stroke-width="0.92" />
+          </g>
+
+          <g class="neuro-background__fragments neuro-background__grids">
+            <g fill="var(--neuro-bg-grid)">
+              <rect x="930" y="82" width="7" height="7" rx="1.3" />
+              <rect x="948" y="92" width="5" height="5" rx="1.1" />
+              <rect x="968" y="78" width="6" height="6" rx="1.2" />
+              <rect x="988" y="96" width="7" height="7" rx="1.3" />
+              <rect x="1010" y="84" width="5" height="5" rx="1.1" />
+              <rect x="1028" y="102" width="6" height="6" rx="1.2" />
+              <rect x="1050" y="88" width="7" height="7" rx="1.3" />
+              <rect x="1070" y="108" width="5" height="5" rx="1.1" />
+              <rect x="1090" y="94" width="6" height="6" rx="1.2" />
+              <rect x="1110" y="112" width="7" height="7" rx="1.3" />
+              <rect x="944" y="126" width="5" height="5" rx="1.1" />
+              <rect x="964" y="142" width="6" height="6" rx="1.2" />
+              <rect x="986" y="128" width="7" height="7" rx="1.3" />
+              <rect x="1008" y="148" width="5" height="5" rx="1.1" />
+              <rect x="1028" y="134" width="6" height="6" rx="1.2" />
+              <rect x="1050" y="152" width="7" height="7" rx="1.3" />
+              <rect x="1072" y="138" width="5" height="5" rx="1.1" />
+              <rect x="1092" y="156" width="6" height="6" rx="1.2" />
+              <rect x="1114" y="142" width="7" height="7" rx="1.3" />
+
+              <rect x="1014" y="224" width="6" height="6" rx="1.2" />
+              <rect x="1034" y="238" width="7" height="7" rx="1.3" />
+              <rect x="1058" y="222" width="5" height="5" rx="1.1" />
+              <rect x="1076" y="244" width="6" height="6" rx="1.2" />
+              <rect x="1100" y="228" width="7" height="7" rx="1.3" />
+              <rect x="1120" y="248" width="5" height="5" rx="1.1" />
+              <rect x="1002" y="266" width="5" height="5" rx="1.1" />
+              <rect x="1024" y="284" width="6" height="6" rx="1.2" />
+              <rect x="1046" y="270" width="7" height="7" rx="1.3" />
+              <rect x="1068" y="290" width="5" height="5" rx="1.1" />
+              <rect x="1088" y="274" width="6" height="6" rx="1.2" />
+              <rect x="1110" y="294" width="7" height="7" rx="1.3" />
+
+              <rect x="934" y="512" width="5" height="5" rx="1.1" />
+              <rect x="954" y="526" width="6" height="6" rx="1.2" />
+              <rect x="976" y="512" width="7" height="7" rx="1.3" />
+              <rect x="998" y="532" width="5" height="5" rx="1.1" />
+              <rect x="1020" y="518" width="6" height="6" rx="1.2" />
+              <rect x="1040" y="538" width="7" height="7" rx="1.3" />
+              <rect x="1062" y="524" width="5" height="5" rx="1.1" />
+              <rect x="1082" y="542" width="6" height="6" rx="1.2" />
+              <rect x="1104" y="528" width="7" height="7" rx="1.3" />
+            </g>
+          </g>
+
+          <g class="neuro-background__trajectory">
+            <path
+              d="M 662 596 C 714 540, 776 500, 848 470 C 924 438, 982 390, 1028 320 C 1066 260, 1098 212, 1134 168"
+              fill="none"
+              stroke="var(--neuro-bg-trajectory)"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M 734 628 C 792 592, 852 568, 918 544 C 984 520, 1038 476, 1088 414"
+              fill="none"
+              stroke="var(--neuro-bg-trajectory)"
+              stroke-width="1.45"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              opacity="0.42"
+            />
+
+            <g class="neuro-background__nodes" fill="var(--neuro-bg-trajectory)">
+              <circle cx="694" cy="562" r="4.2" opacity="0.34" />
+              <circle cx="764" cy="514" r="4.0" opacity="0.42" />
+              <circle cx="840" cy="474" r="4.6" opacity="0.46" />
+              <circle cx="918" cy="436" r="3.8" opacity="0.4" />
+              <circle cx="988" cy="370" r="4.2" opacity="0.44" />
+              <circle cx="1048" cy="282" r="3.8" opacity="0.36" />
+              <circle cx="1104" cy="204" r="3.4" opacity="0.32" />
+            </g>
+          </g>
+
+          <g class="neuro-background__cloud neuro-background__dots">
+            <circle cx="724" cy="110" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="744" cy="124" r="1.5" fill="var(--neuro-bg-dot)" />
+            <circle cx="764" cy="102" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="786" cy="136" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="808" cy="114" r="0.9" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="828" cy="148" r="1.5" fill="var(--neuro-bg-dot)" />
+            <circle cx="850" cy="122" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="872" cy="156" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="894" cy="130" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="916" cy="164" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="938" cy="138" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="960" cy="172" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="982" cy="146" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1004" cy="180" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1026" cy="154" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1048" cy="188" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1070" cy="162" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1092" cy="198" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="1114" cy="172" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1136" cy="206" r="1.5" fill="var(--neuro-bg-dot)" />
+
+            <circle cx="706" cy="196" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="728" cy="214" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="750" cy="190" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="772" cy="226" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="794" cy="204" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="816" cy="238" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="838" cy="216" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="860" cy="250" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="882" cy="226" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="904" cy="262" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="926" cy="238" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="948" cy="274" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="970" cy="250" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="992" cy="286" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="1014" cy="262" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1036" cy="298" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1058" cy="274" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1080" cy="308" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1102" cy="286" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1124" cy="320" r="1.6" fill="var(--neuro-bg-dot)" />
+
+            <circle cx="688" cy="282" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="710" cy="316" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="734" cy="292" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="756" cy="330" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="780" cy="306" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="802" cy="344" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="826" cy="320" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="848" cy="356" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="872" cy="332" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="894" cy="370" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="918" cy="346" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="940" cy="384" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="964" cy="360" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="986" cy="398" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1010" cy="374" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1032" cy="410" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1056" cy="388" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1078" cy="424" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1102" cy="402" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1124" cy="438" r="1.6" fill="var(--neuro-bg-dot)" />
+
+            <circle cx="706" cy="414" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="730" cy="448" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="756" cy="424" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="780" cy="462" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="806" cy="438" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="830" cy="476" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="856" cy="452" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="880" cy="488" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="906" cy="466" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="930" cy="502" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="956" cy="478" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="980" cy="516" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1006" cy="492" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1030" cy="528" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1056" cy="506" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1080" cy="542" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1106" cy="520" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1130" cy="554" r="1.6" fill="var(--neuro-bg-dot)" />
+
+            <circle cx="758" cy="566" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="786" cy="592" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="816" cy="572" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="844" cy="602" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="874" cy="582" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="902" cy="612" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="932" cy="592" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="960" cy="620" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="990" cy="600" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1018" cy="628" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1048" cy="608" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1076" cy="636" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1106" cy="616" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1134" cy="642" r="1.6" fill="var(--neuro-bg-dot)" />
+          </g>
+        </g>
+
+      {% else %}
+        <g clip-path="url(#neuro-background-clip-{{ neuro_background_variant }})">
+          <g class="neuro-background__field neuro-background__contours" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M 632 56 C 738 28, 862 36, 980 74 C 1074 106, 1144 156, 1198 228" stroke="var(--neuro-bg-line-soft)" stroke-width="0.94" />
+            <path d="M 658 104 C 764 76, 882 88, 986 130 C 1072 166, 1138 220, 1192 292" stroke="var(--neuro-bg-line-soft)" stroke-width="1.04" />
+            <path d="M 688 152 C 794 124, 906 134, 1006 174 C 1088 206, 1148 258, 1194 328" stroke="var(--neuro-bg-line-soft)" stroke-width="1.02" />
+            <path d="M 714 208 C 812 180, 916 186, 1012 220 C 1094 250, 1150 300, 1192 364" stroke="var(--neuro-bg-line)" stroke-width="1.08" />
+            <path d="M 700 276 C 806 242, 914 246, 1012 278 C 1092 304, 1150 348, 1188 412" stroke="var(--neuro-bg-line-soft)" stroke-width="1" />
+            <path d="M 724 344 C 826 308, 930 310, 1026 338 C 1104 362, 1160 406, 1190 468" stroke="var(--neuro-bg-line)" stroke-width="1.04" />
+            <path d="M 742 420 C 842 386, 944 388, 1034 414 C 1110 436, 1164 476, 1188 536" stroke="var(--neuro-bg-line-soft)" stroke-width="0.98" />
+            <path d="M 764 500 C 860 470, 956 472, 1042 494 C 1114 514, 1168 548, 1188 602" stroke="var(--neuro-bg-line)" stroke-width="1.02" />
+            <path d="M 786 584 C 876 560, 968 560, 1052 580 C 1118 596, 1170 624, 1188 668" stroke="var(--neuro-bg-line-soft)" stroke-width="0.94" />
+            <path d="M 826 110 C 882 144, 920 192, 940 254 C 962 322, 962 390, 950 458" stroke="var(--neuro-bg-line-soft)" stroke-width="0.92" />
+            <path d="M 916 88 C 982 126, 1026 180, 1048 246 C 1070 312, 1072 390, 1058 462" stroke="var(--neuro-bg-line-soft)" stroke-width="0.92" />
+            <path d="M 998 128 C 1060 174, 1102 234, 1118 300 C 1134 366, 1130 436, 1110 504" stroke="var(--neuro-bg-line)" stroke-width="0.96" />
+            <path d="M 1080 208 C 1128 256, 1160 314, 1170 376 C 1180 438, 1174 500, 1154 560" stroke="var(--neuro-bg-line-soft)" stroke-width="0.88" />
+          </g>
+
+          <g class="neuro-background__fragments neuro-background__grids">
+            <g fill="var(--neuro-bg-grid)">
+              <rect x="942" y="86" width="7" height="7" rx="1.3" />
+              <rect x="960" y="96" width="5" height="5" rx="1.1" />
+              <rect x="980" y="82" width="6" height="6" rx="1.2" />
+              <rect x="1000" y="100" width="7" height="7" rx="1.3" />
+              <rect x="1022" y="88" width="5" height="5" rx="1.1" />
+              <rect x="1040" y="106" width="6" height="6" rx="1.2" />
+              <rect x="1062" y="92" width="7" height="7" rx="1.3" />
+              <rect x="1082" y="112" width="5" height="5" rx="1.1" />
+              <rect x="1102" y="98" width="6" height="6" rx="1.2" />
+              <rect x="952" y="126" width="5" height="5" rx="1.1" />
+              <rect x="972" y="142" width="7" height="7" rx="1.3" />
+              <rect x="994" y="128" width="5" height="5" rx="1.1" />
+              <rect x="1012" y="148" width="6" height="6" rx="1.2" />
+              <rect x="1036" y="134" width="7" height="7" rx="1.3" />
+              <rect x="1056" y="154" width="5" height="5" rx="1.1" />
+              <rect x="1078" y="140" width="6" height="6" rx="1.2" />
+              <rect x="1098" y="158" width="7" height="7" rx="1.3" />
+
+              <rect x="1018" y="246" width="6" height="6" rx="1.2" />
+              <rect x="1040" y="260" width="7" height="7" rx="1.3" />
+              <rect x="1064" y="246" width="5" height="5" rx="1.1" />
+              <rect x="1084" y="268" width="6" height="6" rx="1.2" />
+              <rect x="1108" y="252" width="7" height="7" rx="1.3" />
+              <rect x="1028" y="286" width="5" height="5" rx="1.1" />
+              <rect x="1050" y="304" width="6" height="6" rx="1.2" />
+              <rect x="1072" y="290" width="7" height="7" rx="1.3" />
+              <rect x="1094" y="310" width="5" height="5" rx="1.1" />
+            </g>
+          </g>
+
+          <g class="neuro-background__trajectory">
+            <path
+              d="M 676 590 C 734 538, 796 500, 864 474 C 940 444, 998 394, 1042 322 C 1076 266, 1108 220, 1136 178"
+              fill="none"
+              stroke="var(--neuro-bg-trajectory)"
+              stroke-width="2.1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <g class="neuro-background__nodes" fill="var(--neuro-bg-trajectory)">
+              <circle cx="708" cy="556" r="4.0" opacity="0.34" />
+              <circle cx="776" cy="508" r="3.8" opacity="0.42" />
+              <circle cx="850" cy="476" r="4.5" opacity="0.46" />
+              <circle cx="926" cy="440" r="3.7" opacity="0.38" />
+              <circle cx="994" cy="362" r="4.1" opacity="0.44" />
+              <circle cx="1052" cy="274" r="3.7" opacity="0.36" />
+            </g>
+          </g>
+
+          <g class="neuro-background__cloud neuro-background__dots">
+            <circle cx="720" cy="112" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="742" cy="126" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="764" cy="104" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="786" cy="138" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="808" cy="116" r="0.9" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="830" cy="150" r="1.5" fill="var(--neuro-bg-dot)" />
+            <circle cx="852" cy="128" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="874" cy="162" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="896" cy="140" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="918" cy="174" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="940" cy="152" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="962" cy="186" r="2.0" fill="var(--neuro-bg-dot)" />
+            <circle cx="984" cy="164" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1006" cy="198" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1028" cy="176" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1050" cy="210" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="1072" cy="188" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1094" cy="224" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1116" cy="202" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+
+            <circle cx="704" cy="204" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="728" cy="226" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="752" cy="204" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="776" cy="240" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="800" cy="218" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="824" cy="252" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="848" cy="230" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="872" cy="266" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="896" cy="244" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="920" cy="278" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="944" cy="256" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="968" cy="292" r="2.0" fill="var(--neuro-bg-dot)" />
+            <circle cx="992" cy="270" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1016" cy="304" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1040" cy="282" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1064" cy="316" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1088" cy="294" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1112" cy="330" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="1134" cy="308" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+
+            <circle cx="694" cy="300" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="718" cy="334" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="744" cy="312" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="768" cy="348" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="794" cy="326" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="818" cy="360" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="844" cy="338" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="868" cy="374" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="894" cy="352" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="918" cy="388" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="944" cy="366" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="968" cy="402" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="994" cy="380" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1018" cy="416" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1044" cy="394" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1068" cy="430" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1094" cy="408" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1118" cy="442" r="1.6" fill="var(--neuro-bg-dot)" />
+
+            <circle cx="706" cy="430" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="732" cy="466" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="760" cy="444" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="786" cy="480" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="814" cy="458" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="840" cy="494" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="868" cy="472" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="894" cy="508" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="922" cy="486" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="948" cy="522" r="1.9" fill="var(--neuro-bg-dot)" />
+            <circle cx="976" cy="500" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1002" cy="536" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1030" cy="514" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1056" cy="548" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1084" cy="528" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1110" cy="560" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="1136" cy="540" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+
+            <circle cx="760" cy="580" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="792" cy="604" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="826" cy="586" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="860" cy="614" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="896" cy="596" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="928" cy="624" r="1.7" fill="var(--neuro-bg-dot)" />
+            <circle cx="964" cy="606" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="996" cy="634" r="1.8" fill="var(--neuro-bg-dot)" />
+            <circle cx="1032" cy="616" r="1.0" fill="var(--neuro-bg-dot-soft)" />
+            <circle cx="1064" cy="642" r="1.6" fill="var(--neuro-bg-dot)" />
+            <circle cx="1100" cy="626" r="1.1" fill="var(--neuro-bg-dot-soft)" />
+          </g>
+        </g>
+    {% endcase %}
+  </svg>
+</div>

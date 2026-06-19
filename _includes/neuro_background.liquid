@@ -1,0 +1,37 @@
+{% assign neuro_background_variant = include.variant | default: page.neuro_background | default: page.neuro_background_variant | default: 'balanced' %}
+{% unless neuro_background_variant == 'sparse' or neuro_background_variant == 'balanced' or neuro_background_variant == 'dense' %}
+  {% assign neuro_background_variant = 'balanced' %}
+{% endunless %}
+{% assign use_generated_neuro_background = true %}
+
+{% if use_generated_neuro_background %}
+  <div
+    class="neuro-background neuro-background--{{ neuro_background_variant }}"
+    data-neuro-variant="{{ neuro_background_variant }}"
+    aria-hidden="true"
+  >
+    <svg
+      class="neuro-background__svg"
+      viewBox="0 0 1200 900"
+      preserveAspectRatio="xMidYMid slice"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <clipPath id="neuro-background-clip-{{ neuro_background_variant }}">
+          <path d="M 676 0 L 1200 0 L 1200 708 L 1122 708 L 1048 698 L 960 700 L 868 690 L 788 660 L 726 608 L 694 532 L 682 424 L 678 286 L 676 136 Z" />
+        </clipPath>
+      </defs>
+
+      {% case neuro_background_variant %}
+        {% when 'sparse' %}
+          {% include neuro_background/generated/about-sparse-seed-001.liquid %}
+        {% when 'dense' %}
+          {% include neuro_background/generated/projects-dense-seed-001.liquid %}
+        {% else %}
+          {% include neuro_background/generated/about-balanced-seed-001.liquid %}
+      {% endcase %}
+    </svg>
+  </div>
+{% else %}
+  {% include neuro_background_fallback_static.liquid variant=neuro_background_variant %}
+{% endif %}

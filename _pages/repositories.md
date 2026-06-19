@@ -3,7 +3,7 @@ layout: page
 permalink: /repositories/
 title: repositories
 description: Research code, methods templates, and scientific software.
-nav: true
+nav: false
 nav_order: 4
 ---
 
