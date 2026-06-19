@@ -1,6 +1,5 @@
 ---
 title: Cookiecutter Neuro Research Project
-importance: 70
 date_range: 2023
 context: ISCMJ Neuroeconomics lab
 tags:

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" role="presentation">
+  <!-- Zone system: left_title -> central_bridge -> right_anchor -> lower_echo -->
+  <g class="neuro-background__field neuro-background__contours">
+    <path d="M 31.08 169.79 C 50.05 165.18, 103.47 145.07, 144.88 142.09 C 186.29 139.11, 232.49 148.74, 279.52 151.89 C 326.55 155.04, 402.47 159.48, 427.06 161" fill="none" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="0.77" stroke-linecap="round" stroke-linejoin="round" opacity="0.09" />
+    <path d="M 42.03 180.66 C 59.17 178.71, 105.3 170.58, 144.88 168.94 C 184.46 167.3, 233.39 169.58, 279.52 170.81 C 325.65 172.03, 397.99 175.37, 421.68 176.28" fill="none" stroke="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" stroke-width="0.87" stroke-linecap="round" stroke-linejoin="round" opacity="0.04" />
+    <path d="M 572.2 205.4 C 583.41 202.64, 614.18 192.24, 639.44 188.8 C 664.7 185.36, 694.18 180.21, 723.76 184.75 C 753.34 189.29, 801.41 210.82, 816.94 216.04" fill="none" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="1.04" stroke-linecap="round" stroke-linejoin="round" opacity="0.07" />
+    <path d="M 583.01 406.83 C 592.41 403.76, 615.98 391.81, 639.44 388.39 C 662.9 384.96, 693.09 384.53, 723.76 386.28 C 754.43 388.03, 806.82 396.79, 823.43 398.89" fill="none" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="1.13" stroke-linecap="round" stroke-linejoin="round" opacity="0.05" />
+    <path d="M 568.14 203.81 C 580.02 201.18, 613.5 186.21, 639.44 188.06 C 665.38 189.91, 695.4 211.93, 723.76 214.91 C 752.12 217.89, 795.29 207.42, 809.6 205.92" fill="none" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="1.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.1" />
+    <path d="M 753.43 430.64 C 773.66 431.97, 831.34 439.25, 874.8 438.64 C 918.26 438.04, 967.7 426.81, 1014.2 427.01 C 1060.7 427.22, 1130.55 437.73, 1153.82 439.88" fill="none" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round" opacity="0.32" />
+    <path d="M 773.81 572.53 C 790.64 570.78, 834.74 557.76, 874.8 562.06 C 914.86 566.37, 963.68 596.99, 1014.2 598.34 C 1064.72 599.7, 1150.64 574.88, 1177.93 570.19" fill="none" stroke="var(--neuro-bg-line, rgba(81, 70, 166, 0.12))" stroke-width="1.13" stroke-linecap="round" stroke-linejoin="round" opacity="0.26" />
+    <path d="M 763.62 510.58 C 782.15 507.76, 833.04 497.06, 874.8 493.61 C 916.56 490.17, 964.89 488.03, 1014.2 489.92 C 1063.51 491.82, 1144.56 502.47, 1170.64 504.98" fill="none" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="0.96" stroke-linecap="round" stroke-linejoin="round" opacity="0.24" />
+    <path d="M 760.19 686.62 C 779.29 684.82, 832.46 678.63, 874.8 675.82 C 917.14 673.01, 966.95 667.58, 1014.2 669.78 C 1061.45 671.98, 1134.26 685.8, 1158.27 689" fill="none" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round" opacity="0.29" />
+    <path d="M 1014.7 54 C 1021.3 84.89, 1050.19 170.95, 1054.35 239.36 C 1058.51 307.77, 1043.87 385, 1039.65 464.44 C 1035.43 543.88, 1030.78 674.07, 1029 716" fill="none" stroke="var(--neuro-bg-line, rgba(81, 70, 166, 0.12))" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.11" />
+    <path d="M 765.1 569.61 C 783.39 570.74, 833.28 579.78, 874.8 576.41 C 916.32 573.04, 967.88 551.01, 1014.2 549.39 C 1060.52 547.77, 1129.61 563.81, 1152.69 566.69" fill="none" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="0.87" stroke-linecap="round" stroke-linejoin="round" opacity="0.11" />
+    <path d="M 87.98 760.96 C 130.9 761.45, 249.67 761.01, 345.52 763.89 C 441.37 766.77, 553.52 778.58, 663.08 778.24 C 772.64 777.9, 946.23 764.58, 1002.86 761.84" fill="none" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="1.06" stroke-linecap="round" stroke-linejoin="round" opacity="0.04" />
+    <g opacity="0.07"><line x1="161.98" y1="79.64" x2="230.01" y2="84.14" stroke="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" stroke-width="0.84" stroke-linecap="round" /><line x1="161.98" y1="79.64" x2="182.37" y2="46.89" stroke="var(--neuro-bg-line-soft, rgba(120, 122, 132, 0.1))" stroke-width="0.78" stroke-linecap="round" /><line x1="172.59" y1="79.14" x2="178.59" y2="81.94" stroke="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" stroke-width="0.7" stroke-linecap="round" /><line x1="186.19" y1="80.04" x2="192.19" y2="82.84" stroke="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" stroke-width="0.7" stroke-linecap="round" /><line x1="199.8" y1="80.94" x2="205.8" y2="83.74" stroke="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" stroke-width="0.7" stroke-linecap="round" /><line x1="213.4" y1="81.84" x2="219.4" y2="84.64" stroke="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" stroke-width="0.7" stroke-linecap="round" /></g>
+  </g>
+  <g class="neuro-background__fragments neuro-background__grids">
+    <g opacity="0.06"><rect x="206.57" y="54.28" width="5.14" height="5.14" rx="1.13" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /><rect x="223.96" y="53.14" width="5.16" height="5.16" rx="1.14" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="235.24" y="51.96" width="7.1" height="7.1" rx="1.56" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /><rect x="252.96" y="54.04" width="7.2" height="7.2" rx="1.58" fill="var(--neuro-bg-grid-accent, rgba(112, 104, 200, 0.2))" /><rect x="206.95" y="64.54" width="5.95" height="5.95" rx="1.31" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /><rect x="238.44" y="65.56" width="7.09" height="7.09" rx="1.56" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="208.79" y="76.74" width="6.52" height="6.52" rx="1.43" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /><rect x="221.1" y="75.89" width="4.22" height="4.22" rx="0.93" fill="var(--neuro-bg-grid-accent, rgba(112, 104, 200, 0.2))" /><rect x="236.26" y="77.74" width="5.6" height="5.6" rx="1.23" fill="var(--neuro-bg-grid-accent, rgba(112, 104, 200, 0.2))" /><rect x="251.71" y="78.79" width="5.69" height="5.69" rx="1.25" fill="var(--neuro-bg-grid-accent, rgba(112, 104, 200, 0.2))" /><rect x="206.7" y="91.3" width="5.47" height="5.47" rx="1.2" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="223.97" y="90.6" width="5.4" height="5.4" rx="1.19" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /><rect x="236.54" y="87.49" width="4.41" height="4.41" rx="0.97" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="251.1" y="89.17" width="5.82" height="5.82" rx="1.28" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /></g>
+    <g opacity="0.3"><rect x="897.87" y="596.76" width="5.53" height="5.53" rx="1.22" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="914.01" y="596.66" width="5.98" height="5.98" rx="1.32" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /><rect x="925.39" y="596.11" width="6.99" height="6.99" rx="1.54" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /><rect x="939.05" y="597.4" width="6.11" height="6.11" rx="1.34" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="898.63" y="610.56" width="6.67" height="6.67" rx="1.47" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="911.05" y="607.73" width="5.78" height="5.78" rx="1.27" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /><rect x="926.83" y="607.48" width="6.27" height="6.27" rx="1.38" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="940.36" y="610.67" width="4.96" height="4.96" rx="1.09" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /></g>
+    <g opacity="0.25"><rect x="894.85" y="61.47" width="5.04" height="5.04" rx="1.11" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="909.23" y="59.2" width="4.3" height="4.3" rx="0.95" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="883.49" y="74.95" width="5.53" height="5.53" rx="1.22" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="896.98" y="71.73" width="4.71" height="4.71" rx="1.04" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="911.02" y="72.19" width="6.32" height="6.32" rx="1.39" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="927.72" y="71.79" width="6.71" height="6.71" rx="1.48" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="882.24" y="84.02" width="4.72" height="4.72" rx="1.04" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="896.15" y="84.96" width="4.52" height="4.52" rx="0.99" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /><rect x="927.17" y="85.53" width="6.96" height="6.96" rx="1.53" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" /></g>
+    <g opacity="0.04"><rect x="84.79" y="717.39" width="4.07" height="4.07" rx="0.9" fill="var(--neuro-bg-grid-accent, rgba(112, 104, 200, 0.2))" /><rect x="99.11" y="718.77" width="5.22" height="5.22" rx="1.15" fill="var(--neuro-bg-grid-accent, rgba(112, 104, 200, 0.2))" /><rect x="117.89" y="719.49" width="6.47" height="6.47" rx="1.42" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="133.28" y="719.75" width="6.92" height="6.92" rx="1.52" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /><rect x="145.45" y="720.57" width="5.79" height="5.79" rx="1.27" fill="var(--neuro-bg-grid, rgba(120, 122, 132, 0.1))" /></g>
+    <rect x="324.1" y="63.98" width="11.53" height="1.03" rx="0.51" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.03" transform="rotate(5.27 329.87 64.5)" />
+    <rect x="374.99" y="177.66" width="7.37" height="2.03" rx="1.02" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.08" transform="rotate(-0.46 378.68 178.67)" />
+    <rect x="150.79" y="37" width="12.25" height="2.35" rx="1.17" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.03" transform="rotate(9.55 156.92 38.17)" />
+    <rect x="173.49" y="196.55" width="7.56" height="1.42" rx="0.71" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.06" transform="rotate(0.86 177.27 197.26)" />
+    <rect x="69.37" y="213.7" width="11.72" height="2.09" rx="1.05" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.04" transform="rotate(-9.84 75.22 214.74)" />
+    <rect x="107.95" y="113.16" width="10.11" height="1.92" rx="0.96" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.07" transform="rotate(10.21 113.01 114.12)" />
+    <rect x="292.65" y="94.35" width="7.85" height="2.34" rx="1.17" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.06" transform="rotate(4.43 296.57 95.52)" />
+    <rect x="183.67" y="109.9" width="13.66" height="1.31" rx="0.66" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.04" transform="rotate(9.71 190.5 110.55)" />
+    <rect x="68.1" y="194.14" width="13.21" height="1.25" rx="0.62" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.06" transform="rotate(5.03 74.7 194.77)" />
+    <rect x="246.7" y="87.99" width="11.03" height="1.33" rx="0.67" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.05" transform="rotate(-9.44 252.21 88.66)" />
+    <rect x="125.9" y="94.25" width="9.94" height="1.79" rx="0.89" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.07" transform="rotate(1.31 130.87 95.15)" />
+    <rect x="167.77" y="70.24" width="7.4" height="2.34" rx="1.17" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.08" transform="rotate(-7.88 171.47 71.41)" />
+    <rect x="93.8" y="45.28" width="9" height="1.6" rx="0.8" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.03" transform="rotate(4.54 98.3 46.08)" />
+    <rect x="364.25" y="62.73" width="6.02" height="2.11" rx="1.06" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.05" transform="rotate(-8.29 367.26 63.79)" />
+    <rect x="140.28" y="78.32" width="8.57" height="1.33" rx="0.66" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.05" transform="rotate(-4.58 144.56 78.98)" />
+    <rect x="198.87" y="122.65" width="14.42" height="2.07" rx="1.04" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.08" transform="rotate(7.33 206.08 123.68)" />
+    <rect x="150.66" y="141.62" width="11.27" height="1.8" rx="0.9" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.04" transform="rotate(-11.81 156.3 142.52)" />
+    <rect x="401.28" y="204.84" width="10.6" height="1.13" rx="0.56" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.07" transform="rotate(-0.71 406.58 205.4)" />
+    <rect x="287.03" y="56.15" width="8.19" height="2.14" rx="1.07" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.06" transform="rotate(-1.6 291.12 57.22)" />
+    <rect x="418.8" y="205.37" width="11.08" height="2.25" rx="1.12" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.03" transform="rotate(7.54 424.33 206.49)" />
+    <rect x="90" y="129.14" width="13.37" height="1.95" rx="0.98" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.04" transform="rotate(-10.98 96.68 130.12)" />
+    <rect x="256.55" y="207.13" width="11.46" height="1.42" rx="0.71" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.08" transform="rotate(7 262.28 207.84)" />
+    <rect x="261.32" y="192.18" width="11.02" height="1.36" rx="0.68" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.04" transform="rotate(-11.39 266.83 192.86)" />
+    <rect x="279.5" y="105.66" width="15.1" height="1.07" rx="0.54" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.07" transform="rotate(-4.23 287.05 106.19)" />
+    <rect x="289.78" y="119.36" width="7.84" height="1.07" rx="0.53" fill="var(--neuro-bg-depth, rgba(17, 17, 17, 0.08))" opacity="0.05" transform="rotate(-1.33 293.7 119.89)" />
+    <rect x="301.48" y="203.6" width="6.48" height="1.45" rx="0.72" fill="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" opacity="0.05" transform="rotate(-2.81 304.72 204.33)" />
+  </g>
+  <g class="neuro-background__trajectory">
+    <path d="M 612 470 C 623.89 463.12, 653.02 438.46, 683.36 428.72 C 713.7 418.97, 759.27 424.03, 794.05 411.55 C 828.84 399.08, 860.66 373.22, 892.07 353.86 C 923.49 334.5, 953.23 320.55, 982.54 295.42 C 1011.86 270.29, 1042.37 228.3, 1067.95 203.07 C 1093.53 177.83, 1124.66 153.84, 1136 144" fill="none" stroke="var(--neuro-bg-trajectory, rgba(81, 70, 166, 0.34))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.94" />
+    <path d="M 553.35 531.85 C 562.96 524.42, 595.36 499.47, 610.99 487.24 C 626.62 475, 646.95 461.31, 647.12 458.44 C 647.29 455.56, 617.85 468.07, 612 470" fill="none" stroke="var(--neuro-bg-depth-secondary, rgba(126, 138, 164, 0.12))" stroke-width="1.24" stroke-linecap="round" stroke-linejoin="round" opacity="0.42" />
+    <g class="neuro-background__nodes"><circle cx="683.36" cy="428.72" r="2.75" fill="var(--neuro-bg-node, rgba(72, 105, 170, 0.28))" opacity="0.27" /><circle cx="794.05" cy="411.55" r="3.35" fill="var(--neuro-bg-node, rgba(72, 105, 170, 0.28))" opacity="0.33" /><circle cx="982.54" cy="295.42" r="3.23" fill="var(--neuro-bg-node, rgba(72, 105, 170, 0.28))" opacity="0.46" /><circle cx="1067.95" cy="203.07" r="3.44" fill="var(--neuro-bg-node, rgba(72, 105, 170, 0.28))" opacity="0.38" /><circle cx="1136" cy="144" r="3.03" fill="var(--neuro-bg-node, rgba(72, 105, 170, 0.28))" opacity="0.27" /></g>
+  </g>
+  <g class="neuro-background__cloud neuro-background__dots">
+    <circle cx="651.22" cy="450.08" r="1.29" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.12" />
+    <circle cx="689.82" cy="412.42" r="1.44" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.06" />
+    <circle cx="637.15" cy="458.21" r="1.19" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.12" />
+    <circle cx="663.6" cy="429.79" r="1.04" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.06" />
+    <circle cx="630.52" cy="462.22" r="1.4" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.14" />
+    <circle cx="674.34" cy="408.19" r="1.16" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.11" />
+    <circle cx="631.28" cy="443.83" r="1.39" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.12" />
+    <circle cx="721.35" cy="438.17" r="1.01" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.13" />
+    <circle cx="638.73" cy="483.55" r="1.36" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.07" />
+    <circle cx="704.83" cy="415.85" r="1.28" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.08" />
+    <circle cx="631.73" cy="493.73" r="0.9" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.05" />
+    <circle cx="682.61" cy="425.03" r="1" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.06" />
+    <circle cx="629.37" cy="495.25" r="1.08" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.15" />
+    <circle cx="687.78" cy="432.7" r="1.06" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.12" />
+    <circle cx="631.25" cy="480.65" r="0.87" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.12" />
+    <circle cx="679.55" cy="390" r="1.3" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.12" />
+    <circle cx="636.45" cy="481.73" r="1.37" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.11" />
+    <circle cx="657.02" cy="442.2" r="0.94" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.07" />
+    <circle cx="647.55" cy="472.6" r="0.93" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.05" />
+    <circle cx="690.02" cy="435.57" r="1.23" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.15" />
+    <circle cx="894.51" cy="377.81" r="1.14" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.25" />
+    <circle cx="848.7" cy="321.04" r="1.64" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.23" />
+    <circle cx="991.68" cy="295.63" r="1.33" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.15" />
+    <circle cx="1085.39" cy="212.73" r="1.14" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.22" />
+    <circle cx="1118.14" cy="178.66" r="1.12" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.29" />
+    <circle cx="760" cy="424.14" r="1.51" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.23" />
+    <circle cx="898.39" cy="364.34" r="1.74" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.35" />
+    <circle cx="960.94" cy="281.66" r="1.93" fill="var(--neuro-bg-dot-accent, rgba(81, 70, 166, 0.42))" opacity="0.28" />
+    <circle cx="1091.33" cy="216.26" r="1.78" fill="var(--neuro-bg-dot-accent, rgba(81, 70, 166, 0.42))" opacity="0.21" />
+    <circle cx="1102.8" cy="159.96" r="1.12" fill="var(--neuro-bg-dot-accent, rgba(81, 70, 166, 0.42))" opacity="0.17" />
+    <circle cx="760" cy="455.13" r="0.98" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.25" />
+    <circle cx="862.58" cy="372.1" r="1.69" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.12" />
+    <circle cx="1040.48" cy="319.96" r="1.57" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.09" />
+    <circle cx="1036.12" cy="165.15" r="1.66" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.21" />
+    <circle cx="1144.11" cy="124.38" r="1.45" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.31" />
+    <circle cx="852.9" cy="391.08" r="1.21" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.16" />
+    <circle cx="846.01" cy="371.07" r="1.86" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.11" />
+    <circle cx="909.16" cy="366.78" r="1.05" fill="var(--neuro-bg-dot-accent, rgba(81, 70, 166, 0.42))" opacity="0.11" />
+    <circle cx="1148.54" cy="155.58" r="1.58" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.15" />
+    <circle cx="1111.44" cy="109.47" r="1.36" fill="var(--neuro-bg-dot-accent, rgba(81, 70, 166, 0.42))" opacity="0.24" />
+    <circle cx="848.34" cy="398.04" r="1" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.16" />
+    <circle cx="921.92" cy="336.13" r="1.64" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.31" />
+    <circle cx="965.52" cy="288.94" r="1.36" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.33" />
+    <circle cx="1085.15" cy="231.21" r="1.41" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.35" />
+    <circle cx="1125.36" cy="115.74" r="1.91" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.27" />
+    <circle cx="798.9" cy="360.86" r="1.14" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.27" />
+    <circle cx="939.84" cy="348.6" r="0.91" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.33" />
+    <circle cx="945.79" cy="256.69" r="0.92" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.26" />
+    <circle cx="1126.48" cy="172.78" r="1.01" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.14" />
+    <circle cx="1134.37" cy="109.48" r="1.1" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.26" />
+    <circle cx="770.22" cy="419.52" r="1.49" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.36" />
+    <circle cx="894.45" cy="354.76" r="1.41" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.3" />
+    <circle cx="931.81" cy="299.09" r="1.25" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.09" />
+    <circle cx="1117.88" cy="224" r="1.08" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.2" />
+    <circle cx="1108.83" cy="103.23" r="1.81" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.19" />
+    <circle cx="766.33" cy="416.34" r="0.91" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.19" />
+    <circle cx="859.64" cy="347.82" r="1.36" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.27" />
+    <circle cx="940.48" cy="298.71" r="1.86" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.17" />
+    <circle cx="1031.2" cy="166.21" r="1.59" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.11" />
+    <circle cx="1113.33" cy="124.75" r="1.46" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.26" />
+    <circle cx="785.22" cy="429.24" r="1.38" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.36" />
+    <circle cx="939.98" cy="384.94" r="1.3" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.11" />
+    <circle cx="962.75" cy="299.57" r="1.36" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.35" />
+    <circle cx="1022.56" cy="216.31" r="1.88" fill="var(--neuro-bg-dot-accent, rgba(81, 70, 166, 0.42))" opacity="0.15" />
+    <circle cx="1154.99" cy="180.38" r="1.29" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.15" />
+    <circle cx="811.36" cy="377.2" r="1.32" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.33" />
+    <circle cx="927.98" cy="340.07" r="1.62" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.3" />
+    <circle cx="1036.8" cy="250.85" r="1.69" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.26" />
+    <circle cx="1052.39" cy="181.21" r="1.31" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.19" />
+    <circle cx="1064.81" cy="152.05" r="1.1" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.09" />
+    <circle cx="775.07" cy="431.32" r="1.86" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.21" />
+    <circle cx="867.97" cy="348.8" r="1.78" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.27" />
+    <circle cx="999.88" cy="313.81" r="1.87" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.14" />
+    <circle cx="1067.73" cy="230.22" r="1.16" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.15" />
+    <circle cx="1112.35" cy="128.92" r="1.29" fill="var(--neuro-bg-dot-accent, rgba(81, 70, 166, 0.42))" opacity="0.13" />
+    <circle cx="815.38" cy="389.34" r="1.72" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.32" />
+    <circle cx="861.53" cy="391.69" r="1.54" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.2" />
+    <circle cx="935.92" cy="301.34" r="1.23" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.25" />
+    <circle cx="972.34" cy="184.99" r="1.94" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.2" />
+    <circle cx="1125.67" cy="142.76" r="1.01" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.35" />
+    <circle cx="761.79" cy="359.35" r="0.98" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.09" />
+    <circle cx="916.92" cy="368.78" r="1.08" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.11" />
+    <circle cx="1030.98" cy="288.71" r="0.95" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.22" />
+    <circle cx="1050.63" cy="197.94" r="1.43" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.34" />
+    <circle cx="1154.09" cy="115.56" r="1.62" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.22" />
+    <circle cx="805.5" cy="421.08" r="1.01" fill="var(--neuro-bg-dot-accent, rgba(81, 70, 166, 0.42))" opacity="0.15" />
+    <circle cx="857.65" cy="378.85" r="1.8" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.23" />
+    <circle cx="1000.13" cy="287.69" r="1.01" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.15" />
+    <circle cx="1047.46" cy="218.29" r="1.35" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.31" />
+    <circle cx="1152.48" cy="113.04" r="1.4" fill="var(--neuro-bg-dot, rgba(72, 105, 170, 0.28))" opacity="0.36" />
+    <circle cx="800.99" cy="451.72" r="1.63" fill="var(--neuro-bg-dot-accent, rgba(81, 70, 166, 0.42))" opacity="0.24" />
+    <circle cx="898.71" cy="370.18" r="1.51" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.29" />
+    <circle cx="891.01" cy="767.12" r="1.34" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.07" />
+    <circle cx="938.44" cy="783.74" r="0.97" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.03" />
+    <circle cx="862.77" cy="792.22" r="1.44" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.08" />
+    <circle cx="914.01" cy="788.62" r="0.98" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.07" />
+    <circle cx="866.57" cy="749.55" r="1.1" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.05" />
+    <circle cx="939.46" cy="770.83" r="1.25" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.03" />
+  </g>
+</svg>

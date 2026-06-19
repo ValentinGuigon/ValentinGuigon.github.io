@@ -1,6 +1,5 @@
 ---
 title: SUPLEX-agentic-workflow
-importance: 80
 date_range: 2026
 context: Personal research project
 tags:

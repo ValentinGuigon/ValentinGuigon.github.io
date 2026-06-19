@@ -1,7 +1,6 @@
 ---
 title: fMRI Fitlins Templates
-importance: 40
-date_range: 2025
+date_range: 2025-2026
 context: UMD SLD Lab
 tags:
   - fmri

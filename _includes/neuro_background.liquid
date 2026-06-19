@@ -2,34 +2,109 @@
 {% unless neuro_background_variant == 'sparse' or neuro_background_variant == 'balanced' or neuro_background_variant == 'dense' %}
   {% assign neuro_background_variant = 'balanced' %}
 {% endunless %}
+{% assign neuro_background_debug = false %}
+{% if include.debug == true or include.debug == 'true' or page.neuro_background_debug == true or page.neuro_background_debug == 'true' %}
+  {% assign neuro_background_debug = true %}
+{% endif %}
 {% assign use_generated_neuro_background = true %}
 
 {% if use_generated_neuro_background %}
   <div
-    class="neuro-background neuro-background--{{ neuro_background_variant }}"
+    class="neuro-background neuro-background--{{ neuro_background_variant }}{% if neuro_background_debug %} neuro-background--debug{% endif %}"
     data-neuro-variant="{{ neuro_background_variant }}"
+    data-neuro-debug="{% if neuro_background_debug %}true{% else %}false{% endif %}"
     aria-hidden="true"
   >
     <svg
       class="neuro-background__svg"
       viewBox="0 0 1200 900"
-      preserveAspectRatio="xMidYMid slice"
+      preserveAspectRatio="xMidYMid meet"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <clipPath id="neuro-background-clip-{{ neuro_background_variant }}">
-          <path d="M 676 0 L 1200 0 L 1200 708 L 1122 708 L 1048 698 L 960 700 L 868 690 L 788 660 L 726 608 L 694 532 L 682 424 L 678 286 L 676 136 Z" />
-        </clipPath>
+        <linearGradient id="neuro-background-mask-base-{{ neuro_background_variant }}" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="white" stop-opacity="0.22" />
+          <stop offset="26%" stop-color="white" stop-opacity="0.3" />
+          <stop offset="48%" stop-color="white" stop-opacity="0.44" />
+          <stop offset="68%" stop-color="white" stop-opacity="0.66" />
+          <stop offset="100%" stop-color="white" stop-opacity="0.98" />
+        </linearGradient>
+        <radialGradient id="neuro-background-mask-left-{{ neuro_background_variant }}" cx="226" cy="136" r="264" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="white" stop-opacity="0.54" />
+          <stop offset="62%" stop-color="white" stop-opacity="0.32" />
+          <stop offset="100%" stop-color="white" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="neuro-background-mask-bridge-{{ neuro_background_variant }}" cx="690" cy="344" r="288" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="white" stop-opacity="0.34" />
+          <stop offset="70%" stop-color="white" stop-opacity="0.2" />
+          <stop offset="100%" stop-color="white" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="neuro-background-mask-right-{{ neuro_background_variant }}" cx="980" cy="322" r="398" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="white" stop-opacity="0.4" />
+          <stop offset="72%" stop-color="white" stop-opacity="0.24" />
+          <stop offset="100%" stop-color="white" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="neuro-background-mask-lower-{{ neuro_background_variant }}" x1="0" y1="706" x2="0" y2="860" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="white" stop-opacity="0.08" />
+          <stop offset="100%" stop-color="white" stop-opacity="0.22" />
+        </linearGradient>
+        <mask
+          id="neuro-background-mask-{{ neuro_background_variant }}"
+          maskUnits="userSpaceOnUse"
+          maskContentUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width="1200"
+          height="900"
+        >
+          <rect x="0" y="0" width="1200" height="900" fill="url(#neuro-background-mask-base-{{ neuro_background_variant }})" />
+          <rect x="30" y="22" width="420" height="232" rx="32" fill="url(#neuro-background-mask-left-{{ neuro_background_variant }})" />
+          <rect x="548" y="108" width="302" height="476" rx="44" fill="url(#neuro-background-mask-bridge-{{ neuro_background_variant }})" />
+          <rect x="728" y="26" width="438" height="710" rx="56" fill="url(#neuro-background-mask-right-{{ neuro_background_variant }})" />
+          <rect x="84" y="706" width="934" height="154" rx="28" fill="url(#neuro-background-mask-lower-{{ neuro_background_variant }})" />
+          <rect x="92" y="228" width="500" height="428" rx="40" fill="black" fill-opacity="0.48" />
+          <rect x="110" y="738" width="716" height="118" rx="26" fill="black" fill-opacity="0.68" />
+          <rect x="452" y="102" width="100" height="118" rx="18" fill="black" fill-opacity="0.4" />
+        </mask>
       </defs>
 
-      {% case neuro_background_variant %}
-        {% when 'sparse' %}
-          {% include neuro_background/generated/about-sparse-seed-001.liquid %}
-        {% when 'dense' %}
-          {% include neuro_background/generated/projects-dense-seed-001.liquid %}
-        {% else %}
-          {% include neuro_background/generated/about-balanced-seed-001.liquid %}
-      {% endcase %}
+      <g mask="url(#neuro-background-mask-{{ neuro_background_variant }})">
+        {% case neuro_background_variant %}
+          {% when 'sparse' %}
+            {% case page.url %}
+              {% when '/blog/' %}
+                {% include neuro_background/generated/blog-sparse-seed-001.liquid %}
+              {% when '/news/' %}
+                {% include neuro_background/generated/news-sparse-seed-001.liquid %}
+              {% when '/publications/' %}
+                {% include neuro_background/generated/publications-sparse-seed-001.liquid %}
+              {% when '/resume/' %}
+                {% include neuro_background/generated/resume-sparse-seed-001.liquid %}
+              {% when '/teaching/' %}
+                {% include neuro_background/generated/teaching-sparse-seed-001.liquid %}
+              {% else %}
+                {% include neuro_background/generated/about-sparse-seed-001.liquid %}
+            {% endcase %}
+          {% when 'dense' %}
+            {% include neuro_background/generated/projects-dense-seed-001.liquid %}
+          {% else %}
+            {% include neuro_background/generated/about-balanced-seed-001.liquid %}
+        {% endcase %}
+      </g>
+
+      {% if neuro_background_debug %}
+        <g class="neuro-background__debug" aria-hidden="true">
+          <rect x="0.5" y="0.5" width="1199" height="899" fill="none" stroke="rgba(28, 28, 28, 0.5)" stroke-width="1" />
+          <rect x="34" y="24" width="396" height="204" rx="18" fill="rgba(63, 111, 214, 0.08)" stroke="rgba(63, 111, 214, 0.72)" stroke-width="1.5" stroke-dasharray="10 8" />
+          <rect x="570" y="112" width="248" height="448" rx="18" fill="rgba(79, 157, 104, 0.08)" stroke="rgba(79, 157, 104, 0.72)" stroke-width="1.5" stroke-dasharray="10 8" />
+          <rect x="760" y="54" width="410" height="662" rx="18" fill="rgba(168, 98, 201, 0.08)" stroke="rgba(168, 98, 201, 0.72)" stroke-width="1.5" stroke-dasharray="10 8" />
+          <rect x="84" y="706" width="934" height="154" rx="18" fill="rgba(214, 146, 70, 0.08)" stroke="rgba(214, 146, 70, 0.72)" stroke-width="1.5" stroke-dasharray="10 8" />
+          <rect x="82" y="212" width="538" height="464" rx="16" fill="rgba(196, 53, 64, 0.08)" stroke="rgba(196, 53, 64, 0.72)" stroke-width="1.2" stroke-dasharray="6 5" />
+          <rect x="84" y="734" width="762" height="126" rx="16" fill="rgba(196, 53, 64, 0.08)" stroke="rgba(196, 53, 64, 0.72)" stroke-width="1.2" stroke-dasharray="6 5" />
+          <rect x="444" y="96" width="116" height="132" rx="16" fill="rgba(196, 53, 64, 0.08)" stroke="rgba(196, 53, 64, 0.72)" stroke-width="1.2" stroke-dasharray="6 5" />
+          <path d="M 676 0 L 1200 0 L 1200 708 L 1122 708 L 1048 698 L 960 700 L 868 690 L 788 660 L 726 608 L 694 532 L 682 424 L 678 286 L 676 136 Z" fill="rgba(132, 120, 245, 0.04)" stroke="rgba(132, 120, 245, 0.72)" stroke-width="1.4" stroke-dasharray="7 6" />
+        </g>
+      {% endif %}
     </svg>
   </div>
 {% else %}

@@ -142,6 +142,7 @@ DEBUG_ZONE_STYLES = {
 
 DEBUG_MOTIF_COLORS = {
     "contour_field": "rgba(88, 103, 188, 0.8)",
+    "vector_field": "rgba(88, 103, 188, 0.72)",
     "posterior_cloud": "rgba(81, 70, 166, 0.8)",
     "latent_trajectory": "rgba(22, 92, 138, 0.84)",
     "matrix_fragment": "rgba(95, 104, 120, 0.84)",
@@ -186,6 +187,9 @@ VARIANT_PRESETS = {
     "rich": Preset(20, 2, 2, 2, 2, 2, 6, 4, 4, 3, 2, 3, 2, 2, 6, 16, 22, 1.48),
     "composite": Preset(20, 2, 2, 2, 2, 2, 6, 4, 4, 3, 2, 3, 2, 2, 6, 16, 22, 1.48),
     "rich_sparse": Preset(12, 1, 1, 1, 1, 1, 4, 2, 2, 2, 1, 2, 1, 1, 3, 10, 12, 1.24, True),
+    # Latent-dynamics-first website hero. The hierarchy is intentional:
+    # trajectories/cloud/flow dominate; diagnostic fragments remain secondary.
+    "latent_hero": Preset(10, 3, 2, 2, 1, 1, 2, 1, 2, 1, 1, 2, 0, 0, 1, 18, 8, 1.55, True),
 }
 
 
@@ -606,7 +610,7 @@ def build_main_trajectory_points(rng: random.Random, variant: str, index: int) -
         (964.0, 278.0),
         (1084.0, 194.0),
     ]
-    if variant in {"dense", "rich", "composite"} and index == 1:
+    if variant in {"dense", "rich", "composite", "latent_hero"} and index == 1:
         base = [
             (586.0, 522.0),
             (674.0, 506.0),
@@ -617,6 +621,95 @@ def build_main_trajectory_points(rng: random.Random, variant: str, index: int) -
         ]
     return [(x + rng.uniform(-14.0, 14.0), y + rng.uniform(-22.0, 22.0)) for x, y in base]
 
+
+def add_vector_field(builder: Builder, zone: str = "right_anchor", role: str = ROLE_STRUCTURAL) -> None:
+    """Add a sparse phase-portrait layer behind the latent trajectory.
+
+    This is deliberately different from contour fields. Contours imply density or
+    topology; the vector field implies a local transition rule in latent space.
+    """
+    rng = builder.rng
+    x1, y1, x2, y2 = ZONE_DEFINITIONS[zone].bounds
+
+    cols = 16 if zone == "right_anchor" else 10
+    rows = 11 if zone == "right_anchor" else 7
+    jitter = 6.0
+    pieces: List[str] = []
+    points: List[Point] = []
+
+    # Zone-specific visual centers keep the field aligned with existing layout.
+    if zone == "right_anchor":
+        center_x, center_y = 940.0, 360.0
+        scale_x, scale_y = 260.0, 210.0
+    else:
+        center_x, center_y = rect_center(ZONE_DEFINITIONS[zone].bounds)
+        scale_x = max(140.0, (x2 - x1) * 0.45)
+        scale_y = max(120.0, (y2 - y1) * 0.45)
+
+    for row in range(rows):
+        for col in range(cols):
+            x = lerp(x1 + 24.0, x2 - 24.0, col / max(1, cols - 1)) + rng.uniform(-jitter, jitter)
+            y = lerp(y1 + 36.0, y2 - 42.0, row / max(1, rows - 1)) + rng.uniform(-jitter, jitter)
+            point = (x, y)
+
+            if point_in_any_rect(point, HARD_KEEP_OUT_RECTS):
+                continue
+            if zone == "right_anchor" and not point_in_polygon(point, RIGHT_ANCHOR_SAFE_POLYGON):
+                continue
+
+            nx = (x - center_x) / scale_x
+            ny = (y - center_y) / scale_y
+
+            # A compact nonlinear phase portrait: weak rotation, contraction,
+            # and sinusoidal local structure. It reads as a latent transition
+            # field without requiring a literal model object.
+            u = -0.55 * ny + 0.24 * math.sin(2.2 * nx)
+            v = 0.42 * nx - 0.18 * ny + 0.16 * math.cos(1.8 * ny)
+            norm = math.hypot(u, v) or 1.0
+            u /= norm
+            v /= norm
+
+            length = rng.uniform(10.0, 22.0 if zone == "right_anchor" else 17.0)
+            x_end = x + u * length
+            y_end = y + v * length
+
+            angle = math.atan2(v, u)
+            head = rng.uniform(2.2, 3.6)
+            left = (
+                x_end - head * math.cos(angle - 0.55),
+                y_end - head * math.sin(angle - 0.55),
+            )
+            right = (
+                x_end - head * math.cos(angle + 0.55),
+                y_end - head * math.sin(angle + 0.55),
+            )
+
+            opacity = rng.uniform(0.14, 0.32 if role != ROLE_ANCHOR else 0.38)
+            stroke = var_color(choose_color_role(rng, role, "curve"))
+            stroke_width = rng.uniform(0.45, 0.8 if role != ROLE_ANCHOR else 0.95)
+
+            pieces.append(
+                f'<line x1="{fmt(x)}" y1="{fmt(y)}" x2="{fmt(x_end)}" y2="{fmt(y_end)}" '
+                f'stroke="{stroke}" stroke-width="{fmt(stroke_width)}" '
+                f'stroke-linecap="round" opacity="{fmt(opacity)}" />'
+            )
+            pieces.append(
+                f'<path d="M {fmt(x_end)} {fmt(y_end)} L {fmt(left[0])} {fmt(left[1])} '
+                f'L {fmt(right[0])} {fmt(right[1])} Z" fill="{stroke}" opacity="{fmt(opacity * 0.85)}" />'
+            )
+            points.extend([point, (x_end, y_end)])
+
+    if not points:
+        return
+
+    bounds = polyline_bounds(points, pad=8.0)
+    group = (
+        f'<g class="neuro-background__motif neuro-background__motif--vector-field" '
+        f'data-motif-type="vector_field" data-zone="{zone}" data-role="{role}" data-opacity-class="soft">'
+        + "".join(pieces)
+        + "</g>"
+    )
+    builder.add("field", "vector_field", zone, role, bounds, group, rect_center(bounds), 0.22)
 
 def add_latent_trajectory(builder: Builder, index: int) -> None:
     rng = builder.rng
@@ -1163,6 +1256,13 @@ def populate(builder: Builder) -> None:
     for zone in ("left_title", "central_bridge", "right_anchor", "lower_echo"):
         for _ in range(max(1, preset.contour_fields // 4)):
             add_contour_field(builder, zone, ROLE_AMBIENT if zone in {"left_title", "lower_echo"} else ROLE_STRUCTURAL)
+
+    # True flow-field layer. It is drawn before trajectories so the trajectory
+    # remains the visual anchor.
+    add_vector_field(builder, "right_anchor", ROLE_STRUCTURAL)
+    if builder.variant in {"dense", "rich", "composite", "latent_hero"}:
+        add_vector_field(builder, "central_bridge", ROLE_AMBIENT)
+
     add_ambient_dots(builder)
 
     for index in range(preset.latent_trajectories):

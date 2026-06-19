@@ -1,6 +1,5 @@
 ---
 title: Personal Website
-importance: 50
 date_range: 2024-present
 context:
 tags:

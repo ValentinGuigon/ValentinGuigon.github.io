@@ -1,7 +1,6 @@
 ---
 title: fMRI SPM Templates
-importance: 40
-date_range: 2019-2023
+date_range: 2019-2024
 context: ISCMJ Neuroeconomics Lab
 tags:
   - fmri

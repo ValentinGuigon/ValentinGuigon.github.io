@@ -1,7 +1,6 @@
 ---
 title: fMRIPrep QC guide and logging
-importance: 40
-date_range: 2025-present
+date_range: 2025-2026
 context: UMD SLD Lab
 tags:
   - fMRI

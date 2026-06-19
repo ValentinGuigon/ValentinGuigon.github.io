@@ -1,8 +1,8 @@
-<header>
+<header id="site-header" class="site-header {% if site.navbar_fixed %}site-header--fixed{% endif %}">
   <!-- Nav Bar -->
   <nav
     id="navbar"
-    class="navbar navbar-light navbar-expand-sm site-header {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}"
+    class="navbar navbar-light navbar-expand-sm {% unless site.navbar_fixed %}sticky-top{% endunless %}"
     role="navigation"
   >
     <div class="container">
@@ -129,10 +129,10 @@
   </nav>
   {% if site.enable_progressbar %}
     <!-- Scrolling Progress Bar -->
-    <progress id="progress" value="0">
-      <div class="progress-container">
+    <div class="progress-container" aria-hidden="true">
+      <progress id="progress" value="0">
         <span class="progress-bar"></span>
-      </div>
-    </progress>
+      </progress>
+    </div>
   {% endif %}
 </header>

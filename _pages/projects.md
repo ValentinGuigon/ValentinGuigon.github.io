@@ -18,7 +18,7 @@ neuro_background: dense
 
 <h2 id="{{ year_group.name }}" class="year-heading">{{ year_group.name }}</h2>
 
-{% assign sorted_projects = year_group.items | sort: "importance" | reverse %}
+{% assign sorted_projects = year_group.items | sort: "title" %}
 
 <div class="project-list">
 {% for project in sorted_projects %}

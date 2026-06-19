@@ -153,4 +153,15 @@
     <circle cx="866.83" cy="757.45" r="1.4" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.07" />
     <circle cx="922.29" cy="779.24" r="1.17" fill="var(--neuro-bg-dot-soft, rgba(80, 82, 92, 0.16))" opacity="0.04" />
   </g>
+<g class="neuro-background__debug" aria-hidden="true">
+  <rect x="0.5" y="0.5" width="1199" height="899" fill="none" stroke="rgba(25, 25, 25, 0.48)" stroke-width="1" />
+  <rect x="34" y="24" width="396" height="204" rx="18" fill="rgba(63, 111, 214, 0.08)" stroke="rgba(63, 111, 214, 0.72)" stroke-width="1.5" stroke-dasharray="10 8" />
+  <rect x="570" y="112" width="248" height="448" rx="18" fill="rgba(79, 157, 104, 0.08)" stroke="rgba(79, 157, 104, 0.72)" stroke-width="1.5" stroke-dasharray="10 8" />
+  <rect x="760" y="54" width="410" height="662" rx="18" fill="rgba(168, 98, 201, 0.08)" stroke="rgba(168, 98, 201, 0.72)" stroke-width="1.5" stroke-dasharray="10 8" />
+  <rect x="84" y="706" width="934" height="154" rx="18" fill="rgba(214, 146, 70, 0.08)" stroke="rgba(214, 146, 70, 0.72)" stroke-width="1.5" stroke-dasharray="10 8" />
+  <rect x="82" y="212" width="538" height="464" rx="16" fill="rgba(196, 53, 64, 0.08)" stroke="rgba(196, 53, 64, 0.7)" stroke-width="1.2" stroke-dasharray="6 5" />
+  <rect x="84" y="734" width="762" height="126" rx="16" fill="rgba(196, 53, 64, 0.08)" stroke="rgba(196, 53, 64, 0.7)" stroke-width="1.2" stroke-dasharray="6 5" />
+  <rect x="444" y="96" width="116" height="132" rx="16" fill="rgba(196, 53, 64, 0.08)" stroke="rgba(196, 53, 64, 0.7)" stroke-width="1.2" stroke-dasharray="6 5" />
+  <path d="M 676 0 L 1200 0 L 1200 708 L 1122 708 L 1048 698 L 960 700 L 868 690 L 788 660 L 726 608 L 694 532 L 682 424 L 678 286 L 676 136 Z" fill="rgba(132, 120, 245, 0.04)" stroke="rgba(132, 120, 245, 0.72)" stroke-width="1.4" stroke-dasharray="7 6" />
+</g>
 </svg>
