@@ -21,7 +21,7 @@ body {
 
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
-  padding-top: var(--header-offset);
+  padding-top: calc(var(--header-offset) + 0.75rem);
 }
 
 body.sticky-bottom-footer {
@@ -120,9 +120,7 @@ footer.sticky-bottom {
   white-space: nowrap;
   margin-bottom: 0;
   font-size: clamp(2.6rem, 4.5vw, 4.15rem);
-  line-height: 1.02;
-  padding-top: 0.08em;
-  padding-bottom: 0.08em;
+  line-height: 0.92;
 }
 
 .post--about .desc {
@@ -552,9 +550,7 @@ footer.sticky-bottom {
   .post-title {
     font-size: clamp(2.35rem, 4.3vw, 4.35rem);
     letter-spacing: -0.04em;
-    line-height: 1.02;
-    padding-top: 0.08em;
-    padding-bottom: 0.08em;
+    line-height: 0.92;
     text-transform: lowercase;
   }
 
