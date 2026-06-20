@@ -20,8 +20,10 @@ body {
 }
 
 body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: calc(var(--header-offset) + 0.75rem);
+  // Keep the fixed header from overlapping the main content container.
+  [role="main"] {
+    margin-top: calc(var(--header-offset) + 0.75rem) !important;
+  }
 }
 
 body.sticky-bottom-footer {
