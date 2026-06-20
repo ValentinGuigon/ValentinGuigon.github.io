@@ -22,7 +22,8 @@ body {
 body.fixed-top-nav {
   // Keep the fixed header from overlapping the main content container.
   [role="main"] {
-    margin-top: calc(var(--header-offset) + 0.75rem) !important;
+    margin-top: 0 !important;
+    padding-top: calc(var(--header-offset) + 0.75rem) !important;
   }
 }
 
