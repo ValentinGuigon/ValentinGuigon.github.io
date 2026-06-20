@@ -49,7 +49,7 @@
     }
 
     function initializeProgressElement() {
-      let headerHeight = $('#site-header').outerHeight(true);
+      let headerHeight = $('#site-header').outerHeight(true) + 12;
       document.documentElement.style.setProperty('--header-offset', headerHeight + 'px');
       progressBar.attr({
         max: getDistanceToScroll(),

@@ -4,7 +4,7 @@
 
 body {
   --progress-height: 1px;
-  --header-offset: calc(var(--nav-height) + var(--progress-height));
+  --header-offset: 73px;
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
@@ -23,7 +23,7 @@ body.fixed-top-nav {
   // Keep the fixed header from overlapping the main content container.
   [role="main"] {
     margin-top: 0 !important;
-    padding-top: calc(var(--header-offset) + 0.75rem) !important;
+    padding-top: 85px !important;
   }
 }
 
