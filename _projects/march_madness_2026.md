@@ -1,14 +1,18 @@
 ---
 title: March Madness 2026 Forecasting Engine
 date_range: 2026
-context: Personal research project
+context: personal research project
+section: Personal and research tools, AI experiments, and technical projects
+sort_year: 2026
+sort_rank: 3
 tags:
-  - ai
+  - AI
   - modeling
   - visualization
 kind: research-software
-description: >
-  Built an end-to-end public-facing prediction and diagnostics engine for the 2026 NCAA tournament. Fetched BartTorvik, WarrenNolan and NCAA historic data, tested predicting models, created brackets portfolio, and diagnosed predictions after each round. It was built in 3.5 days using an earlier version of SUPLEX.
+description_paragraphs:
+  - I built a public-facing forecasting and diagnostics engine for the 2026 NCAA tournament as a time-bounded test of AI-assisted analytical workflow design. The system fetched tournament data, tested predictive models, generated bracket portfolios, and diagnosed prediction errors after each round.
+  - The project served as a stress test for fast, reviewable, end-to-end modeling work using an earlier version of SUPLEX. I ranked 3/11 on both Men and Women friends bracket tournaments, with +EV on my bets.
 links:
   - label: Github
     url: https://github.com/ValentinGuigon/March_Madness_2026

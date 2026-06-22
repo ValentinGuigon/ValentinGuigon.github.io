@@ -1,14 +1,18 @@
 ---
 title: SUPLEX-agentic-workflow
 date_range: 2026
-context: Personal research project
+context: personal research project
+section: Personal and research tools, AI experiments, and technical projects
+sort_year: 2026
+sort_rank: 1
 tags:
   - AI
   - governance
   - workflow
 kind: software
-description: >
-  Developed a control layer for bounded LLM-assisted repository work, built around explicit handoffs, execution reports, scoped task boundaries, and continuity artifacts. It is used to structure changes so delegation of tasks to LLMs does not erase provenance, scope discipline, or reviewability. Now used in each of my most complex projects.
+description_paragraphs:
+  - I developed SUPLEX as a control layer for bounded LLM-assisted repository work. The system structures AI-assisted coding around explicit task boundaries, handoffs, execution reports, provenance records, and continuity artifacts.
+  - The goal is to preserve human supervision and reviewability when delegating complex repository work to LLMs. I now use SUPLEX-style workflows in my most complex projects, especially when changes span code, documentation, analysis outputs, and project infrastructure.
 links:
   - label: Github
     url: https://github.com/ValentinGuigon/ValentinGuigon.github.io/blob/main/SUPLEX.md

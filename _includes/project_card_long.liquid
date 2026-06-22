@@ -82,7 +82,11 @@
         </ul>
       {% endif %}
 
-      {% if project.description %}
+      {% if project.description_paragraphs and project.description_paragraphs.size > 0 %}
+        {% for paragraph in project.description_paragraphs %}
+          <p class="project-card__description{% unless forloop.last %} mb-3{% else %} mb-0{% endunless %}">{{ paragraph }}</p>
+        {% endfor %}
+      {% elsif project.description %}
         <p class="project-card__description mb-0">{{ project.description }}</p>
       {% endif %}
 

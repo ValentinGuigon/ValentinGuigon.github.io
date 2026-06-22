@@ -1,12 +1,16 @@
 ---
-title: Polarization and social learning in social network
-date_range: 2024-present
+title: Polarization and social learning in social networks
+date_range: 2024-2026
 context: ISCMJ Neuroeconomics Lab
+section: Research projects
+sort_year: 2024
+sort_rank: 2
 tags:
-  - fake news
-  - computational modeling
-  - social network
+  - social networks
+  - belief formation
+  - information propagation
 kind: research
-description: >
-  I initialized a study on the formation of beliefs in social networks with Jean-Claude Dreher, Frederic Moisan and Alain Barrat. Gaël Carniel is now conducting the study. At the collective level, the behavior of each individual contributes to the evolution of the architecture of social networks in which we are embedded. In turn, those networks affect the beliefs we form about the state of the world. With this study, our main objective is to investigate how information propagation impacts the formation of consensus/dissensus/polarization, reflected by the formation of communities, and the role of social learning in large groups.
+description_paragraphs:
+  - Building on the task logic of ReceivingNews and SendingNews, I developed the conceptual and task-design framework for a study on how beliefs evolve in social networks, with Jean-Claude Dreher, Frédéric Moisan, and Alain Barrat. The project is now being conducted by Gaël Carniel.
+  - The design extends my earlier work on information evaluation and information sharing to a collective setting. It asks how individual belief updating and network-level information propagation jointly shape consensus, dissensus, and polarization.
 ---

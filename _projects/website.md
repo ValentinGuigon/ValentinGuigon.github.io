@@ -1,13 +1,17 @@
 ---
-title: Personal Website
-date_range: 2024-present
+title: Personal website
+date_range: 2024-2026
 context:
+section: Personal and research tools, AI experiments, and technical projects
+sort_year: 2024
+sort_rank: 1
 tags:
   - website
-  - jekyll
+  - Jekyll
+  - academic profile
 kind: communication
-description: >
-  The site you are reading: a Jekyll (built from al-folio) research-facing website.
+description_paragraphs:
+  - The current website you are navigating. Updated using SUPLEX.
 links:
   - label: Github
     url: https://github.com/ValentinGuigon/ValentinGuigon.github.io
