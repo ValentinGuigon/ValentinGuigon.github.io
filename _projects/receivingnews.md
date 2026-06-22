@@ -8,7 +8,7 @@ sort_rank: 2
 tags:
   - information seeking
   - metacognition
-  - ambiguous news
+  - fake news
 kind: research
 description_paragraphs:
   - I developed and led ReceivingNews, a behavioral project testing how metacognitive confidence shapes information seeking after people evaluate ambiguous news. Participants made incentivized judgments about whether news items were true or false, reported confidence in those judgments, and indicated how much they were willing to pay to receive or avoid additional information.

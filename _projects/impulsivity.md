@@ -8,7 +8,7 @@ sort_rank: 1
 tags:
   - impulsivity
   - reward
-  - computational modeling
+  - virtual reality
 kind: research
 description_paragraphs:
   - During my research internship in the Neuroeconomics, Reward and Decision-Making team, I contributed to David O'Connor's behavioral study testing whether spatial proximity to rewarding cues increases impulsive behavior. The project used virtual reality to compare responses to food-reward cues presented near or far from the participant.

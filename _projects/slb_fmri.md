@@ -6,9 +6,9 @@ section: Research projects
 sort_year: 2025
 sort_rank: 1
 tags:
-  - fMRI
+  - social learning
   - computational modeling
-  - social learning battery
+  - model-based fMRI
 kind: research
 description_paragraphs:
   - I lead with Caroline Charpentier the fMRI implementation of the Social Learning Battery, a multi-task project designed to characterize how people learn from direct experience, social information, and changing social partners. The battery combines tasks of risk and ambiguity, trust learning, and observational learning.

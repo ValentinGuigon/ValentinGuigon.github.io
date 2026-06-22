@@ -6,7 +6,7 @@ section: Research projects
 sort_year: 2020
 sort_rank: 1
 tags:
-  - beliefs
+  - bayesian updating
   - preference inference
   - model-based fMRI
 kind: research
