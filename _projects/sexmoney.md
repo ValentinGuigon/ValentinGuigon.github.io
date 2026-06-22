@@ -1,6 +1,6 @@
 ---
 title: Sex-Money - testosterone and prefrontal-limbic reward circuitry
-date_range: 2018
+date_range: 2018-2019
 context: ISCMJ Neuroeconomics Lab
 section: Research projects
 sort_year: 2018

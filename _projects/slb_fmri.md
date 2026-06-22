@@ -1,6 +1,6 @@
 ---
 title: Neurocomputational mechanisms of social learning
-date_range: 2025-2026
+date_range: 2024-2026
 context: UMD SLD Lab
 section: Research projects
 sort_year: 2025
