@@ -1366,7 +1366,40 @@ nav[data-toggle="toc"] {
 
 @media (max-width: 576px) {
   .toc-sidebar-shell {
-    display: none;
+    display: block;
+    position: static;
+    top: auto;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1rem 0.85rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.9rem;
+    background-color: var(--global-card-bg-color);
+  }
+
+  .toc-sidebar-shell.sticky-top,
+  nav[data-toggle="toc"] {
+    position: static;
+    top: auto;
+  }
+
+  .toc-sidebar-shell .toc-shell__title {
+    margin-bottom: 0.7rem;
+  }
+
+  .toc-sidebar-shell .nav > li > a,
+  .toc-sidebar-shell .nav .nav > li > a {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .toc-sidebar-shell .nav > li > a {
+    padding-left: 0.75rem;
+  }
+
+  .toc-sidebar-shell .nav .nav > li > a {
+    padding-left: 1.65rem;
   }
 }
 
