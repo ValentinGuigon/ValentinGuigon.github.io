@@ -15,6 +15,9 @@ layout: default
         ></a>
       {% endif %}
     </h1>
+    {% if page.resume_last_updated %}
+      <p class="post-description">Last updated: {{ page.resume_last_updated | date: '%B %d, %Y' }}.</p>
+    {% endif %}
     {% if page.description %}
       <p class="post-description">{{ page.description }}</p>
     {% endif %}
