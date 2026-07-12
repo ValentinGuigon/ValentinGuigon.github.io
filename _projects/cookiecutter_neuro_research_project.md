@@ -11,8 +11,7 @@ tags:
   - Python/R/MATLAB
 kind: software
 description_paragraphs:
-  - I created a Cookiecutter template for starting psychology and neuroscience research projects with a clearer computational architecture from the outset. The template provides a reusable scaffold for organizing data, code, documentation, outputs, and handoffs across Python-, R-, and MATLAB-based workflows.
-  - The project was designed for computational neuroscience contexts where analyses often evolve across multiple contributors, software environments, and preprocessing stages.
+  - In experimental cognitive sciences, research projects involve multiple contributors, software environments, and preprocessing stages. This creates vulnerabilities in computational reproducibility. This Cookiecutter template creates structured, FAIR-compliant repositories from a simple command-line execution. The template organizes data, code, documentation, and outputs, and supports the automatic initialization of venv, renv, and Matlab project files.
 links:
   - label: GitHub
     url: https://github.com/ValentinGuigon/cookiecutter-neuro-research-project

@@ -11,8 +11,7 @@ tags:
   - documentation
 kind: methods
 description_paragraphs:
-  - I designed a guide and logging system for evaluating fMRIPrep outputs in the lab's fMRI studies. The workflow standardizes how researchers inspect anatomical alignment, brain masks, susceptibility distortions, confounds, and preprocessing artifacts.
-  - The aim is to make fMRI quality control teachable, auditable, and consistent across raters. Instead of leaving QC decisions implicit or scattered across notes, the system creates a structured record of what was inspected, what was flagged, and how each dataset should be treated downstream.
+  - fMRI quality control (QC) is hardly automatable (see MRIQC and [MRIQCEPTION](https://github.com/elizabethbeard/mriqception/ on no-reference IQMs). To standardize QC across lab members, I designed a guide for evaluating fMRIPrep QC outputs, and an excel logging system. We found fMRI quality control more teachable, auditable, and consistent across lab members (as evidenced by rating spread between RAs).
 links:
   - label: Guide
     url: https://github.com/ValentinGuigon/fMRIPrep_QC/blob/main/SLB_MRI_QA_%26_preprocessing_QC_Guide-June_2026.pptx

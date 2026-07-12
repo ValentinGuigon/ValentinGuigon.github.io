@@ -11,8 +11,7 @@ tags:
   - visualization
 kind: research-software
 description_paragraphs:
-  - I built a public-facing forecasting and diagnostics engine for the 2026 NCAA tournament as a time-bounded test of AI-assisted analytical workflow design. The system fetched tournament data, tested predictive models, generated bracket portfolios, and diagnosed prediction errors after each round.
-  - The project served as a stress test for fast, reviewable, end-to-end modeling work using an earlier version of SUPLEX. I ranked 3/11 on both Men and Women friends bracket tournaments, with +EV on my bets.
+  - To celebrate my first-ever March Madness, I built a forecasting engine for the 2026 NCAA Men/Women tournament. The system fetched tournament data, tested predictive models, generated bracket portfolios, and diagnosed prediction errors after each round. The result is still live on dedicated webpages. I proudly ranked 3/11 on both Men and Women friends bracket tournaments, with +EV on my bets.
 links:
   - label: Github
     url: https://github.com/ValentinGuigon/March_Madness_2026

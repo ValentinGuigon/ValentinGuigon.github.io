@@ -11,6 +11,5 @@ tags:
   - lab infrastructure
 kind: methods
 description_paragraphs:
-  - I led the development of lab-level computational infrastructure for reproducible behavioral and fMRI research. It makes complex multi-person workflows more reliable, inspectable, and scalable by standardizing how data, code, outputs, quality checks, and documentation move through a project.
-  - Built with implementation work from Gaurav Mahajan and other research assistants, the system automates repeated steps, reduces avoidable human error, limits workflow drift, and makes analyses easier to inspect, rerun, hand off, and extend.
+  - I led the development of lab-level computational infrastructure for reproducible behavioral and fMRI analyses. Built with implementation work from Gaurav D. Mahajan and other research assistants, we automated fMRI and behavioral stratified sampling, experiments logging, data extraction, data preprocessing, and quality control. Employs containers and nightly triggers.
 ---

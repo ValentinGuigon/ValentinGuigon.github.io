@@ -1,5 +1,5 @@
 ---
-title: SendingNews - inferring others' preferences for information
+title: SendingNews - Neurocomputational mechanisms of inferring others' preferences for information
 date_range: 2020-2026
 context: ISCMJ Neuroeconomics Lab
 section: Research projects

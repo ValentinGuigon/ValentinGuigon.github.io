@@ -11,8 +11,8 @@ tags:
   - heterogeneity
 kind: research
 description_paragraphs:
-  - I study heterogeneity in social learning, focusing on how people form and revise trust when repeated interactions involve uncertainty, changing reciprocity, and possible betrayal.
-  - Different strategies can guide trust behavior, including simple heuristics, reinforcement learning, and belief updating. In a dynamic trust-learning task that can be solved in multiple ways, I use computational modeling to characterize this heterogeneity systematically, identifying profiles of participants who rely on distinct cognitive strategies.
+  - With Caroline Charpentier, I study heterogeneity in social learning, focusing on how people form and revise trust when repeated interactions involve uncertainty, changing reciprocity, and possible betrayal.
+  - Different strategies can guide trust behavior, including simple heuristics, reinforcement learning, and belief updating. In a dynamic trust-learning task that can be solved in multiple ways, I use computational modeling to characterize this heterogeneity systematically, identifying profiles of participants who rely on distinct cognitive strategies (reinforcement learning, bayesian updating, sensitivity to betrayal and uncertainty, or heuristics).
 links:
   - label: Poster
     url: /assets/pdf/posters/Poster_2025_SNE_CISE.pdf

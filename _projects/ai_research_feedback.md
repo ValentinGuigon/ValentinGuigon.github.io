@@ -11,8 +11,7 @@ tags:
   - research workflows
 kind: research-software
 description_paragraphs:
-  - I adapted and extended a set of Claude Code skills originally developed by Claes Backman for academic research review. I reworked the workflows for cognitive neuroscience, computational neuroscience, grant review, manuscript revision, and paper-code reproducibility checks.
-  - The tool supports structured review of manuscripts, grants, pre-analysis plans, and paper-code packages. It is designed to make AI-assisted research feedback more bounded, auditable, and reusable than one-off chat interactions.
+  - Claude and Codex skills to support AI-assisted review of manuscripts, grants, pre-analysis plans, and paper-code packages. Adapted from Claes Backman, economist; rewritten and extended for psychology and neuroscience research projects.
 links:
   - label: GitHub
     url: https://github.com/ValentinGuigon/AI-research-feedback

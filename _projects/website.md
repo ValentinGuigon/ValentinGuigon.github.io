@@ -11,7 +11,7 @@ tags:
   - academic profile
 kind: communication
 description_paragraphs:
-  - The current website you are navigating. Updated using SUPLEX.
+  - The current website you are navigating.
 links:
   - label: Github
     url: https://github.com/ValentinGuigon/ValentinGuigon.github.io

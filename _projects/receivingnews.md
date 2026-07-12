@@ -1,5 +1,5 @@
 ---
-title: ReceivingNews - metacognition and information seeking after ambiguous news evaluation
+title: ReceivingNews - Metacognition biases information seeking in assessing ambiguous news
 date_range: 2020-2024
 context: ISCMJ Neuroeconomics Lab
 section: Research projects

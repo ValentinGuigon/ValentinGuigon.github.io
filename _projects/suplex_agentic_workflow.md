@@ -11,8 +11,7 @@ tags:
   - workflow
 kind: software
 description_paragraphs:
-  - I developed SUPLEX as a control layer for bounded LLM-assisted repository work. The system structures AI-assisted coding around explicit task boundaries, handoffs, execution reports, provenance records, and continuity artifacts.
-  - The goal is to preserve human supervision and reviewability when delegating complex repository work to LLMs. I now use SUPLEX-style workflows in my most complex projects, especially when changes span code, documentation, analysis outputs, and project infrastructure.
+  - The more complex the task to perform, the more LLMs tend to make assumptions and to drift away from initial task specifications. To reduce these risks, I developed SUPLEX, a workflow/control system for LLM-assisted work. The system consists of .md documentation and logging that layers on top of pre-existing agentic scaffolds. It structures AI-assisted coding around a) clear goals and bounded tasks, b) explicit task handoffs, c) execution reports, and d) a memory system. It preserves human supervision and reviewability.
 links:
   - label: Github
     url: https://github.com/ValentinGuigon/ValentinGuigon.github.io/blob/main/SUPLEX.md

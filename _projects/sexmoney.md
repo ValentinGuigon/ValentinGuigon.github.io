@@ -1,5 +1,5 @@
 ---
-title: Sex-Money - testosterone and prefrontal-limbic reward circuitry
+title: Testosterone Causes Decoupling of Orbitofrontal Cortex-Amygdala Relationship While Anticipating Primary and Secondary Rewards
 date_range: 2018-2019
 context: ISCMJ Neuroeconomics Lab
 section: Research projects

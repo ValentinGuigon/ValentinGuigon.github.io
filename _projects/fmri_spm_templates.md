@@ -11,7 +11,7 @@ tags:
   - pipelines
 kind: methods
 description_paragraphs:
-  - I built reusable SPM-based templates for fMRI project setup, preprocessing structure, and first-level analysis organization. These templates helped standardize recurring analysis patterns across projects and reduced the need to rebuild fMRI pipelines from scratch for each new study.
+  - These standardized SPM-based templates support fMRI project setup, preprocessing structure, first-level and second-level analysis.
 links:
   - label: Github
     url: https://github.com/ValentinGuigon/SPM_fMRI_pipeline_template

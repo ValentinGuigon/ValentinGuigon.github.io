@@ -11,6 +11,5 @@ tags:
   - information propagation
 kind: research
 description_paragraphs:
-  - Building on the task logic of ReceivingNews and SendingNews, I developed the conceptual and task-design framework for a study on how beliefs evolve in social networks, with Jean-Claude Dreher, Frédéric Moisan, and Alain Barrat. The project is now being conducted by Gaël Carniel.
-  - The design extends my earlier work on information evaluation and information sharing to a collective setting. It asks how individual belief updating and network-level information propagation jointly shape consensus, dissensus, and polarization.
+  - Building on my ReceivingNews and SendingNews projects, I developed the framework for studying how beliefs evolve in social networks, with Jean-Claude Dreher, Frédéric Moisan, and Alain Barrat. The project is now being conducted by Gaël Carniel. The design extends my earlier work on information evaluation and information sharing to a collective setting, asking asks how individual belief updating and network-level information propagation shape consensus, dissensus, and the apparition of polarization.
 ---
