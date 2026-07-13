@@ -33,6 +33,15 @@ bundle exec jekyll serve
 
 The site will be available at http://localhost:4000.
 
+## Project-card media
+
+The long project cards rendered on `/projects/` accept optional front matter media fields:
+
+- `image`: repo-local image path to display on the long project card
+- `image_alt`: optional alt text for that image
+
+If `image` is omitted, the long card falls back to deterministic generated SVG art.
+
 ## Substack feed update (manual)
 
 Substack content is not fetched automatically.

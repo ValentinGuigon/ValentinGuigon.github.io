@@ -5,6 +5,8 @@ context: ISCMJ Neuroeconomics Lab
 section: Research projects
 sort_year: 2018
 sort_rank: 1
+image: /assets/img/projects/sexmoney.png
+image_alt:
 tags:
   - testosterone
   - functional connectivity

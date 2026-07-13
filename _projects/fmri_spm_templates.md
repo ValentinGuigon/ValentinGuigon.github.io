@@ -11,7 +11,7 @@ tags:
   - pipelines
 kind: methods
 description_paragraphs:
-  - These standardized SPM-based templates support fMRI project setup, preprocessing structure, first-level and second-level analysis.
+  - Standardized SPM-based templates. They support fMRI project setup, preprocessing, first- and second-level Informed Basis Set definition and contrasting, and MRIcroGL figures, with tutorials on fMRI design and preprocessing.
 links:
   - label: Github
     url: https://github.com/ValentinGuigon/SPM_fMRI_pipeline_template

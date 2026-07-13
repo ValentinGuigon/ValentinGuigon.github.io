@@ -1,10 +1,12 @@
 ---
-title: Polarization and social learning in social networks
+title: Dynamics of Social Networks - Understanding Belief Formation, Polarization, and Consensus Emergence
 date_range: 2024-2026
 context: ISCMJ Neuroeconomics Lab
 section: Research projects
 sort_year: 2024
 sort_rank: 2
+image: /assets/img/projects/polarization_social_network.png
+image_alt:
 tags:
   - social networks
   - belief formation

@@ -5,6 +5,8 @@ context: personal research project
 section: Personal and research tools, AI experiments, and technical projects
 sort_year: 2026
 sort_rank: 2
+image: /assets/img/projects/ai_research_feedback.png
+image_alt:
 tags:
   - AI
   - academic review

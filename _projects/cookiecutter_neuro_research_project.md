@@ -11,7 +11,7 @@ tags:
   - Python/R/MATLAB
 kind: software
 description_paragraphs:
-  - In experimental cognitive sciences, research projects involve multiple contributors, software environments, and preprocessing stages. This creates vulnerabilities in computational reproducibility. This Cookiecutter template creates structured, FAIR-compliant repositories from a simple command-line execution. The template organizes data, code, documentation, and outputs, and supports the automatic initialization of venv, renv, and Matlab project files.
+  - In experimental cognitive sciences, research projects involve multiple contributors, software environments, and preprocessing stages. This creates vulnerabilities that impede computational reproducibility. This Cookiecutter template creates structured, FAIR-compliant repositories for psyc/neuro.
 links:
   - label: GitHub
     url: https://github.com/ValentinGuigon/cookiecutter-neuro-research-project

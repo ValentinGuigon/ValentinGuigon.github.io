@@ -1,8 +1,23 @@
 {% assign project_slug = project.title | slugify %}
-<article class="card project-card project-card--{{ project_slug }} mt-4 mb-4 hoverable">
-  <div class="project-card__art" aria-hidden="true">
-    {% case project_slug %}
-      {% when 'suplex-agentic-workflow' %}
+{% assign project_image = project.image | default: project.img %}
+{% assign project_image_alt = project.image_alt | default: '' %}
+{% assign fallback_seed = project_slug.size | plus: project.title.size | plus: project.section.size | plus: project.sort_year | plus: project.sort_rank %}
+{% assign fallback_variant = fallback_seed | modulo: 6 %}
+<article class="card project-card project-card--{{ project_slug }}{% if project_image %} project-card--has-image{% endif %} mt-4 mb-4 hoverable">
+  <div class="project-card__art{% if project_image %} project-card__art--image{% endif %}"{% unless project_image %} aria-hidden="true"{% endunless %}>
+    {% if project_image %}
+      <div class="project-card__art-frame">
+        <img
+          class="project-card__art-image"
+          src="{{ project_image | relative_url }}"
+          alt="{{ project_image_alt }}"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    {% else %}
+      {% case fallback_variant %}
+      {% when 0 %}
         <svg viewBox="0 0 520 320" role="presentation" focusable="false">
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M162 70C225 30 321 37 381 83C429 119 442 183 419 230C397 274 339 297 284 287C215 274 169 209 177 150C182 113 208 82 245 65" stroke="var(--project-art-line)" stroke-width="1.4" />
@@ -20,7 +35,7 @@
             <circle cx="238" cy="156" r="2.5" />
           </g>
         </svg>
-      {% when 'cookiecutter-neuro-research-project' %}
+      {% when 1 %}
         <svg viewBox="0 0 520 320" role="presentation" focusable="false">
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M176 250C219 218 244 205 277 181C311 156 333 127 365 96C380 81 397 70 420 63" stroke="var(--project-art-line-strong)" stroke-width="1.7" />
@@ -38,22 +53,77 @@
             <circle cx="286" cy="219" r="2.7" />
           </g>
         </svg>
+      {% when 2 %}
+        <svg viewBox="0 0 520 320" role="presentation" focusable="false">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M152 198C206 165 241 157 285 140C337 120 379 96 432 69" stroke="var(--project-art-line-strong)" stroke-width="1.35" />
+            <path d="M181 84C236 62 299 60 350 80C397 99 429 136 437 183C444 225 423 262 381 283" stroke="var(--project-art-line)" stroke-width="1.1" />
+            <path d="M236 110C251 139 280 160 314 167C350 174 383 168 412 150" stroke="var(--project-art-line)" stroke-width="0.95" />
+            <path d="M284 58V150M313 58V150M342 58V150M371 58V150M284 58H371M284 88H371M284 118H371M284 150H371" stroke="var(--project-art-grid)" stroke-width="0.9" />
+          </g>
+          <g fill="var(--project-art-dot)">
+            <circle cx="229" cy="173" r="3.2" />
+            <circle cx="270" cy="153" r="2.8" />
+            <circle cx="315" cy="138" r="3.5" />
+            <circle cx="359" cy="116" r="3.1" />
+            <circle cx="404" cy="88" r="3.7" />
+            <circle cx="390" cy="191" r="2.7" />
+          </g>
+        </svg>
+      {% when 3 %}
+        <svg viewBox="0 0 520 320" role="presentation" focusable="false">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M164 244C198 206 238 171 284 137C322 108 366 81 424 56" stroke="var(--project-art-line)" stroke-width="1.2" />
+            <path d="M189 224C233 219 269 206 304 180C336 157 363 124 389 88" stroke="var(--project-art-line-strong)" stroke-width="1.35" />
+            <path d="M187 94C215 74 252 66 290 69C333 73 373 99 395 134C416 166 420 205 408 240" stroke="var(--project-art-line)" stroke-width="1" />
+            <path d="M255 72L388 72M255 103L388 103M255 134L388 134M255 165L388 165" stroke="var(--project-art-grid)" stroke-width="0.82" />
+          </g>
+          <g fill="var(--project-art-dot)">
+            <circle cx="232" cy="199" r="3.8" />
+            <circle cx="269" cy="174" r="3.1" />
+            <circle cx="304" cy="149" r="3.4" />
+            <circle cx="341" cy="120" r="3.2" />
+            <circle cx="380" cy="88" r="3.6" />
+            <circle cx="361" cy="206" r="2.5" />
+          </g>
+        </svg>
+      {% when 4 %}
+        <svg viewBox="0 0 520 320" role="presentation" focusable="false">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M171 126C215 83 282 60 350 67C404 72 447 105 463 153C477 195 462 243 421 274" stroke="var(--project-art-line-strong)" stroke-width="1.25" />
+            <path d="M158 206C203 182 245 164 288 141C331 119 375 92 430 73" stroke="var(--project-art-line)" stroke-width="1.08" />
+            <path d="M209 237C248 220 288 213 326 215C365 217 398 229 429 252" stroke="var(--project-art-line)" stroke-width="0.92" />
+            <path d="M300 54V136M329 54V136M358 54V136M387 54V136M300 54H387M300 81H387M300 108H387M300 136H387" stroke="var(--project-art-grid)" stroke-width="0.88" />
+          </g>
+          <g fill="var(--project-art-dot)">
+            <circle cx="216" cy="176" r="3.1" />
+            <circle cx="252" cy="159" r="3.5" />
+            <circle cx="290" cy="141" r="3.2" />
+            <circle cx="333" cy="121" r="3.7" />
+            <circle cx="376" cy="100" r="3.1" />
+            <circle cx="419" cy="80" r="3.9" />
+            <circle cx="351" cy="210" r="2.4" />
+          </g>
+        </svg>
       {% else %}
         <svg viewBox="0 0 520 320" role="presentation" focusable="false">
           <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M174 224C211 187 248 158 292 131C325 110 360 92 411 77" stroke="var(--project-art-line)" stroke-width="1.2" />
-            <path d="M187 108C234 75 302 63 360 80C404 93 437 121 454 162" stroke="var(--project-art-line-strong)" stroke-width="1.1" />
-            <path d="M293 70V136M321 70V136M349 70V136M377 70V136M293 70H377M293 92H377M293 114H377M293 136H377" stroke="var(--project-art-grid)" stroke-width="0.85" />
+            <path d="M151 230C198 192 246 165 294 140C340 116 386 93 439 78" stroke="var(--project-art-line)" stroke-width="1.15" />
+            <path d="M180 116C215 84 266 64 321 68C371 72 417 100 442 141C467 181 467 235 440 275" stroke="var(--project-art-line-strong)" stroke-width="1.18" />
+            <path d="M241 219C276 202 313 194 348 197C382 200 412 212 438 234" stroke="var(--project-art-line)" stroke-width="0.9" />
+            <path d="M287 68V158M318 68V158M349 68V158M380 68V158M287 68H380M287 98H380M287 128H380M287 158H380" stroke="var(--project-art-grid)" stroke-width="0.86" />
           </g>
           <g fill="var(--project-art-dot)">
-            <circle cx="254" cy="198" r="3.4" />
-            <circle cx="281" cy="172" r="3.1" />
-            <circle cx="315" cy="156" r="3.6" />
-            <circle cx="343" cy="133" r="2.8" />
-            <circle cx="371" cy="114" r="2.6" />
+            <circle cx="229" cy="195" r="3.4" />
+            <circle cx="267" cy="170" r="3.1" />
+            <circle cx="309" cy="149" r="3.5" />
+            <circle cx="352" cy="126" r="2.9" />
+            <circle cx="391" cy="103" r="2.7" />
+            <circle cx="363" cy="211" r="2.5" />
           </g>
         </svg>
-    {% endcase %}
+      {% endcase %}
+    {% endif %}
   </div>
 
   <div class="card-body project-card__body">
@@ -84,10 +154,10 @@
 
       {% if project.description_paragraphs and project.description_paragraphs.size > 0 %}
         {% for paragraph in project.description_paragraphs %}
-          <p class="project-card__description{% unless forloop.last %} mb-3{% else %} mb-0{% endunless %}">{{ paragraph }}</p>
+          <div class="project-card__description{% unless forloop.last %} mb-3{% else %} mb-0{% endunless %}">{{ paragraph | markdownify }}</div>
         {% endfor %}
       {% elsif project.description %}
-        <p class="project-card__description mb-0">{{ project.description }}</p>
+        <div class="project-card__description mb-0">{{ project.description | markdownify }}</div>
       {% endif %}
 
       {% if project.links and project.links.size > 0 %}

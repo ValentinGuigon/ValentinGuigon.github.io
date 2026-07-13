@@ -5,6 +5,8 @@ context: personal research project
 section: Personal and research tools, AI experiments, and technical projects
 sort_year: 2026
 sort_rank: 3
+image: /assets/img/projects/march_madness_2026.png
+image_alt:
 tags:
   - AI
   - modeling

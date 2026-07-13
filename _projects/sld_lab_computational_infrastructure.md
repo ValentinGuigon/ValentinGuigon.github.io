@@ -11,5 +11,5 @@ tags:
   - lab infrastructure
 kind: methods
 description_paragraphs:
-  - I led the development of lab-level computational infrastructure for reproducible behavioral and fMRI analyses. Built with implementation work from Gaurav D. Mahajan and other research assistants, we automated fMRI and behavioral stratified sampling, experiments logging, data extraction, data preprocessing, and quality control. Employs containers and nightly triggers.
+  - I led the development of lab-level computational infrastructure for behavioral and fMRI studies. Built with implementation work from Gaurav D. Mahajan and with the support of Joshua Berman and Deanna Durben, we automated fMRI and behavioral stratified sampling, experiments logging, data extraction, data preprocessing, and quality control. Employs containers and nightly triggers.
 ---
