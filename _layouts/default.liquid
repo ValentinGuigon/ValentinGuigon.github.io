@@ -49,7 +49,9 @@
                   <nav id="toc-sidebar" class="toc-sidebar-nav toc-sidebar-nav--custom" aria-label="Section navigation">
                     <ul class="nav navbar-nav">
                       {% for item in page.custom_toc %}
-                        <li><a class="nav-link" href="#{{ item.id }}">{{ item.label }}</a></li>
+                        <li>
+                          <a class="nav-link" href="#{{ item.id }}">{{ item.label }}</a>
+                        </li>
                       {% endfor %}
                     </ul>
                   </nav>
@@ -69,7 +71,9 @@
                   <nav id="toc-sidebar" class="toc-sidebar-nav toc-sidebar-nav--custom" aria-label="Section navigation">
                     <ul class="nav navbar-nav">
                       {% for item in page.custom_toc %}
-                        <li><a class="nav-link" href="#{{ item.id }}">{{ item.label }}</a></li>
+                        <li>
+                          <a class="nav-link" href="#{{ item.id }}">{{ item.label }}</a>
+                        </li>
                       {% endfor %}
                     </ul>
                   </nav>
@@ -130,5 +134,12 @@
         })();
       </script>
     {% endif %}
+    <!-- Cloudflare Web Analytics -->
+    <script
+      type="module"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "d5293a74817a49fa80215f4f81aa146a"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>
