@@ -645,6 +645,7 @@ footer.sticky-bottom {
     position: relative;
     inset: auto;
     z-index: 1;
+    pointer-events: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -691,12 +692,63 @@ footer.sticky-bottom {
     box-shadow: 16px 18px 34px rgba(17, 17, 17, 0.12);
   }
 
+  .project-card__art-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+  }
+
   .project-card__art-image {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    cursor: zoom-in;
+  }
+
+  .project-image-dialog {
+    padding: 0;
+    border: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .project-image-dialog::backdrop {
+    background: rgba(17, 17, 17, 0.82);
+  }
+
+  .project-image-dialog__image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: calc(100vw - 3rem);
+    max-height: calc(100vh - 3rem);
+    object-fit: contain;
+    cursor: zoom-out;
+  }
+
+  .project-image-dialog__close {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.65rem;
+    z-index: 1;
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(17, 17, 17, 0.7);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
   }
 
   .project-card__body {

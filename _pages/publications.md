@@ -12,6 +12,8 @@ wide_toc_content: true
 custom_toc:
   - id: peer-reviewed
     label: peer-reviewed
+  - id: preprints
+    label: preprints
   - id: under-review
     label: under review
   - id: in-preparation
@@ -23,6 +25,9 @@ custom_toc:
 
 <h3 id="peer-reviewed">Peer-Reviewed</h3>
 {% bibliography --query @*[status=in_press || status=published || status=accepted] %}
+
+<h3 id="preprints">Preprints</h3>
+{% bibliography --query @*[status=preprint] %}
 
 <h3 id="under-review">Under Review</h3>
 {% bibliography --query @*[status=under_review] --group_by none %}

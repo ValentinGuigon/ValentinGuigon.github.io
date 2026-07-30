@@ -3,8 +3,8 @@ title: Neurocomputational mechanisms of social learning
 date_range: 2024-2026
 context: UMD SLD Lab
 section: Research projects
-sort_year: 2025
-sort_rank: 1
+sort_year: 2026
+sort_rank: 2
 tags:
   - social learning
   - computational modeling
