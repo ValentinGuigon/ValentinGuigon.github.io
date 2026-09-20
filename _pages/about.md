@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm Valentin, a computational neuroscientist and psychologist studying the computations that link brain and behavior.
+I’m Valentin, a computational neuroscientist and psychologist modeling latent processes of brain and behavior.
 
 I work with Caroline Charpentier in the Social Learning and Decisions Lab ([SLD Lab](https://sldlab.umd.edu/)) at the University of Maryland. I am also an affiliated member of the Artificial Intelligence Interdisciplinary Institute at Maryland ([AIM](https://aim.umd.edu/people/valentin-guigon)), an affiliate researcher of the Neuroscience and Cognitive Science ([NACS](https://nacs.umd.edu/facultyprofile/guigon/valentin)) program, an elected Full Member of [Sigma Xi](https://www.sigmaxi.org/), the Scientific Research Honor Society, a Fellow at [Thinking about Thinking](https://www.thinkingaboutthinking.org/fellowshiphub/fellowship/valentin-guigon/feed), and a founding member and Cohort 001 expert at [DisCo](https://discoforever.org/profile/valentinguigon). My doctoral thesis was supervised by [Jean-Claude Dreher](https://dreherteam.wixsite.com/neuroeconomics) and [Marie Claire Villeval](https://sites.google.com/view/marie-claire-villeval).
 
