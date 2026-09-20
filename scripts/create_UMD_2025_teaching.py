@@ -3,8 +3,8 @@
 Generate merged-topic teaching pages for UMD 2025.
 
 Creates:
-- _teaching/2025_UMD_course_syllabus.md
-- _teaching/2025_UMD_course_<topic_slug>.md for each merged topic bundle
+- _teachings/2025_UMD_course_syllabus.md
+- _teachings/2025_UMD_course_<topic_slug>.md for each merged topic bundle
 
 Assumptions (edit if needed):
 - PDFs live at:  assets/pdf/UMD_2025/<slug>.pdf
@@ -30,7 +30,7 @@ import re
 YEAR = 2025
 # must match teaching.md display_categories if you filter by category
 CATEGORY = "UMD"
-OUTPUT_DIR = Path("_teaching")
+OUTPUT_DIR = Path("_teachings")
 
 PDF_BASE = "/assets/pdf/UMD_2025"  # site-relative
 IMG_BASE = "/assets/img/UMD_2025"  # site-relative
