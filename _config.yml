@@ -199,9 +199,12 @@ collections:
   articles:
     output: true
     permalink: /articles/:year-:month-:day-:title/
-  teaching:
+  teachings:
     output: true
-    permalink: /teaching/:path/
+    permalink: /teachings/:path/
+  talks:
+    output: true
+    permalink: /talks/:path/
 
 announcements:
   enabled: false

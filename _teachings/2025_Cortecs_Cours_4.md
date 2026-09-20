@@ -4,7 +4,7 @@ title: "Ecole douteuse: Cours 4"
 description: "Evaluer des informations complexes"
 img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_4.png
 importance: 2
-category: "Summer school Cortecs"
+category: "Teaching: Summer school Cortecs"
 year: 2025
 pdf: /assets/pdf/Cortecs_2025/Ecole_douteuse_2025-Valentin_Guigon-Cours_4.pdf
 ---

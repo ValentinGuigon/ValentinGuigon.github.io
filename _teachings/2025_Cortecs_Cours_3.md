@@ -1,16 +1,16 @@
 ---
 layout: page
-title: "Ecole douteuse: Cours 6"
-description: "Prédictions"
-img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_6.png
+title: "Ecole douteuse: Cours 3"
+description: "Le raisonnement et ses limites"
+img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_3.png
 importance: 2
-category: "Summer school Cortecs"
+category: "Teaching: Summer school Cortecs"
 year: 2025
-pdf: /assets/pdf/Cortecs_2025/Ecole_douteuse_2025-Valentin_Guigon-Cours_6.pdf
+pdf: /assets/pdf/Cortecs_2025/Ecole_douteuse_2025-Valentin_Guigon-Cours_3.pdf
 ---
 
 Cours enseigné par Valentin Guigon pour l'école d'été 'Ecole douteuse', organisée par le Cortecs du 14 au 18 Juillet 2025.
-Ce sixième cours est dédié aux diverses manières de formuler des prédictions.
+Ce troisième cours est dédié au raisonnement.
 
 Le matériel du cours est fourni ci-dessous comme simple PDF.
 

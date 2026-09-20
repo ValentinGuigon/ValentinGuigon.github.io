@@ -1,16 +1,16 @@
 ---
 layout: page
-title: "Ecole douteuse: Cours entier"
-description: "Informations, Croyances, Prédictions"
-img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_entier.png
-importance: 1
-category: "Summer school Cortecs"
+title: "Ecole douteuse: Cours 6"
+description: "Prédictions"
+img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_6.png
+importance: 2
+category: "Teaching: Summer school Cortecs"
 year: 2025
-pdf: /assets/pdf/Cortecs_2025/Ecole_douteuse_2025-Valentin_Guigon-Cours_entier.pdf
+pdf: /assets/pdf/Cortecs_2025/Ecole_douteuse_2025-Valentin_Guigon-Cours_6.pdf
 ---
 
 Cours enseigné par Valentin Guigon pour l'école d'été 'Ecole douteuse', organisée par le Cortecs du 14 au 18 Juillet 2025.
-La totalité de ce cours est dédiée aux Informations, Croyances, et Prédictions.
+Ce sixième cours est dédié aux diverses manières de formuler des prédictions.
 
 Le matériel du cours est fourni ci-dessous comme simple PDF.
 

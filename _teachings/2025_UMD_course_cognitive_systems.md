@@ -4,7 +4,7 @@ title: "NACS 645: Cognitive systems"
 description: "Memory and reasoning systems of human cognition."
 img: /assets/img/UMD_2025/cognitive_systems.png
 importance: 9
-category: "UMD"
+category: "Teaching: UMD"
 year: 2025
 pdf: /assets/pdf/UMD_2025/cognitive_systems.pdf
 ---

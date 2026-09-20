@@ -1,16 +1,16 @@
 ---
 layout: page
-title: "Ecole douteuse: Cours 1"
-description: "Traitement d'informations"
-img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_1.png
-importance: 2
-category: "Summer school Cortecs"
+title: "Ecole douteuse: Cours entier"
+description: "Informations, Croyances, Prédictions"
+img: /assets/img/Cortecs_2025/2025_Cortecs_Cours_entier.png
+importance: 1
+category: "Teaching: Summer school Cortecs"
 year: 2025
-pdf: /assets/pdf/Cortecs_2025/Ecole_douteuse_2025-Valentin_Guigon-Cours_1.pdf
+pdf: /assets/pdf/Cortecs_2025/Ecole_douteuse_2025-Valentin_Guigon-Cours_entier.pdf
 ---
 
 Cours enseigné par Valentin Guigon pour l'école d'été 'Ecole douteuse', organisée par le Cortecs du 14 au 18 Juillet 2025.
-Ce premier cours est dédié au traitement des informations.
+La totalité de ce cours est dédiée aux Informations, Croyances, et Prédictions.
 
 Le matériel du cours est fourni ci-dessous comme simple PDF.
 

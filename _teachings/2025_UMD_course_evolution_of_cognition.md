@@ -4,7 +4,7 @@ title: "NACS 645: Evolution of cognition"
 description: "Evolutionary accounts of syntax and the role of language in cognitive evolution."
 img: /assets/img/UMD_2025/evolution_of_cognition.png
 importance: 6
-category: "UMD"
+category: "Teaching: UMD"
 year: 2025
 pdf: /assets/pdf/UMD_2025/evolution_of_cognition.pdf
 ---

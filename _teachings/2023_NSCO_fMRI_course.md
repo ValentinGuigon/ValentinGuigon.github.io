@@ -4,7 +4,7 @@ title: "NSCO Doctorate school fMRI course"
 description: "Preprocessing and statistical analysis of fMRI data with SPM12"
 img: /assets/img/UCBL1_2023/2023_NSCO_fMRI_course.png
 importance: 1
-category: "UCBL1"
+category: "Teaching: UCBL1"
 year: 2023
 pdf: /assets/pdf/UCBL1_2023/Formation_fMRI-contrasts_and_preprocessing.pdf
 ---

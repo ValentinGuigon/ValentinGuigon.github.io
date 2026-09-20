@@ -4,7 +4,7 @@ title: "NACS 645: Cognitive architecture"
 description: "Bayesian approaches to cognition and arguments about their scope and robustness."
 img: /assets/img/UMD_2025/cognitive_architecture.png
 importance: 3
-category: "UMD"
+category: "Teaching: UMD"
 year: 2025
 pdf: /assets/pdf/UMD_2025/cognitive_architecture.pdf
 ---

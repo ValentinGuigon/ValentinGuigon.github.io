@@ -1,13 +1,13 @@
 ---
 layout: page
-title: teaching
-permalink: /teaching/
-description: Materials for courses taught.
+title: teachings and talks
+permalink: /teachingstalks/
+description: Selected materials for courses and talks.
 nav: true
 nav_order: 5
 neuro_background: sparse
-display_years: [2025, 2023]
-display_categories: ["UMD", "Summer school Cortecs", "UCBL1"]
+display_years: [2026, 2025, 2023]
+display_categories: ["Talk: Information Quality Talk Series", "Teaching: UMD", "Teaching: Summer school Cortecs", "Teaching: UCBL1"]
 horizontal: false
 toc:
   sidebar: right
@@ -16,7 +16,7 @@ _styles: >
   nav[data-toggle=toc] .nav-link + ul { display: block !important; }
 ---
 
-{% assign all_teaching = site.teaching %}
+{% assign all_teaching = site.teachings | concat: site.talks %}
 
 <div class="projects">
 

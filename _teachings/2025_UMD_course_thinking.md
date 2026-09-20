@@ -4,7 +4,7 @@ title: "NACS 645: Thinking"
 description: "Accounts of reasoning on the individual and collective levels."
 img: /assets/img/UMD_2025/thinking.png
 importance: 10
-category: "UMD"
+category: "Teaching: UMD"
 year: 2025
 pdf: /assets/pdf/UMD_2025/thinking.pdf
 ---

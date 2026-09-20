@@ -4,7 +4,7 @@ title: "NACS 645: Brain architecture"
 description: "Connectivity, network organization, and constraints on computation."
 img: /assets/img/UMD_2025/brain_architecture.png
 importance: 2
-category: "UMD"
+category: "Teaching: UMD"
 year: 2025
 pdf: /assets/pdf/UMD_2025/brain_architecture.pdf
 ---
