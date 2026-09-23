@@ -17,5 +17,5 @@ description_paragraphs:
   - Different strategies can guide trust behavior, including simple heuristics, reinforcement learning, and belief updating. In a dynamic trust-learning task, I use computational modeling to identify profiles of participants who rely on distinct cognitive strategies. With Caroline Charpentier and Selin Topel, we cluster profiles and link this heterogeneity to psychiatric measures of social anxiety and ASD.
 links:
   - label: Poster
-    url: /assets/pdf/posters/Poster_2025_SNE_CISE.pdf
+    url: /assets/pdf/posters/Poster_2026_PTFS.pdf
 ---
