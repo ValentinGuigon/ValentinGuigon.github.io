@@ -4,7 +4,7 @@ date_range: 2026
 context: Neuromatch NeuroAI
 section: Research projects
 sort_year: 2026
-sort_rank: 3
+sort_rank: 4
 image: /assets/img/projects/dynamics_rsg.png
 tags:
   - NeuroAI
