@@ -13,7 +13,7 @@ tags:
   - virtual reality
 kind: research
 description_paragraphs:
-  - During my research internship in JC Dreher's Neuroeconomics, Reward and Decision-Making team, I contributed to David O'Connor's behavioral study on the effects that spatial proximity to rewarding cues has on impulsive behavior. The project used virtual reality to compare responses to food-reward cues presented near or far from the participant. I contributed to data acquisition and behavioral modeling (DDM analyses of response-time and decision processes). The study showed that nearby rewards increased impulsive action, impairing participants' ability to withhold motor responses, but did not increase impulsive choice in an intertemporal-choice task.
+  - With O'Connor, Dreher and collaborators, I studied the effects of spatial proximity to rewarding cues on impulsive behavior. We used virtual reality to compare responses to food-reward cues presented near or far from the participant. I contributed to data acquisition and behavioral modeling. We showed that nearby rewards increased impulsive action, impairing participants' ability to withhold motor responses, but did not increase impulsive choice in an intertemporal-choice task.
 links:
   - label: Paper
     url: https://www.cell.com/iscience/fulltext/S2589-0042(21)00260-1
