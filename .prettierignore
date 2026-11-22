@@ -1,2 +1,17 @@
 _pages/teaching.md
 _pages/march_madness.md
+
+# Jekyll expands Liquid before compiling this Sass entry point.
+/assets/css/main.scss
+
+# Generated files and bundled third-party assets.
+/_includes/neuro_background/generated/
+/_includes/neuro_background_fallback_static.liquid
+/_site/
+/lighthouse_results/
+/assets/pdfjs/
+/assets/plotly/demo.html
+/assets/js/distillpub/template.v2.js
+/assets/js/distillpub/transforms.v2.js
+/assets/**/*.min.css
+/assets/**/*.min.js

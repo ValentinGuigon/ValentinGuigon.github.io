@@ -75,10 +75,10 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2"
+          ruby-version: "3.3"
           bundler-cache: true
-      - name: Install ImageMagick
-        run: sudo apt-get update && sudo apt-get install -y imagemagick
+      - name: Install image and notebook tools
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends imagemagick jupyter-nbconvert
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -86,11 +86,10 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
-      - name: Install and Build 🔧
-        run: |
-          pip3 install --upgrade jupyter
-          export JEKYLL_ENV=production
-          bundle exec jekyll build
+      - name: Build site 🔧
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

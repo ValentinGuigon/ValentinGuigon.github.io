@@ -33,6 +33,12 @@ bundle exec jekyll serve
 
 The site will be available at http://localhost:4000.
 
+## Deployment and formatting
+
+The GitHub Pages workflow uses the latest Ruby 3.3 patch. It installs ImageMagick for responsive images and Ubuntu's `jupyter-nbconvert` package so Jekyll can render notebooks as HTML.
+
+Prettier runs as an advisory check on pushes and pull requests to `master` or `main`. Formatting findings appear in the workflow summary. For an optional local check, run `npm ci` and `npm run format:check`. Run `npm run format` to apply formatting to files covered by the check.
+
 ## Project-card media
 
 The long project cards rendered on `/projects/` accept optional front matter media fields:
