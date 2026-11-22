@@ -16,7 +16,7 @@
   --color-accent: #5146a6;
   --color-accent-muted: #7068c8;
   --color-accent-soft: #e8e6f7;
-  --color-link-contrast: #232321;
+  --color-link-contrast: var(--color-accent);
   --neuro-purple: rgba(81, 70, 166, 0.42);
   --neuro-blue: rgba(72, 105, 170, 0.28);
   --neuro-indigo-soft: rgba(112, 104, 200, 0.2);
